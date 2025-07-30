@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {colour_background} from "../src/common/colours/"
 
 const GlobalStyle = styled.div`
   * {
