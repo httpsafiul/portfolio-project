@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colour_background } from '../../../common/colours/';
+import { colour_background } from '../../../Common/colours/';
 
 export const FooterContainer = styled.footer`
   width: 100%;
