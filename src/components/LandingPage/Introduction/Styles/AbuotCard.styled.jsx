@@ -4,7 +4,7 @@ import { Typography } from '@mui/material';
 import { colour_primary } from '../../../../Common/colours';
 
 export const CardContainer = styled.div`
-  width: 260px;
+  width: 300px;
   height: 390px;
   perspective: 1000px;
 `;

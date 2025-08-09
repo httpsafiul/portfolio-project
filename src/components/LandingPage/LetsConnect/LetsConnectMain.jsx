@@ -36,7 +36,7 @@ const LetsConnectMain = () => {
                             <Email fontSize="medium" /> &nbsp; Email Me
                         </LinkHeading>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            <LinkText>mdsafiul@gmail.com</LinkText>
+                            <LinkText>mdsafiulhaque4@gmail.com</LinkText>
                             <IconButton onClick={handleCopy} aria-label="copy email">
                                 <ContentCopyIcon />
                             </IconButton>

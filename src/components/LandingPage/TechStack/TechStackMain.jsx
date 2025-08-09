@@ -29,7 +29,7 @@ import TechStackCard from './TehcStackCard';
 const TechStackMain = () => {
   return (
     <TechStackSection>
-      <SectionHeading>Tech Stack</SectionHeading>
+      <SectionHeading>Skills</SectionHeading>
       <CardsWrapper>
         <TechStackCard
           title="Languages"
