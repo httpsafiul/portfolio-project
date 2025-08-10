@@ -10,14 +10,16 @@ import LetsConnectMain from './components/LandingPage/LetsConnect/LetsConnectMai
 import CopyrightSection from './components/Copyright/CopyrightSection';
 import LandingPageMain from './components/LandingPage/LandingPageMain';
 import ProjectsMain from './components/ProjectsPage/ProjectsMain';
+import AchievementsMain from './components/AchievementsPage/AchievementsMain';
 
 function App() {
   return (
     <>
       <Navbar />
       <GlobalStyle>
-        <LandingPageMain/>
+        {/* <LandingPageMain/> */}
         {/* <ProjectsMain/> */}
+        <AchievementsMain/>
       </GlobalStyle>
       <CopyrightSection/>
     </>
