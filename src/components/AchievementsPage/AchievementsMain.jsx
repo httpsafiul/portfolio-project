@@ -7,15 +7,17 @@ import {
 import AchievementsCard from "./AchievementsCard";
 // import { IMAGES as policeHackathonImgs } from "./Images/policeHackathon";
 // import { IMAGES as innovateImgs } from "./Images/innovate";
-import { IMAGES } from "./Images"
 import { RajasthanPoliceHackathon } from "./Images"
+import { Innovate } from "./Images"
+import { SIH } from "./Images"
+import { Hackfest } from "./Images"
 
 const AchievementsMain = () => {
   const achievements = [
     {
       id: 1,
       competitionName: "Rajasthan Police Hackathon 1.0",
-      date: "March 2023",
+      date: "Januray 2024",
       position: "Winner",
       team: [
         { name: "Subhradeep Pal", linkedin: "https://www.linkedin.com/in/subhradeep-pal/" },
@@ -29,17 +31,52 @@ const AchievementsMain = () => {
     {
       id: 2,
       competitionName: "Innovate 2.0",
-      date: "October 2022",
+      date: "May 2024",
       position: "Winner",
       team: [
-        { name: "Emily Chen", linkedin: "https://linkedin.com/in/emilychen" },
-        { name: "Michael Brown", linkedin: "https://linkedin.com/in/michaelbrown" }
+        { name: "Subhradeep Pal", linkedin: "https://www.linkedin.com/in/subhradeep-pal/" },
+        { name: "Deblina Mandal", linkedin: "https://www.linkedin.com/in/deblina-mandal-13b990226/" },
+        { name: "Devasmita Kundu", linkedin: "https://www.linkedin.com/in/luna-skywalker/" },
+        { name: "Samrat Ghosh", linkedin: "https://www.linkedin.com/in/samratghosh490/" },
       ],
       description:
         "Secured first place by developing an innovative solution in the field of smart automation, competing against top teams nationwide.",
-      images: IMAGES,
+      images: Innovate,
       emoji: "🏆"
-    }
+    },
+    {
+      id: 3,
+      competitionName: "Hackfest by SAP Labs",
+      date: "April 2025",
+      position: "Winner",
+      team: [
+        { name: "Devasmita Kundu", linkedin: "https://www.linkedin.com/in/luna-skywalker/" },
+        { name: "Poorva Adhikari", linkedin: "https://www.linkedin.com/in/poorva-adhikary0912/" },
+        { name: "Sayantika Dey", linkedin: "https://www.linkedin.com/in/sayantika-dey-232b80271/" },
+        { name: "Namrata Sinha Roy", linkedin: "https://www.linkedin.com/in/namratasinharoy/" },
+      ],
+      description:
+        "Secured first place by developing an innovative solution in the field of smart automation, competing against top teams nationwide.",
+      images: Hackfest,
+      emoji: "🏆"
+    },
+    {
+      id: 4,
+      competitionName: "Smart India Hackathon Internal (MSIT)",
+      date: "September 2024",
+      position: "Winner",
+      team: [
+        { name: "Devasmita Kundu", linkedin: "https://www.linkedin.com/in/luna-skywalker/" },
+        { name: "Samrat Ghosh", linkedin: "https://www.linkedin.com/in/samratghosh490/" },
+        { name: "Poorva Adhikari", linkedin: "https://www.linkedin.com/in/poorva-adhikary0912/" },
+        { name: "Namrata Sinha Roy", linkedin: "https://www.linkedin.com/in/namratasinharoy/" },
+        { name: "Pushkar Pan", linkedin: "https://www.linkedin.com/in/pushkar-pan-61b515281/" },
+      ],
+      description:
+        "Secured first place by developing an innovative solution in the field of smart automation, competing against top teams nationwide.",
+      images: SIH,
+      emoji: "🏆"
+    },
   ];
 
   return (

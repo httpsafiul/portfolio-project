@@ -1,67 +1,141 @@
-export const IMAGES = [
-    {
-        id: 0,
-        imageSrc:
-            "https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    },
-    {
-        id: 1,
-        imageSrc:
-            "https://images.pexels.com/photos/164758/pexels-photo-164758.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    },
-    {
-        id: 2,
-        imageSrc:
-            "https://images.pexels.com/photos/3430143/pexels-photo-3430143.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-    },
-    {
-        id: 3,
-        imageSrc:
-            "https://images.pexels.com/photos/2231756/pexels-photo-2231756.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-    },
-    {
-        id: 4,
-        imageSrc:
-            "https://images.pexels.com/photos/1813157/pexels-photo-1813157.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-    }
-]
-
-import one from '../../assets/AchievementsSection/RajasthanPoliceHackathon/one.jpg';
-import two from '../../assets/AchievementsSection/RajasthanPoliceHackathon/two.jpg';
-import three from '../../assets/AchievementsSection/RajasthanPoliceHackathon/three.jpg';
-import four from '../../assets/AchievementsSection/RajasthanPoliceHackathon/four.jpg';
-import five from '../../assets/AchievementsSection/RajasthanPoliceHackathon/five.jpg';
-import six from '../../assets/AchievementsSection/RajasthanPoliceHackathon/six.jpg';
-import seven from '../../assets/AchievementsSection/RajasthanPoliceHackathon/seven.jpg';
+import RPHone from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHone.jpg';
+import RPHtwo from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHtwo.jpg';
+import RPHthree from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHthree.jpg';
+import RPHfour from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHfour.jpg';
+import RPHfive from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHfive.jpg';
+import RPHsix from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHsix.jpg';
+import RPHseven from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHseven.jpg';
+import RPHeight from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHeight.jpg';
 
 export const RajasthanPoliceHackathon = [
     {
         id: 0,
-        imageSrc: one
+        imageSrc: RPHone
     },
     {
         id: 1,
-        imageSrc: two
+        imageSrc: RPHtwo
     },
     {
         id: 2,
-        imageSrc: three
+        imageSrc: RPHthree
     },
     {
         id: 3,
-        imageSrc: four
+        imageSrc: RPHfour
     },
     {
         id: 4,
-        imageSrc: five
+        imageSrc: RPHfive
     },
     {
         id: 5,
-        imageSrc: six
+        imageSrc: RPHsix
     },
     {
         id: 6,
-        imageSrc: seven
+        imageSrc: RPHseven
+    },
+    {
+        id: 7,
+        imageSrc: RPHeight
+    },
+
+]
+
+import SIHone from '../../assets/AchievementsSection/SIHInternal/SIHone.jpg';
+import SIHtwo from '../../assets/AchievementsSection/SIHInternal/SIHtwo.jpg';
+import SIHthree from '../../assets/AchievementsSection/SIHInternal/SIHthree.jpg';
+import SIHfour from '../../assets/AchievementsSection/SIHInternal/SIHfour.jpg';
+
+export const SIH = [
+    {
+        id: 0,
+        imageSrc: SIHone
+    },
+    {
+        id: 1,
+        imageSrc: SIHtwo
+    },
+    {
+        id: 2,
+        imageSrc: SIHthree
+    },
+    {
+        id: 3,
+        imageSrc: SIHfour
+    }
+
+]
+
+
+import InnovateOne from '../../assets/AchievementsSection/Innovate/Innovateone.jpg';
+import Innovatetwo from '../../assets/AchievementsSection/Innovate/Innovatetwo.jpg';
+import Innovatethree from '../../assets/AchievementsSection/Innovate/Innovatethree.jpg';
+import Innovatefour from '../../assets/AchievementsSection/Innovate/Innovatefour.jpg';
+import Innovatefive from '../../assets/AchievementsSection/Innovate/Innovatefive.jpg';
+
+export const Innovate = [
+    {
+        id: 0,
+        imageSrc: InnovateOne
+    },
+    {
+        id: 1,
+        imageSrc: Innovatetwo
+    },
+    {
+        id: 2,
+        imageSrc: Innovatethree
+    },
+    {
+        id: 3,
+        imageSrc: Innovatefour
+    },
+    {
+        id: 4,
+        imageSrc: Innovatefive
+    },
+
+]
+
+
+import HackfestOne from '../../assets/AchievementsSection/Hackfest/HackfestOne.jpg';
+import Hackfesttwo from '../../assets/AchievementsSection/Hackfest/Hackfesttwo.jpg';
+import Hackfestthree from '../../assets/AchievementsSection/Hackfest/Hackfestthree.jpg';
+import Hackfestfour from '../../assets/AchievementsSection/Hackfest/Hackfestfour.jpg';
+import Hackfestfive from '../../assets/AchievementsSection/Hackfest/Hackfestfive.jpg';
+import Hackfestsix from '../../assets/AchievementsSection/Hackfest/Hackfestsix.jpg';
+import Hackfestseven from '../../assets/AchievementsSection/Hackfest/Hackfestseven.jpg';
+
+export const Hackfest = [
+    {
+        id: 0,
+        imageSrc: HackfestOne
+    },
+    {
+        id: 1,
+        imageSrc: Hackfesttwo
+    },
+    {
+        id: 2,
+        imageSrc: Hackfestthree
+    },
+    {
+        id: 3,
+        imageSrc: Hackfestfour
+    },
+    {
+        id: 4,
+        imageSrc: Hackfestfive
+    },
+    {
+        id: 5,
+        imageSrc: Hackfestsix
+    },
+    {
+        id: 6,
+        imageSrc: Hackfestseven
     },
 
 ]

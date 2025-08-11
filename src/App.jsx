@@ -17,9 +17,9 @@ function App() {
     <>
       <Navbar />
       <GlobalStyle>
-        {/* <LandingPageMain/> */}
+        <LandingPageMain/>
         {/* <ProjectsMain/> */}
-        <AchievementsMain/>
+        {/* <AchievementsMain/> */}
       </GlobalStyle>
       <CopyrightSection/>
     </>

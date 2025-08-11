@@ -7,8 +7,8 @@ export const CardContainer = styled.div`
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  height: 450px; /* Increased height */
-  width: 80%;
+  /* height: 450px;  */
+  width: 85%;
   @media (max-width: 768px) {
     flex-direction: column;
     height: auto;
