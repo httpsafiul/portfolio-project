@@ -4,10 +4,12 @@ import IntroductionMain from './Introduction/IntroductionMain';
 import EducationMain from './Education/EducationMain';
 import TechStackMain from './TechStack/TechStackMain';
 import LetsConnectMain from './LetsConnect/LetsConnectMain';
+import Navbar from '../Navbar/Navbar';
 
 function LandingPageMain() {
   return (
     <>
+    <Navbar active={"home"}/>
         <HeroMain />
         <IntroductionMain />
         <EducationMain/>

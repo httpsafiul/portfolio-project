@@ -7,6 +7,7 @@ import leatherdefect from '../../assets/Projects/leatherdefect.png';
 import plantdisease from '../../assets/Projects/plantdisease.png';
 import policefeedback from '../../assets/Projects/policefeedback.png';
 import tictactoe from '../../assets/Projects/tictactoe.jpg';
+import Navbar from '../Navbar/Navbar';
 
 const ProjectsMain = () => {
     const projects = [
@@ -68,11 +69,14 @@ const ProjectsMain = () => {
 
 
     return (
-        <ProjectsContainer>
-            {projects.map((project, index) => (
-                <ProjectSection key={index} project={project} />
-            ))}
-        </ProjectsContainer>
+        <>
+            <Navbar active={"projects"}/>
+            <ProjectsContainer>
+                {projects.map((project, index) => (
+                    <ProjectSection key={index} project={project} />
+                ))}
+            </ProjectsContainer>
+        </>
     );
 };
 

@@ -11,6 +11,8 @@ import { RajasthanPoliceHackathon } from "./Images"
 import { Innovate } from "./Images"
 import { SIH } from "./Images"
 import { Hackfest } from "./Images"
+import { Webology } from "./Images"
+import Navbar from "../Navbar/Navbar";
 
 const AchievementsMain = () => {
   const achievements = [
@@ -77,9 +79,24 @@ const AchievementsMain = () => {
       images: SIH,
       emoji: "🏆"
     },
+    {
+      id: 5,
+      competitionName: "Web-O-Logy (by BPPIMT)",
+      date: "March 2023",
+      position: "Winner",
+      team: [
+        { name: "Subhradeep Pal", linkedin: "https://www.linkedin.com/in/subhradeep-pal/" }
+      ],
+      description:
+        "Secured first place by developing an innovative solution in the field of smart automation, competing against top teams nationwide.",
+      images: Webology,
+      emoji: "🏆"
+    },
   ];
 
   return (
+    <>
+    <Navbar active={"achievements"}/>
     <AchievementsContainer id="achievements">
       {/* <SectionHeading>My Achievements</SectionHeading> */}
       <CardsWrapper>
@@ -97,6 +114,7 @@ const AchievementsMain = () => {
         ))}
       </CardsWrapper>
     </AchievementsContainer>
+    </>
   );
 };
 

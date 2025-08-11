@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -17,20 +18,23 @@ import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
 import { colour_background, colour_primary } from '../../Common/colours';
 
-
 const drawerWidth = 240;
-const navItems = ["Projects", "Achievements", "Life", "Thoughts" ];
+const navItems = ["Home", "Achievements", "Projects", "Life", "Thoughts"];
 
-function Navbar(props) {
-  const { window } = props;
+function Navbar({ active }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [displayedText, setDisplayedText] = useState('');
   const [phase, setPhase] = useState('typing');
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const navigate = useNavigate(); // <-- navigation hook
+
   const fullText = 'AFIUL';
 
+  // Typing animation
   useEffect(() => {
     let timeout;
-
     if (phase === 'typing') {
       if (displayedText.length < fullText.length) {
         timeout = setTimeout(() => {
@@ -48,12 +52,30 @@ function Navbar(props) {
         timeout = setTimeout(() => setPhase('typing'), 500);
       }
     }
-
     return () => clearTimeout(timeout);
   }, [displayedText, phase]);
 
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const handleNavClick = (item) => {
+    navigate(`/${item.toLowerCase() === 'contact' ? 'contact' : item.toLowerCase()}`);
   };
 
   const drawer = (
@@ -65,7 +87,13 @@ function Navbar(props) {
       <List>
         {[...navItems, 'Contact'].map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton
+              sx={{
+                textAlign: 'center',
+                color: String(active || '').toLowerCase() === item.toLowerCase() ? colour_primary : '#000'
+              }}
+              onClick={() => handleNavClick(item)}
+            >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -74,88 +102,97 @@ function Navbar(props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
-
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: colour_background, height: "80px" }}>
       <CssBaseline />
-      <AppBar
-        component="nav"
-        elevation={0}
-        position="static"
-        sx={{
-          backgroundColor: colour_background,
-          px: 16,
-          py: 1.5,
-        }}
-      >
-        <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-        <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="end"
-            onClick={handleDrawerToggle}
-            sx={{ display: { sm: 'none' }, color: colour_primary }}
-          >
-            <MenuIcon />
-          </IconButton>
-        <Box sx={{width: "10%"}}>
-          <Typography
-            component="div"
-            variant="h6"
-            sx={{ fontWeight: 700, fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}
-          >
-            <span style={{ color: colour_primary }}>S</span>
-            <span style={{ color: colour_primary }}>{displayedText.slice(0, 3)}</span>
-            <span style={{ color: '#000' }}>{displayedText.slice(3)}</span>
-          </Typography>
-          </Box>
 
-          <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 3, width: "80%", justifyContent: "center" }}>
-            {navItems.map((item) => (
-              <motion.div
-                key={item}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+      {/* Animated AppBar */}
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: showNavbar ? 0 : -100 }}
+        transition={{ duration: 0.3 }}
+        style={{ width: '100%', position: 'fixed', top: 0, zIndex: 1200 }}
+      >
+        <AppBar
+          component="nav"
+          elevation={0}
+          sx={{
+            backgroundColor: colour_background,
+            px: 16,
+            paddingTop: 0.8
+          }}
+        >
+          <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              sx={{ display: { sm: 'none' }, color: colour_primary }}
+            >
+              <MenuIcon />
+            </IconButton>
+
+            {/* Logo / Typing text */}
+            <Box sx={{ width: '10%' }}>
+              <Typography
+                component="div"
+                variant="h6"
+                sx={{ fontWeight: 700, fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}
               >
+                <span style={{ color: colour_primary }}>S</span>
+                <span style={{ color: colour_primary }}>{displayedText.slice(0, 3)}</span>
+                <span style={{ color: '#000' }}>{displayedText.slice(3)}</span>
+              </Typography>
+            </Box>
+
+            {/* Nav links */}
+            <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 3, width: '80%', justifyContent: 'center' }}>
+              {navItems.map((item) => {
+                const isActive = String(active || '').toLowerCase() === item.toLowerCase();
+                return (
+                  <motion.div key={item} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 300 }}>
+                    <Button
+                      onClick={() => handleNavClick(item)}
+                      sx={{
+                        color: isActive ? colour_primary : '#000',
+                        fontWeight: '600',
+                        fontSize: '1rem',
+                      }}
+                    >
+                      {item}
+                    </Button>
+                  </motion.div>
+                );
+              })}
+            </Box>
+
+            {/* Contact button */}
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <motion.div whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 300 }}>
                 <Button
+                  onClick={() => handleNavClick('Contact')}
                   sx={{
-                    color: '#000',
-                    fontWeight: '700',
+                    color: String(active || '').toLowerCase() === 'contact' ? colour_primary : '#000',
+                    fontWeight: '600',
                     fontSize: '1rem',
-                    // textTransform: 'none',
+                    textTransform: 'none',
                   }}
                 >
-                  {item}
+                  CONTACT
                 </Button>
               </motion.div>
-            ))}
-          </Box>
+            </Box>
 
-          {/* Right: Contact */}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              <Button
-                sx={{
-                  color: '#000',
-                  fontWeight: '700',
-                  fontSize: '1rem',
-                  textTransform: 'none',
-                }}
-              >
-                CONTACT
-              </Button>
-            </motion.div>
-          </Box>
-        </Toolbar>
-      </AppBar>
+          </Toolbar>
 
+          <Divider sx={{ backgroundColor: colour_primary, height: '1px' }} />
+        </AppBar>
+      </motion.div>
+
+      {/* Drawer for mobile */}
       <nav>
         <Drawer
-          container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}

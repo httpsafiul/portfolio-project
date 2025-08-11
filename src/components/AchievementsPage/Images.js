@@ -100,7 +100,7 @@ export const Innovate = [
 ]
 
 
-import HackfestOne from '../../assets/AchievementsSection/Hackfest/HackfestOne.jpg';
+import Hackfestone from '../../assets/AchievementsSection/Hackfest/HackfestOne.jpg';
 import Hackfesttwo from '../../assets/AchievementsSection/Hackfest/Hackfesttwo.jpg';
 import Hackfestthree from '../../assets/AchievementsSection/Hackfest/Hackfestthree.jpg';
 import Hackfestfour from '../../assets/AchievementsSection/Hackfest/Hackfestfour.jpg';
@@ -111,7 +111,7 @@ import Hackfestseven from '../../assets/AchievementsSection/Hackfest/Hackfestsev
 export const Hackfest = [
     {
         id: 0,
-        imageSrc: HackfestOne
+        imageSrc: Hackfestone
     },
     {
         id: 1,
@@ -138,4 +138,24 @@ export const Hackfest = [
         imageSrc: Hackfestseven
     },
 
+]
+
+
+import Webologyone from '../../assets/AchievementsSection/Webology/WebologyOne.jpg';
+import Webologytwo from '../../assets/AchievementsSection/Webology/Webologytwo.jpg';
+import Webologythree from '../../assets/AchievementsSection/Webology/Webologythree.jpg';
+
+export const Webology = [
+    {
+        id: 0,
+        imageSrc: Webologyone
+    },
+    {
+        id: 1,
+        imageSrc: Webologytwo
+    },
+    {
+        id: 2,
+        imageSrc: Webologythree
+    },
 ]
