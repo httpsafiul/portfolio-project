@@ -74,6 +74,10 @@ export const ImageWrapper = styled(motion.div)`
   position: relative;
   width: 325px;
   height: 325px;
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 export const CircleBackdrop = styled(motion.div)`
@@ -83,6 +87,10 @@ export const CircleBackdrop = styled(motion.div)`
   border-radius: 50%;
   background-color: #7c3f00;
   z-index: 0;
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 export const AnimatedProfileImage = styled(motion.img)`
