@@ -29,6 +29,9 @@ export const LeftSection = styled.div`
 export const TrophyIcon = styled.div`
   font-size: 6rem;
   margin-bottom: 0px;
+  @media (max-width: 768px) {
+    font-size: 4.5rem;
+  }
 `;
 
 export const Title = styled.h3`
