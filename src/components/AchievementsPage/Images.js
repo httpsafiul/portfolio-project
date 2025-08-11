@@ -99,7 +99,6 @@ export const Innovate = [
 
 ]
 
-
 import Hackfestone from '../../assets/AchievementsSection/Hackfest/Hackfestone.jpg';
 import Hackfesttwo from '../../assets/AchievementsSection/Hackfest/Hackfesttwo.jpg';
 import Hackfestthree from '../../assets/AchievementsSection/Hackfest/Hackfestthree.jpg';
