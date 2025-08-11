@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -52,28 +52,42 @@ function Navbar({ active }) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        S
-      </Typography>
-      <Divider />
-      <List>
-        {[...navItems, 'Contact'].map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton
-              sx={{
-                textAlign: 'center',
-                color: String(active || '').toLowerCase() === item.toLowerCase() ? colour_primary : '#000'
-              }}
-              onClick={() => handleNavClick(item)}
-            >
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Typography
+      variant="h6"
+      sx={{
+        my: 2,
+        fontWeight: 700,
+        fontSize: '1.5rem',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    >
+      <span style={{ color: colour_primary }}>SAFI</span>
+      <span style={{ color: '#000' }}>UL</span>
+    </Typography>
+    <Divider />
+    <List>
+      {[...navItems, 'Contact'].map((item) => (
+        <ListItem key={item} disablePadding>
+          <ListItemButton
+            sx={{
+              textAlign: 'center',
+              color: String(active || '').toLowerCase() === item.toLowerCase()
+                ? colour_primary
+                : '#000'
+            }}
+            onClick={() => handleNavClick(item)}
+          >
+            <ListItemText primary={item} />
+          </ListItemButton>
+        </ListItem>
+      ))}
+    </List>
+  </Box>
+);
+
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: colour_background, height: "80px" }}>
@@ -91,22 +105,12 @@ function Navbar({ active }) {
           elevation={0}
           sx={{
             backgroundColor: colour_background,
-            px: {xs: 3, sm: 16},
+            px: { xs: 3, sm: 16 },
             paddingTop: 0.8
           }}
         >
-          <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="end"
-              onClick={handleDrawerToggle}
-              sx={{ display: { sm: 'none' }, color: colour_primary }}
-            >
-              <MenuIcon />
-            </IconButton>
-
-
+          <Toolbar sx={{ justifyContent: 'space-between', width: '100%' }}>
+            {/* Logo */}
             <Box sx={{ width: { xs: '25%', sm: '10%' } }}>
               <Typography
                 component="div"
@@ -118,7 +122,7 @@ function Navbar({ active }) {
               </Typography>
             </Box>
 
-            {/* Nav links */}
+            {/* Desktop Nav */}
             <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 3, width: '80%', justifyContent: 'center' }}>
               {navItems.map((item) => {
                 const isActive = String(active || '').toLowerCase() === item.toLowerCase();
@@ -139,7 +143,7 @@ function Navbar({ active }) {
               })}
             </Box>
 
-            {/* Contact button */}
+            {/* Contact Button (Desktop) */}
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <motion.div whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 300 }}>
                 <Button
@@ -156,6 +160,16 @@ function Navbar({ active }) {
               </motion.div>
             </Box>
 
+            {/* Mobile Hamburger Menu */}
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              sx={{ display: { sm: 'none' }, color: colour_primary }}
+            >
+              <MenuIcon />
+            </IconButton>
           </Toolbar>
 
           <Divider sx={{ backgroundColor: colour_primary, height: '1px' }} />
@@ -165,6 +179,7 @@ function Navbar({ active }) {
       {/* Drawer for mobile */}
       <nav>
         <Drawer
+          anchor="right"
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
