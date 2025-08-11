@@ -28,6 +28,9 @@ export const MotionIntroText = styled(motion.h2)`
   color: ${colour_primary};
   margin: 0;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 1.7rem;
+  }
 `;
 
 export const MotionNameText = styled(motion.h1)`
@@ -35,6 +38,9 @@ export const MotionNameText = styled(motion.h1)`
   font-weight: 900;
   color: #111;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 3.2rem;
+  }
 `;
 
 export const HighlightedText = styled.span`
@@ -42,11 +48,26 @@ export const HighlightedText = styled.span`
   font-weight: 900;
 `;
 
+export const SubtitleText = styled(motion.h3)`
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #444;
+  margin: 1rem 0;
+  font-family: 'Poppins', sans-serif;
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+`;
+
 export const ImageSection = styled.div`
   flex: 1;
   display: flex;
   justify-content: right;
   position: relative;
+  padding-top: 0px;
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
 `;
 
 export const ImageWrapper = styled(motion.div)`
@@ -73,14 +94,6 @@ export const AnimatedProfileImage = styled(motion.img)`
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
-`;
-
-export const SubtitleText = styled(motion.h3)`
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #444;
-  margin: 1rem 0;
-  font-family: 'Poppins', sans-serif;
 `;
 
 export const ButtonContainer = styled.div`

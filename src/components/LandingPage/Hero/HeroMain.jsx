@@ -50,7 +50,7 @@ const HeroMain = () => {
           <StyledButton
             variant="contained"
             sx={{ backgroundColor: colour_primary, '&:hover': { backgroundColor: colour_primary }, fontWeight: "bold", }}
-            href="/resume.pdf" // replace with actual CV link
+            href="https://drive.google.com/file/d/1hYEk6YaGctYhFJFnrGH4o03fFk2k3aM-/view?usp=drive_link" // replace with actual CV link
             target="_blank"
           >
             Download CV
@@ -66,7 +66,7 @@ const HeroMain = () => {
                 borderColor: colour_primary,
               },
             }}
-            href="#contact"
+            href="contact"
           >
             Contact
           </StyledButton>

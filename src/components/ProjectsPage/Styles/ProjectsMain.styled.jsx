@@ -5,7 +5,7 @@ export const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr; /* Default: 1 per row on small screens */
   gap: 2rem;
-  padding: 8rem;
+  padding: 40px 8%;
   background-color: ${colour_background};
 
   @media (min-width: 1024px) {
