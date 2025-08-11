@@ -141,7 +141,7 @@ export const Hackfest = [
 ]
 
 
-import Webologyone from '../../assets/AchievementsSection/Webology/WebologyOne.jpg';
+import Webologyone from '../../assets/AchievementsSection/Webology/Webologyone.jpg';
 import Webologytwo from '../../assets/AchievementsSection/Webology/Webologytwo.jpg';
 import Webologythree from '../../assets/AchievementsSection/Webology/Webologythree.jpg';
 
