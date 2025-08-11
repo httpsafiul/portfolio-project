@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -23,37 +23,10 @@ const navItems = ["Home", "Achievements", "Projects", "Life", "Thoughts"];
 
 function Navbar({ active }) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [displayedText, setDisplayedText] = useState('');
-  const [phase, setPhase] = useState('typing');
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const navigate = useNavigate(); // <-- navigation hook
-
-  const fullText = 'AFIUL';
-
-  // Typing animation
-  useEffect(() => {
-    let timeout;
-    if (phase === 'typing') {
-      if (displayedText.length < fullText.length) {
-        timeout = setTimeout(() => {
-          setDisplayedText(fullText.slice(0, displayedText.length + 1));
-        }, 200);
-      } else {
-        timeout = setTimeout(() => setPhase('deleting'), 1500);
-      }
-    } else if (phase === 'deleting') {
-      if (displayedText.length > 0) {
-        timeout = setTimeout(() => {
-          setDisplayedText(fullText.slice(0, displayedText.length - 1));
-        }, 100);
-      } else {
-        timeout = setTimeout(() => setPhase('typing'), 500);
-      }
-    }
-    return () => clearTimeout(timeout);
-  }, [displayedText, phase]);
+  const navigate = useNavigate();
 
   // Scroll detection
   useEffect(() => {
@@ -118,7 +91,7 @@ function Navbar({ active }) {
           elevation={0}
           sx={{
             backgroundColor: colour_background,
-            px: 16,
+            px: {xs: 3, sm: 16},
             paddingTop: 0.8
           }}
         >
@@ -133,16 +106,15 @@ function Navbar({ active }) {
               <MenuIcon />
             </IconButton>
 
-            {/* Logo / Typing text */}
-            <Box sx={{ width: '10%' }}>
+
+            <Box sx={{ width: { xs: '25%', sm: '10%' } }}>
               <Typography
                 component="div"
                 variant="h6"
                 sx={{ fontWeight: 700, fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}
               >
-                <span style={{ color: colour_primary }}>S</span>
-                <span style={{ color: colour_primary }}>{displayedText.slice(0, 3)}</span>
-                <span style={{ color: '#000' }}>{displayedText.slice(3)}</span>
+                <span style={{ color: colour_primary }}>SAFI</span>
+                <span style={{ color: '#000' }}>UL</span>
               </Typography>
             </Box>
 
