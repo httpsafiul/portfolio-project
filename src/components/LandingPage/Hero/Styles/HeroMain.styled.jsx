@@ -36,7 +36,7 @@ export const MotionIntroText = styled(motion.h2)`
 export const MotionNameText = styled(motion.h1)`
   font-size: 4.5rem;
   font-weight: 900;
-  color: #111;
+  /* color: #111; */
   text-transform: uppercase;
   @media (max-width: 768px) {
     font-size: 3.2rem;
@@ -85,7 +85,7 @@ export const CircleBackdrop = styled(motion.div)`
   width: 325px;
   height: 325px;
   border-radius: 50%;
-  background-color: #7c3f00;
+  background-color: ${colour_primary};
   z-index: 0;
   @media (max-width: 768px) {
     width: 300px;
