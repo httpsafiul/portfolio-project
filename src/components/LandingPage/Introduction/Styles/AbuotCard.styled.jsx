@@ -1,71 +1,78 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { Typography } from '@mui/material';
-import { colour_primary } from '../../../../Common/colours';
+import styled from "styled-components";
+import {
+  colour_orange,
+  colour_green,
+  colour_white
+} from "../../../../Common/colours";
 
-export const CardContainer = styled.div`
-  width: 300px;
-  height: 390px;
-  perspective: 1000px;
-`;
-
-export const CardInner = styled(motion.div)`
-  width: 100%;
-  height: 100%;
+export const CardWrapper = styled.div`
   position: relative;
-  transform-style: preserve-3d;
-  border-radius: 18px;
-`;
-
-export const CardFront = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 18px;
+  width: 360px; /* Adjust as per layout */
+  aspect-ratio: 4 / 3;
   overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: ${colour_green};
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
-export const FrontOverlay = styled.div`
+export const CardImage = styled.div`
   position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 14px 14px;
-  box-sizing: border-box;
+  inset: 0;
+  background-image: url(${(props) => props.img});
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  transition: opacity 0.3s ease;
+
+  ${CardWrapper}:hover & {
+    opacity: 0;
+  }
 `;
 
-export const FrontHeading = styled.span`
-  color: ${colour_primary};
-  font-weight: 600;
-  font-size: 1.7rem;
-  font-style: italic;
-`;
-
-export const CardBack = styled.div`
+export const CardText = styled.div`
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  border-radius: 18px;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  padding: 24px;
-`;
-
-export const BackContent = styled.div`
+  color: ${colour_orange};
+  font-size: 1.5rem;
+  font-weight: 600;
   text-align: center;
+  padding: 0.5rem;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+
+  ${CardWrapper}:hover & {
+    opacity: 0;
+  }
 `;
 
-export const BackHeading = styled(Typography)`
-  color: ${colour_primary};
-  font-weight: bold;
-  margin-bottom: 8px;
-`;
+export const CardHoverContent = styled.div`
+  position: absolute;
+  inset: 0;
+  background-color: ${colour_green};
+  color: ${colour_white};
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 
-export const BackText = styled(Typography)`
-  /* color: ${colour_primary}; */
-  font-size: 1rem;
+  p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  ${CardWrapper}:hover & {
+    opacity: 1;
+  }
 `;
