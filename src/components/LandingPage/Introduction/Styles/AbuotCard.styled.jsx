@@ -7,7 +7,7 @@ import {
 
 export const CardWrapper = styled.div`
   position: relative;
-  width: 360px; /* Adjust as per layout */
+  width: 360px;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 6px;
@@ -17,6 +17,14 @@ export const CardWrapper = styled.div`
 
   &:hover {
     transform: scale(1.02);
+  }
+
+  @media (max-width: 768px) {
+    width: 260px;
+  }
+
+  @media (max-width: 480px) {
+    width: 220px;
   }
 `;
 
@@ -51,6 +59,10 @@ export const CardText = styled.div`
   ${CardWrapper}:hover & {
     opacity: 0;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const CardHoverContent = styled.div`
@@ -74,5 +86,11 @@ export const CardHoverContent = styled.div`
 
   ${CardWrapper}:hover & {
     opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 0.8rem;
+    }
   }
 `;

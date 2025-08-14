@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   IntroductionContainer,
   HeadingWrapper,
@@ -14,7 +14,7 @@ import graduation from '../../../assets/IntroSection/graduation.jpg';
 import hackathon from '../../../assets/IntroSection/hackathon.jpg';
 import harry from '../../../assets/IntroSection/harry.jpeg';
 import office from '../../../assets/IntroSection/office.jpg';
-import taylor from '../../../assets/IntroSection/taylor.webp';
+import taylor from '../../../assets/IntroSection/taylor2.webp';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -42,31 +42,45 @@ const cardsData = [
   },
   {
     frontHeading: "Proud Potterhead",
-    image: harry, // Add a Harry Potter themed image
+    image: harry,
     title: "Living in the wizarding world",
     hoverText:
       "The Harry Potter series has been a magical part of my life. From the lessons of friendship and courage to the thrill of spells and Quidditch, it’s a universe I revisit often. Whether it’s re-reading the books or binge-watching the films, the magic never fades."
   },
   {
     frontHeading: "Certified Swiftie",
-    image: taylor, // Add an image of Taylor Swift or related aesthetic
+    image: taylor,
     title: "Finding inspiration in music",
     hoverText:
       "Taylor Swift’s music is my constant companion — from her storytelling to her melodies, I find inspiration and motivation in her songs. Being a Swiftie is more than fandom; it's about embracing creativity, emotions, and growth through music."
   },
   {
     frontHeading: "The Office Aficionado",
-    image: office, // Add a The Office still or related image
+    image: office,
     title: "Laughing through life's chaos",
     hoverText:
       "‘The Office’ is my go-to comfort show. I love its quirky humor, awkward moments, and heartfelt friendships. It's a reminder that even in the most ordinary places, extraordinary stories — and laughs — can be found."
   }
 ];
 
-
 const IntroductionMain = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const cardsPerPage = 3;
+  const [cardsPerPage, setCardsPerPage] = useState(3);
+
+  // Detect screen size to adjust cards per page
+  useEffect(() => {
+    const updateCardsPerPage = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerPage(1);
+      } else {
+        setCardsPerPage(3);
+      }
+    };
+
+    updateCardsPerPage();
+    window.addEventListener('resize', updateCardsPerPage);
+    return () => window.removeEventListener('resize', updateCardsPerPage);
+  }, []);
 
   const handleNext = () => {
     if (startIndex + cardsPerPage < cardsData.length) {

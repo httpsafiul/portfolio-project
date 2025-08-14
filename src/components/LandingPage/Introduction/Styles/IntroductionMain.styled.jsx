@@ -25,11 +25,16 @@ export const HeadingWrapper = styled.div`
 `;
 
 export const Heading = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin-left: 95px;
   white-space: nowrap;
   color: ${colour_green};
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    margin-left: 20px;
+  }
 `;
 
 export const DividerLine = styled.div`
@@ -45,6 +50,10 @@ export const CarouselWrapper = styled.div`
   gap: 1rem;
   width: 100%;
   max-width: 1400px;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
 `;
 
 export const CarouselInner = styled.div`
@@ -53,6 +62,10 @@ export const CarouselInner = styled.div`
   gap: 2rem;
   flex: 1;
   transition: transform 0.3s ease;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 `;
 
 export const NavButton = styled(Button)`
@@ -73,5 +86,13 @@ export const NavButton = styled(Button)`
     background-color: #ccc !important;
     color: #666 !important;
     cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    min-width: 36px !important;
+    height: 36px;
+    svg {
+      font-size: 1rem;
+    }
   }
 `;

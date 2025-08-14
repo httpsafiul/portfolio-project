@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colour_primary, colour_background } from '../../../../Common/colours';
+import { colour_primary, colour_background, colour_green } from '../../../../Common/colours';
 import { Button } from '@mui/material';
 
 export const ConnectSection = styled.section`
@@ -12,9 +12,10 @@ export const ConnectSection = styled.section`
 `;
 
 export const SectionHeading = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 3rem;
+  color: ${colour_green};
 `;
 
 export const ContentWrapper = styled.div`
@@ -51,7 +52,7 @@ export const LinkItem = styled.div`
 export const LinkHeading = styled.h3`
   font-size: 1.4rem;
   font-weight: 600;
-  color: ${colour_primary};
+  color: ${colour_green};
   display: flex;
   align-items: center;
   gap: 8px;
@@ -72,16 +73,4 @@ export const LinkText = styled.p`
   }
 `;
 
-export const CopyButton = styled(Button)`
-  && {
-    text-transform: none;
-    background-color: ${colour_primary};
-    color: white;
-    font-size: 0.85rem;
-    padding: 4px 12px;
-    border-radius: 6px;
-    &:hover {
-      background-color: #5e2f00;
-    }
-  }
-`;
+

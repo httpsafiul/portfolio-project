@@ -13,7 +13,7 @@ const AboutCard = ({ image, title, hoverText, frontHeading }) => {
       <CardImage img={image} />
       <CardText>{frontHeading}</CardText>
       <CardHoverContent>
-      <p style={{color: colour_orange, paddingBottom: "10px", fontSize: "1.1rem"}}>{title}</p>
+        <p style={{color: colour_orange, paddingBottom: "10px", fontSize: "1.1rem"}}>{title}</p>
         <p>{hoverText}</p>
       </CardHoverContent>
     </CardWrapper>

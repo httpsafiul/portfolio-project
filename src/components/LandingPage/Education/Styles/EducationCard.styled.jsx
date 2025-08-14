@@ -1,60 +1,97 @@
-import styled from 'styled-components';
-import { Card } from '@mui/material';
-import { colour_primary, colour_background } from '../../../../Common/colours';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import {
+  colour_orange,
+  colour_green,
+  colour_white
+} from "../../../../Common/colours";
 
-// Use motion for hover animation
-export const CardContainer = styled(motion(Card))`
-  background-color: ${colour_background};
-  width: 300px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 16px;
+export const CardWrapper = styled.div`
+  position: relative;
+  width: 360px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: ${colour_green};
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  @media (max-width: 768px) {
+    width: 260px;
+  }
+
+  @media (max-width: 480px) {
+    width: 220px;
+  }
+`;
+
+export const CardImage = styled.div`
+  position: absolute;
+  inset: 0;
+  background-image: url(${(props) => props.img});
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+  transition: opacity 0.3s ease;
+
+  ${CardWrapper}:hover & {
+    opacity: 0;
+  }
+`;
+
+export const CardText = styled.div`
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  color: ${colour_green};
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  margin-top: 15px;
+
+  ${CardWrapper}:hover & {
+    opacity: 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+`;
+
+export const CardHoverContent = styled.div`
+  position: absolute;
+  inset: 0;
+  background-color: ${colour_green};
+  color: ${colour_white};
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  transition: transform 0.3s ease;
-`;
-
-export const CourseName = styled.h2`
-  color: ${colour_primary};
-  font-size: 1.37rem;
-  font-weight: bold;
+  justify-content: center;
   text-align: center;
-  margin: 0;
-`;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 
-export const InstitutionLogo = styled.img`
-  height: 85px;
-  object-fit: contain;
-  margin: 10px 0;
-`;
+  p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
 
-export const CollegeName = styled.h3`
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: center;
-  margin: 0;
-  color: #333;
-`;
+  ${CardWrapper}:hover & {
+    opacity: 1;
+  }
 
-export const UniversityName = styled.p`
-  font-size: 1rem;
-  text-align: center;
-  color: #666;
-  margin: 0;
-`;
-
-export const Year = styled.p`
-  font-size: 0.95rem;
-  color: #444;
-  margin: 0;
-`;
-
-export const CGPA = styled.p`
-  font-size: 1rem;
-  color: #444;
-  font-weight: 500;
-  margin: 0;
+  @media (max-width: 768px) {
+    p {
+      font-size: 0.8rem;
+    }
+  }
 `;
