@@ -66,7 +66,8 @@ export const CardText = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: 0px
   }
 `;
 

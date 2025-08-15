@@ -65,7 +65,7 @@ const cardsData = [
 
 const IntroductionMain = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const [cardsPerPage, setCardsPerPage] = useState(3);
+  const [cardsPerPage, setCardsPerPage] = useState(1);
 
   useEffect(() => {
     const updateCardsPerPage = () => {

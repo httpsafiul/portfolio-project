@@ -45,7 +45,7 @@ const cardsData = [
 
 const EducationMain = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const [cardsPerPage, setCardsPerPage] = useState(3);
+  const [cardsPerPage, setCardsPerPage] = useState(1);
 
   // Adjust visible cards based on screen size
   useEffect(() => {

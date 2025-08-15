@@ -46,7 +46,7 @@ const cardsData = [
 
 const TechStackMain = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const [cardsPerPage, setCardsPerPage] = useState(3);
+  const [cardsPerPage, setCardsPerPage] = useState(1);
 
   // Adjust cards per page based on screen size
   useEffect(() => {
