@@ -16,6 +16,13 @@ export const SectionHeading = styled.h2`
   font-weight: 600;
   margin-bottom: 3rem;
   color: ${colour_green};
+    @media (max-width: 1024px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -34,6 +41,11 @@ export const ProfilePhoto = styled.img`
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 768px) {
+    width: 230px;
+  height: 230px;
+  }
 `;
 
 export const LinksWrapper = styled.div`
@@ -47,6 +59,9 @@ export const LinkItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  @media (max-width: 768px) {
+    gap: 0rem;
+  }
 `;
 
 export const LinkHeading = styled.h3`
@@ -57,6 +72,12 @@ export const LinkHeading = styled.h3`
   align-items: center;
   gap: 8px;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    gap: 0px;
+  }
+
 `;
 
 export const LinkText = styled.p`
@@ -70,6 +91,10 @@ export const LinkText = styled.p`
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
 `;
 
