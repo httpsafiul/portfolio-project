@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { colour_green, colour_orange,  } from '../../../../Common/colours';
+import { colour_green, colour_orange } from '../../../../Common/colours';
 import { Card } from '@mui/material';
 
 export const CardContainer = styled(motion(Card))`
@@ -13,6 +13,18 @@ export const CardContainer = styled(motion(Card))`
   flex-direction: column;
   align-items: center;
   gap: 16px;
+
+  @media (max-width: 1024px) {
+    width: 300px;
+  }
+
+  @media (max-width: 768px) {
+    width: 260px;
+  }
+
+  @media (max-width: 480px) {
+    width: 220px;
+  }
 `;
 
 export const SectionTitle = styled.h3`
@@ -40,5 +52,12 @@ export const IconsGrid = styled.div`
     width: 50px;
     height: 50px;
     object-fit: contain;
+  }
+
+  @media (max-width: 480px) {
+    img {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;

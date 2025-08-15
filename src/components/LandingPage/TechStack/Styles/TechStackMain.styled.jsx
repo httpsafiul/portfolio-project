@@ -33,7 +33,7 @@ export const Heading = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 1.8rem;
-    margin-left: 20px;
+    margin-left: 0px;
   }
 `;
 
@@ -94,5 +94,8 @@ export const NavButton = styled(Button)`
     svg {
       font-size: 1rem;
     }
+  }
+    @media (min-width: 1024px) {
+    visibility: hidden;
   }
 `;

@@ -50,10 +50,6 @@ export const CarouselWrapper = styled.div`
   gap: 1rem;
   width: 100%;
   max-width: 1400px;
-
-  @media (max-width: 768px) {
-    gap: 0.5rem;
-  }
 `;
 
 export const CarouselInner = styled.div`
@@ -62,6 +58,10 @@ export const CarouselInner = styled.div`
   gap: 2rem;
   flex: 1;
   transition: transform 0.3s ease;
+
+  @media (max-width: 1024px) {
+    gap: 1.5rem;
+  }
 
   @media (max-width: 768px) {
     gap: 1rem;
@@ -94,5 +94,8 @@ export const NavButton = styled(Button)`
     svg {
       font-size: 1rem;
     }
+  }
+  @media (min-width: 1024px) {
+    visibility: hidden;
   }
 `;

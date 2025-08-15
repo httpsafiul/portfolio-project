@@ -18,8 +18,9 @@ export const HeroContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    /* padding: 2rem; */
     text-align: center;
+    height: auto;
   }
 `;
 
@@ -33,6 +34,9 @@ export const TextSection = styled.div`
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 export const MotionIntroText = styled.h2`
@@ -52,8 +56,11 @@ export const MotionNameText = styled.h1`
   text-transform: uppercase;
   color: ${colour_white};
   margin-top: 0.5rem;
+    @media (max-width: 1024px) {
+    font-size: 3rem;
+  }
   @media (max-width: 768px) {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -72,13 +79,18 @@ export const ImageSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* padding: 0rem 8rem; */
+  @media (max-width: 768px) {
+    padding-top: 1rem;
+  }
 `;
 
 export const StaticProfileImage = styled.img`
   width:450px;
   height: auto;
   object-fit: contain;
+    @media (max-width: 1024px) {
+    width: 370px;
+  }
   @media (max-width: 768px) {
     width: 250px;
   }
@@ -89,6 +101,9 @@ export const ButtonContainer = styled.div`
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const StyledButton = styled(Button)`
@@ -96,4 +111,7 @@ export const StyledButton = styled(Button)`
   text-transform: none;
   border-radius: 8px;
   font-family: "Libre Caslon Text", serif;
+  @media (max-width: 768px) {
+    font-weight: 400;
+  }
 `;
