@@ -30,7 +30,6 @@ const EducationCard = ({ image, institute, university, year, marks, frontHeading
         <Typography
           variant="h6"
           sx={{
-            // color: colour_orange,
             fontWeight: 400,
             textAlign: "center",
             mb: 0.5,
@@ -43,7 +42,6 @@ const EducationCard = ({ image, institute, university, year, marks, frontHeading
         <Typography
           variant="h6"
           sx={{
-            // color: colour_orange,
             fontWeight: 400,
             textAlign: "center",
             mb: 0.5,
@@ -56,7 +54,6 @@ const EducationCard = ({ image, institute, university, year, marks, frontHeading
         <Typography
           variant="h6"
           sx={{
-            // color: colour_orange,
             fontWeight: 400,
             textAlign: "center",
             fontSize: { xs: "0.95rem", sm: "1.1rem", md: "1.2rem" }

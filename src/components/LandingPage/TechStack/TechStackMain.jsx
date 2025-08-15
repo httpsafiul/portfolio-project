@@ -18,14 +18,12 @@ import cIcon from '../../../assets/TechStack/cIcon.png';
 import cppIcon from '../../../assets/TechStack/cppIcon.png';
 import jsIcon from '../../../assets/TechStack/jsIcon.png';
 
-
 import springbootIcon from '../../../assets/TechStack/springbootIcon.png';
 import reactIcon from '../../../assets/TechStack/reactIcon.png';
 import htmlIcon from '../../../assets/TechStack/htmlIcon.png';
 import cssIcon from '../../../assets/TechStack/cssIcon.png';
 import elkIcon from '../../../assets/TechStack/elkIcon.png';
 import nodejsIcon from '../../../assets/TechStack/nodejsIcon.png';
-
 
 import mysqlIcon from '../../../assets/TechStack/mysqlIcon.png';
 import mongoIcon from '../../../assets/TechStack/mongoIcon.png';
@@ -43,19 +41,20 @@ const cardsData = [
   {
     title: "Databases",
     icons: [mysqlIcon, mongoIcon, sqliteIcon]
-  },
-
-]
+  }
+];
 
 const TechStackMain = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [cardsPerPage, setCardsPerPage] = useState(3);
 
-  // Detect screen size to adjust cards per page
+  // Adjust cards per page based on screen size
   useEffect(() => {
     const updateCardsPerPage = () => {
       if (window.innerWidth < 768) {
         setCardsPerPage(1);
+      } else if (window.innerWidth < 1305 && window.innerWidth >=768) {
+        setCardsPerPage(2);
       } else {
         setCardsPerPage(3);
       }
@@ -88,7 +87,10 @@ const TechStackMain = () => {
       </HeadingWrapper>
 
       <CarouselWrapper>
-        <NavButton onClick={handlePrev} disabled={startIndex === 0}>
+        <NavButton
+          onClick={handlePrev}
+          disabled={startIndex === 0}
+        >
           <ArrowBackIosNewIcon />
         </NavButton>
 

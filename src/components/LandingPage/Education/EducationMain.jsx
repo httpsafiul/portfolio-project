@@ -11,7 +11,7 @@ import {
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-import AboutCard from './EducationCard';
+import EducationCard from './EducationCard';
 import college from '../../../assets/EducationSection/college.png';
 import hs from '../../../assets/EducationSection/hs.png';
 import s from '../../../assets/EducationSection/s.png';
@@ -40,19 +40,20 @@ const cardsData = [
     university: "Maulana Abul Kalam Azad University of Technology",
     year: 2025,
     marks: "8.41 CGPA"
-  },
-  
+  }
 ];
 
 const EducationMain = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [cardsPerPage, setCardsPerPage] = useState(3);
 
-  // Detect screen size to adjust cards per page
+  // Adjust visible cards based on screen size
   useEffect(() => {
     const updateCardsPerPage = () => {
       if (window.innerWidth < 768) {
         setCardsPerPage(1);
+      } else if (window.innerWidth < 1305 && window.innerWidth >=768) {
+        setCardsPerPage(2);
       } else {
         setCardsPerPage(3);
       }
@@ -91,7 +92,7 @@ const EducationMain = () => {
 
         <CarouselInner>
           {visibleCards.map((card, index) => (
-            <AboutCard
+            <EducationCard
               key={index}
               frontHeading={card.frontHeading}
               image={card.image}

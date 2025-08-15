@@ -122,7 +122,7 @@ function Navbar({ active }) {
             </Box>
 
             {/* Desktop Nav */}
-            <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 3, width: '80%', justifyContent: 'right ' }}>
+            <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 2, width: '80%', justifyContent: 'right ' }}>
               {navItems.map((item) => {
                 const isActive = String(active || '').toLowerCase() === item.toLowerCase();
                 return (
@@ -149,7 +149,7 @@ function Navbar({ active }) {
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{ display: { sm: 'none' }, color: colour_primary }}
+              sx={{ display: { lg: 'none' }, color: colour_primary }}
             >
               <MenuIcon />
             </IconButton>
@@ -168,7 +168,7 @@ function Navbar({ active }) {
           onClose={handleDrawerToggle}
           ModalProps={{ keepMounted: true }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { md: 'block', lg: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >

@@ -67,11 +67,12 @@ const IntroductionMain = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [cardsPerPage, setCardsPerPage] = useState(3);
 
-  // Detect screen size to adjust cards per page
   useEffect(() => {
     const updateCardsPerPage = () => {
       if (window.innerWidth < 768) {
         setCardsPerPage(1);
+      } else if (window.innerWidth < 1305 && window.innerWidth >=768) {
+        setCardsPerPage(2);
       } else {
         setCardsPerPage(3);
       }
