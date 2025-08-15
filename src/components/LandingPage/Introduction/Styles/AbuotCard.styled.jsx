@@ -28,7 +28,7 @@ export const CardWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 220px;
+    width: 240px;
   }
 `;
 
@@ -96,9 +96,16 @@ export const CardHoverContent = styled.div`
     opacity: 1;
   }
 
+  .title{
+    color: ${colour_orange};
+    padding-bottom: 10px;
+    font-size: 1.1rem;
+}
+
   @media (max-width: 768px) {
     p {
-      font-size: 0.8rem;
+      font-size: 0.6rem;
     }
   }
 `;
+
