@@ -38,7 +38,7 @@ export const Heading = styled.h2`
   color: ${colour_green};
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-left: 20px;
   }
 `;
