@@ -14,6 +14,12 @@ export const IntroductionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+    @media (max-width: 1024px) {
+    padding: 5px 15px
+  }
+    @media (max-width: 720px) {
+    padding: 0px 5px
+  }
 `;
 
 export const HeadingWrapper = styled.div`

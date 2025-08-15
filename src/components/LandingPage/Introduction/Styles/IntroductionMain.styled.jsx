@@ -14,13 +14,11 @@ export const IntroductionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-    @media (max-width: 720px) {
-    padding-left: 5px;
-    padding-right: 5px;
+  @media (max-width: 1024px) {
+    padding: 5px 15px
   }
-    @media (max-width: 1024px) {
-    padding-left: 15px;
-    padding-right: 15px;
+    @media (max-width: 720px) {
+    padding: 0px 5px
   }
 `;
 
@@ -72,7 +70,7 @@ export const CarouselInner = styled.div`
   }
 
   @media (max-width: 768px) {
-    gap: 1rem;
+    /* gap: 1rem; */
   }
 `;
 

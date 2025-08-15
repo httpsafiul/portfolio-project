@@ -64,8 +64,7 @@ function Navbar({ active }) {
         alignItems: 'center'
       }}
     >
-      <span style={{ color: colour_primary }}>SAFI</span>
-      <span style={{ color: '#000' }}>UL</span>
+      <span style={{ color: colour_green }}>SAFIUL</span>
     </Typography>
     <Divider />
     <List>
@@ -75,7 +74,7 @@ function Navbar({ active }) {
             sx={{
               textAlign: 'center',
               color: String(active || '').toLowerCase() === item.toLowerCase()
-                ? colour_primary
+                ? colour_orange
                 : '#000'
             }}
             onClick={() => handleNavClick(item)}
@@ -149,7 +148,7 @@ function Navbar({ active }) {
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{ display: { lg: 'none' }, color: colour_primary }}
+              sx={{ display: { lg: 'none' }, color: colour_orange }}
             >
               <MenuIcon />
             </IconButton>
