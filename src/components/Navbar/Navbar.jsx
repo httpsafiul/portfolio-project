@@ -16,10 +16,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
-import { colour_background, colour_primary } from '../../Common/colours';
+import { colour_background, colour_green, colour_orange, colour_primary, colour_white } from '../../Common/colours';
 
 const drawerWidth = 240;
-const navItems = ["Home", "Achievements", "Projects", "Life", "Thoughts"];
+const navItems = ["Home", "Achievements", "Projects", "Life", "Thoughts", "Contact"];
 
 function Navbar({ active }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -90,7 +90,7 @@ function Navbar({ active }) {
 
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: colour_background, height: "80px" }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: colour_green, height: "80px" }}>
       <CssBaseline />
 
       {/* Animated AppBar */}
@@ -104,7 +104,7 @@ function Navbar({ active }) {
           component="nav"
           elevation={0}
           sx={{
-            backgroundColor: colour_background,
+            backgroundColor: colour_green,
             px: { xs: 3, sm: 16 },
             paddingTop: 0.8
           }}
@@ -117,13 +117,12 @@ function Navbar({ active }) {
                 variant="h6"
                 sx={{ fontWeight: 700, fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}
               >
-                <span style={{ color: colour_primary }}>SAFI</span>
-                <span style={{ color: '#000' }}>UL</span>
+                <span style={{ color: colour_white }}>SAFIUL</span>
               </Typography>
             </Box>
 
             {/* Desktop Nav */}
-            <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 3, width: '80%', justifyContent: 'center' }}>
+            <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 3, width: '80%', justifyContent: 'right ' }}>
               {navItems.map((item) => {
                 const isActive = String(active || '').toLowerCase() === item.toLowerCase();
                 return (
@@ -131,9 +130,10 @@ function Navbar({ active }) {
                     <Button
                       onClick={() => handleNavClick(item)}
                       sx={{
-                        color: isActive ? colour_primary : '#000',
+                        color: isActive ? colour_orange : colour_white,
                         fontWeight: '600',
-                        fontSize: '1rem',
+                        fontSize: '0.9rem',
+                        fontFamily: "Libre Caslon Text",
                       }}
                     >
                       {item}
@@ -141,23 +141,6 @@ function Navbar({ active }) {
                   </motion.div>
                 );
               })}
-            </Box>
-
-            {/* Contact Button (Desktop) */}
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              <motion.div whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 300 }}>
-                <Button
-                  onClick={() => handleNavClick('Contact')}
-                  sx={{
-                    color: String(active || '').toLowerCase() === 'contact' ? colour_primary : '#000',
-                    fontWeight: '600',
-                    fontSize: '1rem',
-                    textTransform: 'none',
-                  }}
-                >
-                  CONTACT
-                </Button>
-              </motion.div>
             </Box>
 
             {/* Mobile Hamburger Menu */}
@@ -172,7 +155,7 @@ function Navbar({ active }) {
             </IconButton>
           </Toolbar>
 
-          <Divider sx={{ backgroundColor: colour_primary, height: '1px' }} />
+          <Divider sx={{ backgroundColor: colour_orange, height: '1px' }} />
         </AppBar>
       </motion.div>
 

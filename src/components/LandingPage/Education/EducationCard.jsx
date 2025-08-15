@@ -1,34 +1,71 @@
-import React from 'react';
+import React from "react";
 import {
-  CardContainer,
-  CourseName,
-  InstitutionLogo,
-  CollegeName,
-  UniversityName,
-  Year,
-  CGPA
-} from './Styles/EducationCard.styled';
+  CardWrapper,
+  CardImage,
+  CardText,
+  CardHoverContent
+} from "./Styles/EducationCard.styled";
+import { colour_orange } from "../../../Common/colours";
+import { Typography } from "@mui/material";
 
-const EducationCard = ({
-  courseName,
-  logoSrc,
-  college,
-  university,
-  year,
-  cgpa
-}) => {
+const EducationCard = ({ image, institute, university, year, marks, frontHeading }) => {
   return (
-    <CardContainer
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: 'spring', stiffness: 300 }}
-    >
-      <CourseName>{courseName}</CourseName>
-      <InstitutionLogo src={logoSrc} alt={`${college} logo`} />
-      <CollegeName>{college}</CollegeName>
-      <UniversityName>{university}</UniversityName>
-      <Year>{year}</Year>
-      <CGPA>CGPA: {cgpa}</CGPA>
-    </CardContainer>
+    <CardWrapper>
+      <CardImage img={image} />
+      <CardText>{frontHeading}</CardText>
+      <CardHoverContent>
+        <Typography
+          variant="h5"
+          sx={{
+            color: colour_orange,
+            fontWeight: 600,
+            textAlign: "center",
+            mb: 1,
+            fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1.5rem" }
+          }}
+        >
+          {institute}
+        </Typography>
+
+        <Typography
+          variant="h6"
+          sx={{
+            // color: colour_orange,
+            fontWeight: 400,
+            textAlign: "center",
+            mb: 0.5,
+            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.3rem" }
+          }}
+        >
+          {university}
+        </Typography>
+
+        <Typography
+          variant="h6"
+          sx={{
+            // color: colour_orange,
+            fontWeight: 400,
+            textAlign: "center",
+            mb: 0.5,
+            fontSize: { xs: "0.95rem", sm: "1.1rem", md: "1.2rem" }
+          }}
+        >
+          {year}
+        </Typography>
+
+        <Typography
+          variant="h6"
+          sx={{
+            // color: colour_orange,
+            fontWeight: 400,
+            textAlign: "center",
+            fontSize: { xs: "0.95rem", sm: "1.1rem", md: "1.2rem" }
+          }}
+        >
+          {marks}
+        </Typography>
+      </CardHoverContent>
+    </CardWrapper>
   );
 };
 

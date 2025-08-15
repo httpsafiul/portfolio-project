@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { colour_primary } from '../../../../Common/colours';
+import { colour_green, colour_orange,  } from '../../../../Common/colours';
 import { Card } from '@mui/material';
 
 export const CardContainer = styled(motion(Card))`
-  width: 300px;
-  padding: 20px;
+  width: 360px;
+  padding: 15px;
   background-color: #fff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 16px;
@@ -18,22 +18,22 @@ export const CardContainer = styled(motion(Card))`
 export const SectionTitle = styled.h3`
   font-size: 1.2rem;
   font-weight: bold;
-  color: ${colour_primary};
+  color: ${colour_green};
   margin: 0;
   text-align: center;
 `;
 
 export const DividerLine = styled.div`
-  width: 180px;
+  width: 200px;
   height: 1px;
-  background-color: ${colour_primary};
+  background-color: ${colour_orange};
   border-radius: 2px;
 `;
 
 export const IconsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 20px;
   justify-items: center;
 
   img {

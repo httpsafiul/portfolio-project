@@ -1,107 +1,87 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { colour_primary, colour_background } from '../../../../Common/colours';
+import { colour_orange, colour_white } from '../../../../Common/colours';
 import { Button } from '@mui/material';
+import bg from '../../../../assets/Hero/bg.png';
 
 export const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 4rem 8rem;
-  min-height: 70vh;
+  /* align-items: flex-end; */
+  /* padding: 4rem 8rem; */
+  height: calc(100vh - 80px);
   font-family: 'Poppins', sans-serif;
-  background-color: ${colour_background};
+  background-image: url(${bg});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
     padding: 2rem;
+    text-align: center;
   }
 `;
 
 export const TextSection = styled.div`
   flex: 3;
+  color: ${colour_white};
+  /* padding-top: 4rem; */
+  padding-left: 8rem;
+  /* padding-bottom: 4rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 `;
 
-export const MotionIntroText = styled(motion.h2)`
-  font-size: 2.5rem;
+export const MotionIntroText = styled.h2`
+  font-size: 2rem;
   font-weight: 700;
-  color: ${colour_primary};
   margin: 0;
   text-transform: uppercase;
+  color: ${colour_white};
   @media (max-width: 768px) {
     font-size: 1.7rem;
   }
 `;
 
-export const MotionNameText = styled(motion.h1)`
-  font-size: 4.5rem;
+export const MotionNameText = styled.h1`
+  font-size: 4rem;
   font-weight: 900;
-  /* color: #111; */
   text-transform: uppercase;
+  color: ${colour_white};
+  margin-top: 0.5rem;
   @media (max-width: 768px) {
     font-size: 3.2rem;
   }
 `;
 
-export const HighlightedText = styled.span`
-  color: ${colour_primary};;
-  font-weight: 900;
-`;
-
-export const SubtitleText = styled(motion.h3)`
+export const SubtitleText = styled.h3`
   font-size: 1.8rem;
   font-weight: 500;
-  color: #444;
+  color: ${colour_orange};
   margin: 1rem 0;
-  font-family: 'Poppins', sans-serif;
   @media (max-width: 768px) {
     font-size: 1.4rem;
   }
 `;
 
 export const ImageSection = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
-  justify-content: right;
-  position: relative;
-  padding-top: 0px;
-  @media (max-width: 768px) {
-    padding-top: 50px;
-  }
+  justify-content: center;
+  align-items: flex-end;
+  /* padding: 0rem 8rem; */
 `;
 
-export const ImageWrapper = styled(motion.div)`
-  position: relative;
-  width: 325px;
-  height: 325px;
+export const StaticProfileImage = styled.img`
+  width:450px;
+  height: auto;
+  object-fit: contain;
   @media (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 250px;
   }
-`;
-
-export const CircleBackdrop = styled(motion.div)`
-  position: absolute;
-  width: 325px;
-  height: 325px;
-  border-radius: 50%;
-  background-color: ${colour_primary};
-  z-index: 0;
-  @media (max-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
-`;
-
-export const AnimatedProfileImage = styled(motion.img)`
-  width: 325px;
-  height: 325px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #999;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1;
 `;
 
 export const ButtonContainer = styled.div`
@@ -115,4 +95,5 @@ export const StyledButton = styled(Button)`
   font-weight: 600;
   text-transform: none;
   border-radius: 8px;
+  font-family: "Libre Caslon Text", serif;
 `;
