@@ -85,7 +85,7 @@ export const ImageSection = styled.div`
 `;
 
 export const StaticProfileImage = styled.img`
-  width:450px;
+  width: 470px;
   height: auto;
   object-fit: contain;
     @media (max-width: 1024px) {
