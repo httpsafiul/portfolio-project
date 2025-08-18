@@ -28,7 +28,7 @@ export const CardWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 220px;
+    width: 240px;
   }
 `;
 
@@ -109,7 +109,7 @@ export const CardHoverContent = styled.div`
 
   @media (max-width: 768px) {
     p {
-      font-size: 0.5rem;
+      font-size: 0.6rem;
     }
   }
 `;
