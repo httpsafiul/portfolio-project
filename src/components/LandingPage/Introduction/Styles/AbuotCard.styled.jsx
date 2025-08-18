@@ -100,11 +100,16 @@ export const CardHoverContent = styled.div`
     color: ${colour_orange};
     padding-bottom: 10px;
     font-size: 1.1rem;
+    
+
+  @media (max-width: 720px) {
+    font-size: 0.8rem;
+  }
 }
 
   @media (max-width: 768px) {
     p {
-      font-size: 0.6rem;
+      font-size: 0.5rem;
     }
   }
 `;

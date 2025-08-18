@@ -10,7 +10,7 @@ export const LifeContainer = styled.div`
   justify-content: center;
   align-items: center;
     @media (max-width: 720px) {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
   }
 `;
 

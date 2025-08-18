@@ -26,7 +26,7 @@ export const GalleryGrid = styled.div`
   }
 
   @media (max-width: 600px) {
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 `;
 
