@@ -9,6 +9,9 @@ export const LifeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+    @media (max-width: 720px) {
+    padding: 3rem 1.5rem;
+  }
 `;
 
 export const LifeHeading = styled.h1`
@@ -16,6 +19,9 @@ export const LifeHeading = styled.h1`
   font-weight: 700;
   color: ${colour_green};
   margin-bottom: 1rem;
+    @media (max-width: 720px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const LifeIntro = styled.p`
@@ -25,13 +31,16 @@ export const LifeIntro = styled.p`
   max-width: 800px;
   margin-bottom: 2rem;
   text-align: center;
+  @media (max-width: 720px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const SectionWrapper = styled.div`
   margin-bottom: 2rem;
 
   .MuiButton-root {
-    border-radius: 12px;
+    border-radius: 3px;
     text-transform: none;
     font-weight: 600;
     padding: 0.5rem 1.5rem;
