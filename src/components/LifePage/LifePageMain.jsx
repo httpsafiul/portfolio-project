@@ -9,6 +9,7 @@ import {
 } from "./Styles/LifePage.styled";
 import Navbar from "../Navbar/Navbar";
 import Friends from "./Friends";
+import LoML from "./LoML";
 
 const LifePageMain = () => {
   const [activeSection, setActiveSection] = useState("family");
@@ -20,7 +21,7 @@ const LifePageMain = () => {
       case "friends":
         return <Friends />;
       case "loml":
-        return <Family />;
+        return <LoML />;
       default:
         return <Family />;
     }
