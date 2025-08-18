@@ -6,12 +6,14 @@ export const GalleryContainer = styled.div`
   margin: 0 auto;
   padding: 2rem 0;
 
-  @media (max-width: 1024px) {
-    width: 80%;
+  @media (max-width: 1350px) {
+    width: 90%;
+    padding: 1rem 0;
   }
 
   @media (max-width: 600px) {
-    width: 95%;
+    width: 100%;
+    padding: 0rem 0;
   }
 `;
 
@@ -19,6 +21,13 @@ export const GalleryGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  @media (max-width: 1350px) {
+    gap: 0.8rem;
+  }
+
+  @media (max-width: 600px) {
+    gap: 0.5rem;
+  }
 `;
 
 export const GalleryImage = styled(motion.img)`
