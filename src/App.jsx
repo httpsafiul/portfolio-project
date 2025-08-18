@@ -7,6 +7,7 @@ import ProjectsMain from './components/ProjectsPage/ProjectsMain';
 import AchievementsMain from './components/AchievementsPage/AchievementsMain';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ComingSoon from './components/ComingSoon';
+import LifePageMain from './components/LifePage/LifePageMain';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/home" element={<LandingPageMain/>} />
           <Route path="achievements" element={<AchievementsMain/>} />
           <Route path="projects" element={<ProjectsMain/>} />
-          <Route path="life" element={<ComingSoon/>} />
+          <Route path="life" element={<LifePageMain/>} />
           <Route path="thoughts" element={<ComingSoon/>} />
           <Route path="contact" element={<ComingSoon/>} />
         </Routes>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colour_primary } from '../../../Common/colours';
+import { colour_green, colour_primary } from '../../../Common/colours';
 
 export const CardContainer = styled.div`
   display: flex;
@@ -35,11 +35,10 @@ export const TrophyIcon = styled.div`
 `;
 
 export const Title = styled.h3`
-  color: var(--colour_primary);
   font-weight: bold;
   text-align: center;
   font-size: 1.5rem;
-  color: ${colour_primary};
+  color: ${colour_green};
 `;
 
 export const Description = styled.p`

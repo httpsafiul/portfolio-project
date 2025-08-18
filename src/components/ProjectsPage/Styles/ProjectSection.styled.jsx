@@ -1,10 +1,10 @@
 
 import styled from 'styled-components';
-import { colour_primary } from '../../../Common/colours';
+import { colour_green, colour_primary } from '../../../Common/colours';
 
 export const ProjectCard = styled.div`
   border: 2px solid ${({ theme }) => theme.colour_primary};
-  border-radius: 15px;
+  border-radius: 5px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -13,10 +13,10 @@ export const ProjectCard = styled.div`
   background: #fff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  &:hover {
+  /* &:hover {
     transform: translateY(-5px);
     box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-  }
+  } */
 `;
 
 export const ProjectImage = styled.img`
@@ -39,27 +39,27 @@ export const ProjectContent = styled.div`
 `;
 
 export const ProjectTitle = styled.h3`
-  color: ${({ theme }) => theme.colour_primary};
+  color: ${colour_green};
   margin: 0;
 `;
 
 export const ProjectDescription = styled.p`
-  color: #444;
+  /* color: #444; */
   font-size: 0.95rem;
 `;
 
 export const ProjectHighlights = styled.p`
-  color: #555;
+  /* color: #555; */
   font-size: 0.9rem;
 `;
 
 export const ProjectRecognition = styled.p`
-  color: #555;
+  /* color: #555; */
   font-size: 0.9rem;
 `;
 
 export const ProjectTech = styled.p`
-  color: #222;
+  /* color: #222; */
   font-size: 0.9rem;
   font-weight: 500;
 `;

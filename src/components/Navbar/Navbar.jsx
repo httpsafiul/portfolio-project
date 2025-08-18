@@ -16,10 +16,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
-import { colour_background, colour_green, colour_orange, colour_primary, colour_white } from '../../Common/colours';
+import { colour_green, colour_orange, colour_white } from '../../Common/colours';
 
 const drawerWidth = 240;
-const navItems = ["Home", "Achievements", "Projects", "Life", "Thoughts", "Contact"];
+const navItems = ["Home", "Achievements", "Projects", "Life", "Contact"];
 
 function Navbar({ active }) {
   const [mobileOpen, setMobileOpen] = useState(false);

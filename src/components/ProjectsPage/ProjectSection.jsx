@@ -23,9 +23,9 @@ const ProjectSection = ({ project }) => {
         <ProjectHighlights><strong>Highlights:</strong> {project.highlights}</ProjectHighlights>
         <ProjectRecognition><strong>Recognition:</strong> {project.recognition}</ProjectRecognition>
         <ProjectTech><strong>Tech Used:</strong> {project.tech}</ProjectTech>
-        <LearnMoreButton href={project.link}>
+        {/* <LearnMoreButton href={project.link}>
           Learn More <ArrowForwardIcon />
-        </LearnMoreButton>
+        </LearnMoreButton> */}
       </ProjectContent>
     </ProjectCard>
   );
