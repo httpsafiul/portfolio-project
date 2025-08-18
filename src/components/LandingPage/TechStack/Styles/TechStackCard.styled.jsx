@@ -23,7 +23,7 @@ export const CardContainer = styled(motion(Card))`
   }
 
   @media (max-width: 480px) {
-    width: 220px;
+    width: 240px;
   }
 `;
 

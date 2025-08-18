@@ -28,7 +28,7 @@ export const CardWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 220px;
+    width: 240px;
   }
 `;
 
