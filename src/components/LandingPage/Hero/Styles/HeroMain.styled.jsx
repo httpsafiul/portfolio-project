@@ -15,7 +15,7 @@ export const HeroContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
-  @media (max-width: 768px) {
+  @media (max-width: 805px) {
     flex-direction: column;
     align-items: center;
     /* padding: 2rem; */
@@ -37,7 +37,7 @@ export const TextSection = styled.div`
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-  @media (max-width: 768px) {
+  @media (max-width: 805px) {
     padding: 1rem;
   }
    @media (min-height: 800px) {
@@ -87,26 +87,26 @@ export const ImageSection = styled.div`
   justify-content: center;
   align-items: flex-end;
   @media (max-width: 1570px) {
-    margin-right: 30px;
+    margin-right: 10px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 805px) {
     /* padding-top: 1rem; */
     margin-left: 40px;
   }
    @media (min-height: 800px) {
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
   }
 `;
 
 export const StaticProfileImage = styled.img`
-  width: 520px;
+  width: 650px;
   height: auto;
   object-fit: contain;
     @media (max-width: 1024px) {
-    width: 420px;
+    width: 520px;
   }
-  @media (max-width: 768px) {
-    width: 250px;
+  @media (max-width: 845px) {
+    width: 380px;
   }
 `;
 
@@ -115,7 +115,7 @@ export const ButtonContainer = styled.div`
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-  @media (max-width: 768px) {
+  @media (max-width: 805px) {
     justify-content: center;
   }
 `;
@@ -135,7 +135,7 @@ export const SocialIconsContainer = styled.div`
   gap: 1rem;
   margin-top: 1.5rem;
   flex-wrap: wrap;
-  @media (max-width: 768px) {
+  @media (max-width: 805px) {
     justify-content: center;
   }
 `;
