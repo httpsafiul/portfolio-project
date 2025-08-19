@@ -18,13 +18,18 @@ emailjs.init({
     },
 });
 
-export default function sendEmail(name, message, email) {
+export default function sendEmail(name, message, email, setSending, setFeedback) {
+    setSending(true);
     emailjs.send('service_pe4myjj', 'template_li0jmtl', {name, message, email}).then(
         (response) => {
             console.log('SUCCESS!', response.status, response.text);
+            setSending(false);
+            setFeedback(1)
         },
         (error) => {
             console.log('FAILED...', error);
+            setSending(fasle);
+            setFeedback(2)
         },
     );
 }
