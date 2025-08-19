@@ -108,6 +108,9 @@ export const StaticProfileImage = styled.img`
   @media (max-width: 845px) {
     width: 380px;
   }
+  @media (max-width: 435px) {
+    width: 280px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
