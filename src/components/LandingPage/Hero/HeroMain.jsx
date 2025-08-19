@@ -10,13 +10,16 @@ import {
   ButtonContainer,
   StyledButton,
   SocialIconsContainer,
-  IconButton
+  IconButton,
+  LocationRow,
+  LocationText
 } from './Styles/HeroMain.styled';
 
-import { LinkedIn, GitHub, Instagram } from '@mui/icons-material';
+import { LinkedIn, GitHub, Instagram, LocationOn } from '@mui/icons-material';
 import XIcon from '@mui/icons-material/X';
-import { colour_green, colour_orange, colour_white } from '../../../Common/colours'; 
+import { colour_green, colour_orange, colour_white } from '../../../Common/colours';
 import safi from "../../../assets/Hero/safi.png";
+import { red } from '@mui/material/colors';
 
 const HeroMain = () => {
   return (
@@ -25,6 +28,10 @@ const HeroMain = () => {
         <MotionIntroText>THIS IS</MotionIntroText>
         <MotionNameText>MD SAFIUL HAQUE</MotionNameText>
         <SubtitleText>Software Developer</SubtitleText>
+        <LocationRow>
+          <LocationOn  style={{ fontSize: "1.8rem", color: colour_orange }} />
+          <LocationText>Kolkata, India</LocationText>
+        </LocationRow>
 
         {/* Buttons */}
         <ButtonContainer>
