@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     CardContainer,
     LeftSection,
@@ -16,7 +16,7 @@ import {
     GitHub,
     Instagram,
     Twitter,
-    ArrowOutward,
+    ContentCopy, // ✅ new icon
     Send,
 } from "@mui/icons-material";
 
@@ -25,10 +25,31 @@ import {
     Button,
     TextField,
     Typography,
+    IconButton,
+    Snackbar,
 } from "@mui/material";
 import { colour_green, colour_orange, colour_white } from "../../Common/colours";
+import sendEmail from "../../Conf/Emailjs.conf";
 
 const ContactCard = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [copied, setCopied] = useState(false);
+
+    const handleSend = () => {
+        if (!name || !email || !message) {
+            alert("Please fill in all fields before sending.");
+            return;
+        }
+        sendEmail(name, message, email);
+    };
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText("mdsafiulhaque4@gmail.com");
+        setCopied(true);
+    };
+
     return (
         <CardContainer>
             {/* LEFT SECTION */}
@@ -37,13 +58,20 @@ const ContactCard = () => {
                     <SocialHeading>
                         <Email fontSize="small" /> Email Me
                     </SocialHeading>
-                    <SocialLink
-                        href="mailto:mdsafiulhaque4@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Typography variant="body2">mdsafiulhaque4@gmail.com</Typography>
-                        <ArrowOutward fontSize="small" />
+                    <SocialLink as="div" onClick={handleCopy}>
+                        <Typography
+                            variant="body2"
+                            sx={{ cursor: "pointer" }}
+                        >
+                            mdsafiulhaque4@gmail.com
+                        </Typography>
+                        <IconButton
+                            size="small"
+                            onClick={handleCopy}
+                            sx={{ color: colour_white }}
+                        >
+                            <ContentCopy fontSize="small" />
+                        </IconButton>
                     </SocialLink>
                 </SocialBox>
 
@@ -57,7 +85,6 @@ const ContactCard = () => {
                         rel="noopener noreferrer"
                     >
                         <Typography variant="body2">linkedin.com/in/safiulhaque</Typography>
-                        <ArrowOutward fontSize="small" />
                     </SocialLink>
                 </SocialBox>
 
@@ -71,7 +98,6 @@ const ContactCard = () => {
                         rel="noopener noreferrer"
                     >
                         <Typography variant="body2">github.com/httpsafiul</Typography>
-                        <ArrowOutward fontSize="small" />
                     </SocialLink>
                 </SocialBox>
 
@@ -85,7 +111,6 @@ const ContactCard = () => {
                         rel="noopener noreferrer"
                     >
                         <Typography variant="body2">instagram.com/yourusername</Typography>
-                        <ArrowOutward fontSize="small" />
                     </SocialLink>
                 </SocialBox>
 
@@ -99,7 +124,6 @@ const ContactCard = () => {
                         rel="noopener noreferrer"
                     >
                         <Typography variant="body2">x.com/yourusername</Typography>
-                        <ArrowOutward fontSize="small" />
                     </SocialLink>
                 </SocialBox>
             </LeftSection>
@@ -115,11 +139,15 @@ const ContactCard = () => {
                             label="Enter your name"
                             variant="outlined"
                             fullWidth
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                         />
                         <TextField
                             label="Enter your email"
                             variant="outlined"
                             fullWidth
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </InputRow>
 
@@ -129,6 +157,8 @@ const ContactCard = () => {
                         multiline
                         rows={6}
                         fullWidth
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                     />
 
                     <Box textAlign="right">
@@ -137,10 +167,11 @@ const ContactCard = () => {
                             sx={{
                                 backgroundColor: colour_green,
                                 color: colour_white,
-                                '&:hover': { backgroundColor: colour_orange, color: colour_green },
+                                "&:hover": { backgroundColor: colour_orange, color: colour_green },
                                 fontWeight: "bold",
                                 fontFamily: "Libre Caslon Text",
                             }}
+                            onClick={handleSend}
                             startIcon={<Send />}
                         >
                             Send
@@ -148,6 +179,14 @@ const ContactCard = () => {
                     </Box>
                 </FormContainer>
             </RightSection>
+
+            {/* Snackbar for copy success */}
+            <Snackbar
+                open={copied}
+                autoHideDuration={2000}
+                onClose={() => setCopied(false)}
+                message="Email copied to clipboard!"
+            />
         </CardContainer>
     );
 };
