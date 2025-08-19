@@ -9,16 +9,41 @@ import {
   NavButton
 } from './Styles/IntroductionMain.styled';
 import AboutCard from './AbuotCard';
+import java from '../../../assets/IntroSection/java.jpg';
+import web from '../../../assets/IntroSection/web.jpg';
+import app from '../../../assets/IntroSection/app.jpg';
 import coding from '../../../assets/IntroSection/coding.jpg';
 import graduation from '../../../assets/IntroSection/graduation.jpg';
 import hackathon from '../../../assets/IntroSection/hackathon.jpg';
 import harry from '../../../assets/IntroSection/harry.jpeg';
 import office from '../../../assets/IntroSection/office.jpg';
 import taylor from '../../../assets/IntroSection/taylor2.webp';
+
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const cardsData = [
+  {
+    frontHeading: "Java Developer",
+    image: java,
+    title: "Building scalable and robust applications",
+    hoverText:
+      "With strong expertise in Java, I enjoy creating efficient, object-oriented, and reliable software solutions. From backend systems to enterprise applications, I focus on writing clean, maintainable, and optimized code."
+  },
+  {
+    frontHeading: "Web Designer",
+    image: web,
+    title: "Crafting beautiful and user-friendly interfaces",
+    hoverText:
+      "I design modern, responsive, and intuitive web experiences. By blending aesthetics with usability, I ensure websites not only look great but also provide seamless navigation and engagement."
+  },
+  {
+    frontHeading: "App Developer",
+    image: app,
+    title: "Creating impactful Android applications",
+    hoverText:
+      "I develop Android apps that are functional, user-friendly, and efficient. With a focus on user experience and performance, I love turning ideas into mobile applications that solve real-world problems."
+  },
   {
     frontHeading: "Mixing Coffee with Code",
     image: coding,
@@ -62,6 +87,7 @@ const cardsData = [
       "‘The Office’ is my go-to comfort show. I love its quirky humor, awkward moments, and heartfelt friendships. It's a reminder that even in the most ordinary places, extraordinary stories — and laughs — can be found."
   }
 ];
+
 
 const IntroductionMain = () => {
   const [startIndex, setStartIndex] = useState(0);
