@@ -145,10 +145,27 @@ export const SocialIconsContainer = styled.div`
 
 export const IconButton = styled.a`
   color: ${colour_white};
-  font-size: 2rem;
+  font-size: 1.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
   &:hover {
     color: ${colour_orange};
     transform: scale(1.2);
   }
+`;
+
+export const LocationRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+
+  @media (max-width: 805px) {
+    justify-content: center;
+  }
+`;
+
+export const LocationText = styled.span`
+  font-size: 1.3rem;
+  color: ${colour_white};
+  font-weight: 400;
 `;
