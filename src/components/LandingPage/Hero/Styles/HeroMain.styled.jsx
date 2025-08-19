@@ -109,7 +109,7 @@ export const StaticProfileImage = styled.img`
     width: 380px;
   }
   @media (max-width: 435px) {
-    width: 280px;
+    width: 300px;
   }
 `;
 
