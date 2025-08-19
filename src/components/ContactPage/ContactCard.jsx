@@ -15,10 +15,10 @@ import {
     LinkedIn,
     GitHub,
     Instagram,
-    Twitter,
     ContentCopy, // ✅ new icon
     Send,
 } from "@mui/icons-material";
+import XIcon from '@mui/icons-material/X';
 
 import {
     Box,
@@ -27,6 +27,7 @@ import {
     Typography,
     IconButton,
     Snackbar,
+    Alert,
 } from "@mui/material";
 import { colour_green, colour_orange, colour_white } from "../../Common/colours";
 import sendEmail from "../../Conf/Emailjs.conf";
@@ -36,13 +37,15 @@ const ContactCard = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [copied, setCopied] = useState(false);
+    const [sending, setSending] = useState(false);
+    const [feedback, setFeedback] = useState(0);
 
     const handleSend = () => {
         if (!name || !email || !message) {
             alert("Please fill in all fields before sending.");
             return;
         }
-        sendEmail(name, message, email);
+        sendEmail(name, message, email, setSending, setFeedback);
     };
 
     const handleCopy = () => {
@@ -106,24 +109,24 @@ const ContactCard = () => {
                         <Instagram fontSize="small" /> Follow on Instagram
                     </SocialHeading>
                     <SocialLink
-                        href="https://instagram.com/yourusername"
+                        href="https://www.instagram.com/httpsafiul/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography variant="body2">instagram.com/yourusername</Typography>
+                        <Typography variant="body2">https://www.instagram.com/httpsafiul</Typography>
                     </SocialLink>
                 </SocialBox>
 
                 <SocialBox>
                     <SocialHeading>
-                        <Twitter fontSize="small" /> Connect on X
+                        <XIcon fontSize="small" /> Connect on X
                     </SocialHeading>
                     <SocialLink
-                        href="https://x.com/yourusername"
+                        href="https://x.com/23Safiul"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography variant="body2">x.com/yourusername</Typography>
+                        <Typography variant="body2">https://x.com/23Safiul</Typography>
                     </SocialLink>
                 </SocialBox>
             </LeftSection>
@@ -131,7 +134,7 @@ const ContactCard = () => {
             {/* RIGHT SECTION */}
             <RightSection>
                 <Typography variant="h5" color={colour_green} gutterBottom>
-                    Get in touch with me
+                    If you've come so far, please leave a message for me :)
                 </Typography>
                 <FormContainer>
                     <InputRow>
@@ -141,6 +144,7 @@ const ContactCard = () => {
                             fullWidth
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            required
                         />
                         <TextField
                             label="Enter your email"
@@ -148,6 +152,7 @@ const ContactCard = () => {
                             fullWidth
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            required
                         />
                     </InputRow>
 
@@ -159,25 +164,48 @@ const ContactCard = () => {
                         fullWidth
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
+                        required
                     />
 
                     <Box textAlign="right">
-                        <Button
-                            variant="contained"
-                            sx={{
-                                backgroundColor: colour_green,
-                                color: colour_white,
-                                "&:hover": { backgroundColor: colour_orange, color: colour_green },
-                                fontWeight: "bold",
-                                fontFamily: "Libre Caslon Text",
-                            }}
-                            onClick={handleSend}
-                            startIcon={<Send />}
-                        >
-                            Send
-                        </Button>
+                        {sending ?
+                            <Button loading variant="outlined" loadingPosition="start">
+                                Sending
+                            </Button>
+                            :
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    backgroundColor: colour_green,
+                                    color: colour_white,
+                                    "&:hover": { backgroundColor: colour_orange, color: colour_green },
+                                    fontWeight: "bold",
+                                    fontFamily: "Libre Caslon Text",
+                                }}
+                                onClick={handleSend}
+                                startIcon={<Send />}
+                            >
+                                Send
+                            </Button>
+                        }
                     </Box>
                 </FormContainer>
+                {feedback === 0 ? (
+                    <></>
+                ) : (
+                    <>
+                        {feedback === 1 ? (
+                            <Alert sx={{ marginTop: "20px" }} severity="success">
+                                Message sent successfully! Check your email for confirmation.
+                            </Alert>
+                        ) : (
+                            <Alert sx={{ marginTop: "20px" }} severity="error">
+                                This is an error Alert.
+                            </Alert>
+                        )}
+                    </>
+                )}
+
             </RightSection>
 
             {/* Snackbar for copy success */}
