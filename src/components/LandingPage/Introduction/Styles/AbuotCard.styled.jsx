@@ -38,7 +38,7 @@ export const CardImage = styled.div`
   background-image: url(${(props) => props.img});
   background-size: cover;
   background-position: center;
-  filter: brightness(0.6);
+  filter: brightness(0.5);
   transition: opacity 0.3s ease;
 
   ${CardWrapper}:hover & {
@@ -53,7 +53,7 @@ export const CardText = styled.div`
   align-items: center;
   justify-content: center;
   color: ${colour_orange};
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
   text-align: center;
   padding: 0.5rem;

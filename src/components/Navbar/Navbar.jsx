@@ -104,7 +104,7 @@ function Navbar({ active }) {
           elevation={0}
           sx={{
             backgroundColor: colour_green,
-            px: { xs: 3, sm: 16 },
+            px: { xs: 3, md: 16 },
             paddingTop: 0.8
           }}
         >

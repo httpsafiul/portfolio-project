@@ -8,10 +8,14 @@ import {
   SubtitleText,
   StaticProfileImage,
   ButtonContainer,
-  StyledButton
+  StyledButton,
+  SocialIconsContainer,
+  IconButton
 } from './Styles/HeroMain.styled';
 
-import { colour_green, colour_primary, colour_white } from '../../../Common/colours'; 
+import { LinkedIn, GitHub, Instagram } from '@mui/icons-material';
+import XIcon from '@mui/icons-material/X';
+import { colour_green, colour_orange, colour_white } from '../../../Common/colours'; 
 import safi from "../../../assets/Hero/safi.png";
 
 const HeroMain = () => {
@@ -29,7 +33,7 @@ const HeroMain = () => {
             sx={{
               backgroundColor: colour_white,
               color: colour_green,
-              '&:hover': { backgroundColor: colour_white },
+              '&:hover': { backgroundColor: colour_orange, color: colour_green },
               fontWeight: "bold",
               fontFamily: "Libre Caslon Text",
             }}
@@ -46,8 +50,9 @@ const HeroMain = () => {
               fontWeight: "bold",
               fontFamily: "Libre Caslon Text",
               '&:hover': {
-                backgroundColor: `${colour_white}10`,
-                borderColor: colour_white,
+                // backgroundColor: `${colour_white}`,
+                borderColor: colour_orange,
+                color: colour_orange
               },
             }}
             href="contact"
@@ -55,6 +60,22 @@ const HeroMain = () => {
             Contact
           </StyledButton>
         </ButtonContainer>
+
+        {/* Social Icons */}
+        <SocialIconsContainer>
+          <IconButton href="https://www.linkedin.com/in/safiulhaque/" target="_blank">
+            <LinkedIn fontSize="inherit" />
+          </IconButton>
+          <IconButton href="https://github.com/httpsafiul" target="_blank">
+            <GitHub fontSize="inherit" />
+          </IconButton>
+          <IconButton href="https://www.instagram.com/httpsafiul" target="_blank">
+            <Instagram fontSize="inherit" />
+          </IconButton>
+          <IconButton href="https://x.com/23Safiul" target="_blank">
+            <XIcon fontSize="inherit" />
+          </IconButton>
+        </SocialIconsContainer>
       </TextSection>
 
       <ImageSection>
