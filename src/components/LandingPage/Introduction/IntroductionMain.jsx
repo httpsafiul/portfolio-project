@@ -45,7 +45,7 @@ const cardsData = [
       "I develop Android apps that are functional, user-friendly, and efficient. With a focus on user experience and performance, I love turning ideas into mobile applications that solve real-world problems."
   },
   {
-    frontHeading: "Mixing Coffee with Code",
+    frontHeading: "Solving Problems, Powered by Coffee",
     image: coding,
     title: "Where logic meets creativity",
     hoverText:

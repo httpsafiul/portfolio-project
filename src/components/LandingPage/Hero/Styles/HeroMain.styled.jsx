@@ -22,6 +22,9 @@ export const HeroContainer = styled.div`
     text-align: center;
     height: auto;
   }
+  @media (min-height: 800px) {
+    height: auto;
+  }
 `;
 
 export const TextSection = styled.div`
@@ -37,10 +40,14 @@ export const TextSection = styled.div`
   @media (max-width: 768px) {
     padding: 1rem;
   }
+   @media (min-height: 800px) {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
 `;
 
 export const MotionIntroText = styled.h2`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -57,7 +64,7 @@ export const MotionNameText = styled.h1`
   color: ${colour_white};
   margin-top: 0.5rem;
     @media (max-width: 1024px) {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -79,17 +86,24 @@ export const ImageSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  @media (max-width: 1570px) {
+    margin-right: 30px;
+  }
   @media (max-width: 768px) {
+    /* padding-top: 1rem; */
+    margin-left: 40px;
+  }
+   @media (min-height: 800px) {
     padding-top: 1rem;
   }
 `;
 
 export const StaticProfileImage = styled.img`
-  width: 470px;
+  width: 520px;
   height: auto;
   object-fit: contain;
     @media (max-width: 1024px) {
-    width: 370px;
+    width: 420px;
   }
   @media (max-width: 768px) {
     width: 250px;
@@ -113,5 +127,25 @@ export const StyledButton = styled(Button)`
   font-family: "Libre Caslon Text", serif;
   @media (max-width: 768px) {
     font-weight: 400;
+  }
+`;
+
+export const SocialIconsContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+export const IconButton = styled.a`
+  color: ${colour_white};
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  &:hover {
+    color: ${colour_orange};
+    transform: scale(1.2);
   }
 `;
