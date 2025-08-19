@@ -19,9 +19,15 @@ import { LinkedIn, GitHub, Instagram, LocationOn } from '@mui/icons-material';
 import XIcon from '@mui/icons-material/X';
 import { colour_green, colour_orange, colour_white } from '../../../Common/colours';
 import safi from "../../../assets/Hero/safi.png";
-import { red } from '@mui/material/colors';
+import { useNavigate } from 'react-router-dom';
 
 const HeroMain = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <HeroContainer>
       <TextSection>
@@ -29,7 +35,7 @@ const HeroMain = () => {
         <MotionNameText>MD SAFIUL HAQUE</MotionNameText>
         <SubtitleText>Software Developer</SubtitleText>
         <LocationRow>
-          <LocationOn  style={{ fontSize: "1.8rem", color: colour_orange }} />
+          <LocationOn style={{ fontSize: "1.8rem", color: colour_orange }} />
           <LocationText>Kolkata, India</LocationText>
         </LocationRow>
 
@@ -57,12 +63,11 @@ const HeroMain = () => {
               fontWeight: "bold",
               fontFamily: "Libre Caslon Text",
               '&:hover': {
-                // backgroundColor: `${colour_white}`,
                 borderColor: colour_orange,
                 color: colour_orange
               },
             }}
-            href="contact"
+            onClick={handleContactClick} // 👈 Navigate instead of href
           >
             Contact
           </StyledButton>
