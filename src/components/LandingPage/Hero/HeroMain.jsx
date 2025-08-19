@@ -37,7 +37,7 @@ const HeroMain = () => {
               fontWeight: "bold",
               fontFamily: "Libre Caslon Text",
             }}
-            href="https://drive.google.com/file/d/1hYEk6YaGctYhFJFnrGH4o03fFk2k3aM-/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1ph7YV5Nf4f4rfqpj_RlHT7gbFpysRbkL/view?usp=sharing"
             target="_blank"
           >
             Download CV
