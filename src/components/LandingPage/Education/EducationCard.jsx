@@ -21,7 +21,7 @@ const EducationCard = ({ image, institute, university, year, marks, frontHeading
             fontWeight: 600,
             textAlign: "center",
             mb: 1,
-            fontSize: { xs: "0.9rem", sm: "1.3rem", md: "1.5rem" },
+            fontSize: { xs: "0.9rem", sm: "1.3rem", md: "1.3rem" },
             fontFamily: "Libre Caslon Text",
           }}
         >
@@ -34,7 +34,7 @@ const EducationCard = ({ image, institute, university, year, marks, frontHeading
             fontWeight: 400,
             textAlign: "center",
             mb: 0.5,
-            fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" },
+            fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.1rem" },
             fontFamily: "Libre Caslon Text",
           }}
         >
@@ -47,7 +47,7 @@ const EducationCard = ({ image, institute, university, year, marks, frontHeading
             fontWeight: 400,
             textAlign: "center",
             mb: 0.5,
-            fontSize: { xs: "0.75rem", sm: "1.1rem", md: "1.2rem" },
+            fontSize: { xs: "0.75rem", sm: "1.1rem", md: "1.0rem" },
             fontFamily: "Libre Caslon Text",
           }}
         >
@@ -59,7 +59,7 @@ const EducationCard = ({ image, institute, university, year, marks, frontHeading
           sx={{
             fontWeight: 400,
             textAlign: "center",
-            fontSize: { xs: "0.75rem", sm: "1.1rem", md: "1.2rem" },
+            fontSize: { xs: "0.75rem", sm: "1.1rem", md: "1.0rem" },
             fontFamily: "Libre Caslon Text",
           }}
         >
