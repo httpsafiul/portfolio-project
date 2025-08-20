@@ -8,6 +8,7 @@ import {
     SocialLink,
     FormContainer,
     InputRow,
+    Intro,
 } from "./Styles/ContactCard.styled";
 
 import {
@@ -64,7 +65,7 @@ const ContactCard = () => {
                     <SocialLink as="div" onClick={handleCopy}>
                         <Typography
                             variant="body2"
-                            sx={{ cursor: "pointer" }}
+                            sx={{ cursor: "pointer", fontFamily: "Libre Caslon Text", }}
                         >
                             mdsafiulhaque4@gmail.com
                         </Typography>
@@ -87,7 +88,7 @@ const ContactCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography variant="body2">linkedin.com/in/safiulhaque</Typography>
+                        <Typography sx={{fontFamily: "Libre Caslon Text",}} variant="body2">linkedin.com/in/safiulhaque</Typography>
                     </SocialLink>
                 </SocialBox>
 
@@ -100,7 +101,7 @@ const ContactCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography variant="body2">github.com/httpsafiul</Typography>
+                        <Typography sx={{fontFamily: "Libre Caslon Text",}} variant="body2">github.com/httpsafiul</Typography>
                     </SocialLink>
                 </SocialBox>
 
@@ -113,7 +114,7 @@ const ContactCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography variant="body2">https://www.instagram.com/httpsafiul</Typography>
+                        <Typography sx={{fontFamily: "Libre Caslon Text",}} variant="body2">instagram.com/httpsafiul</Typography>
                     </SocialLink>
                 </SocialBox>
 
@@ -126,16 +127,18 @@ const ContactCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography variant="body2">https://x.com/23Safiul</Typography>
+                        <Typography sx={{fontFamily: "Libre Caslon Text",}} variant="body2">x.com/23Safiul</Typography>
                     </SocialLink>
                 </SocialBox>
             </LeftSection>
 
             {/* RIGHT SECTION */}
             <RightSection>
-                <Typography variant="h5" color={colour_green} gutterBottom>
-                    If you've come so far, please leave a message for me :)
-                </Typography>
+            <div style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <Intro>
+                    If you've come this far, please leave a message for me :)
+                </Intro>
+</div>
                 <FormContainer>
                     <InputRow>
                         <TextField
@@ -145,6 +148,7 @@ const ContactCard = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
+                            
                         />
                         <TextField
                             label="Enter your email"
@@ -200,7 +204,7 @@ const ContactCard = () => {
                             </Alert>
                         ) : (
                             <Alert sx={{ marginTop: "20px" }} severity="error">
-                                This is an error Alert.
+                                Oops! Something went wrong.
                             </Alert>
                         )}
                     </>

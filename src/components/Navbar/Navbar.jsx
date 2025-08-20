@@ -52,41 +52,45 @@ function Navbar({ active }) {
   };
 
   const drawer = (
-  <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-    <Typography
-      variant="h6"
-      sx={{
-        my: 2,
-        fontWeight: 700,
-        fontSize: '1.5rem',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}
-    >
-      <span style={{ color: colour_green }}>SAFIUL</span>
-    </Typography>
-    <Divider />
-    <List>
-      {[...navItems].map((item) => (
-        <ListItem key={item} disablePadding>
-          <ListItemButton
-            sx={{
-              textAlign: 'center',
-              color: String(active || '').toLowerCase() === item.toLowerCase()
-                ? colour_orange
-                : '#000'
-            }}
-            onClick={() => handleNavClick(item)}
-          >
-            <ListItemText primary={item} />
-          </ListItemButton>
-        </ListItem>
-      ))}
-    </List>
-  </Box>
-);
-
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography
+        variant="h6"
+        sx={{
+          my: 2,
+          fontWeight: 700,
+          fontSize: '1.5rem',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontFamily: "Libre Caslon Text",
+          cursor: "pointer"
+        }}
+        onClick={() => navigate("/home")}
+      >
+        <span style={{ color: colour_green }}>SAFIUL</span>
+      </Typography>
+      <Divider />
+      <List>
+        {[...navItems].map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton
+              sx={{
+                textAlign: 'center',
+                color: String(active || '').toLowerCase() === item.toLowerCase()
+                  ? colour_orange
+                  : '#000'
+              }}
+              onClick={() => handleNavClick(item)}
+            >
+              <ListItemText>
+                <Typography sx={{ fontFamily: "Libre Caslon Text" }}>{item}</Typography>
+              </ListItemText>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: colour_green, height: "80px" }}>
@@ -110,11 +114,14 @@ function Navbar({ active }) {
         >
           <Toolbar sx={{ justifyContent: 'space-between', width: '100%' }}>
             {/* Logo */}
-            <Box sx={{ width: { xs: '25%', sm: '10%' } }}>
+            <Box
+              sx={{ width: { xs: '25%', sm: '10%' }, cursor: "pointer" }}
+              onClick={() => navigate("/home")}
+            >
               <Typography
                 component="div"
                 variant="h6"
-                sx={{ fontWeight: 700, fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}
+                sx={{ fontWeight: 700, fontSize: '1.5rem', display: 'flex', alignItems: 'center', fontFamily: "Libre Caslon Text" }}
               >
                 <span style={{ color: colour_white }}>SAFIUL</span>
               </Typography>

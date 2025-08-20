@@ -113,3 +113,13 @@ export const InputRow = styled(Box)`
     flex-direction: column; /* ✅ stack fields */
   }
 `;
+
+export const Intro = styled.p`
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
+`;

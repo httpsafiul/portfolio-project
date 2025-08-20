@@ -76,7 +76,8 @@ const AchievementsCard = ({
                         fontWeight: "bold",
                         color: "var(--colour_primary)",
                         fontSize: "1.4rem", // increased size
-                        marginBottom: "0px"
+                        marginBottom: "0px",
+                        fontFamily: "Libre Caslon Text",
                     }}
                 >
                     {position}
@@ -92,7 +93,8 @@ const AchievementsCard = ({
                         color: "#888",
                         fontStyle: "italic",
                         marginBottom: "8px",
-                        fontSize: "1.2rem"
+                        fontSize: "1.2rem",
+                        fontFamily: "Libre Caslon Text",
                     }}
                 >
                     {date}
@@ -105,7 +107,8 @@ const AchievementsCard = ({
                             sx={{
                                 fontSize: "1.1rem",
                                 fontWeight: "bold",
-                                marginBottom: "4px"
+                                marginBottom: "4px",
+                                fontFamily: "Libre Caslon Text",
                             }}
                         >
                             My Team:
@@ -139,7 +142,7 @@ const AchievementsCard = ({
                                     </Link>
                                 </Stack>
                                 {index < team.length - 1 && (
-                                    <Typography variant="body2" sx={{ color: "#888" }}>|</Typography>
+                                    <Typography variant="body2" sx={{ color: "#888", fontFamily: "Libre Caslon Text", }}>|</Typography>
                                 )}
                             </React.Fragment>
                         ))}

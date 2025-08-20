@@ -25,6 +25,9 @@ export const HeroContainer = styled.div`
   @media (min-height: 800px) {
     height: auto;
   }
+  @media (max-height: 530px) {
+    height: auto;
+  }
 `;
 
 export const TextSection = styled.div`
