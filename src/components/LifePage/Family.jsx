@@ -8,7 +8,6 @@ import img2 from '../../assets/Life/Family/five.jpg';
 import img6 from '../../assets/Life/Family/six.jpg';
 
 import Gallery from "./Gallery";
-import { Typography } from "@mui/material";
 import styled from "styled-components";
 
 const Intro = styled.p`
