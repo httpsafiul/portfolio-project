@@ -14,12 +14,26 @@ import img11 from '../../assets/Life/Friends/img11.jpg';
 import img12 from '../../assets/Life/Friends/img12.jpg';
 
 import Gallery from "./Gallery";
+import styled from "styled-components";
+
+const Intro = styled.p`
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  font-style: italic;
+  text-align: center;
+  @media (max-width: 720px) {
+    font-size: 0.8rem;
+  }
+`;
 
 const Friends = () => {
   const lifeImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
 
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <Intro>Who are there for me.</Intro>
       <Gallery images={lifeImages} />
     </div>
   );

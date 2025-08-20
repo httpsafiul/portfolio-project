@@ -4,7 +4,7 @@ import { colour_green, colour_primary } from '../../../Common/colours';
 export const CardContainer = styled.div`
   display: flex;
   background: #fff;
-  border-radius: 16px;
+  border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   /* height: 450px;  */

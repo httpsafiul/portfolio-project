@@ -36,7 +36,8 @@ const LifePageMain = () => {
           Life is a journey filled with memories, bonds, and experiences that
           shape who we are. From family moments that ground us, to friends who
           make life brighter, and to that one special person who completes the
-          story — every connection holds a place in my heart.
+          story — every connection holds a place in my heart. Let me introduce
+          some of the people who make me who I am.
         </LifeIntro>
 
         <SectionWrapper>

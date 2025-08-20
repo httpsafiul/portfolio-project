@@ -68,7 +68,7 @@ function Navbar({ active }) {
     </Typography>
     <Divider />
     <List>
-      {[...navItems, 'Contact'].map((item) => (
+      {[...navItems].map((item) => (
         <ListItem key={item} disablePadding>
           <ListItemButton
             sx={{
