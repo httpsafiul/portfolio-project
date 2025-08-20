@@ -46,7 +46,7 @@ const ContactCard = () => {
             alert("Please fill in all fields before sending.");
             return;
         }
-        sendEmail(name, message, email, setSending, setFeedback);
+        sendEmail(name, message, email, setSending, setFeedback, setEmail, setName, setMessage);
     };
 
     const handleCopy = () => {
