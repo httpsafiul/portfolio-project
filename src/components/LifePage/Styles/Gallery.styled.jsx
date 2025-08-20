@@ -10,11 +10,6 @@ export const GalleryContainer = styled.div`
     width: 90%;
     padding: 1rem 0;
   }
-
-  @media (max-width: 600px) {
-    width: 100%;
-    padding: 0rem 0;
-  }
 `;
 
 export const GalleryGrid = styled.div`
