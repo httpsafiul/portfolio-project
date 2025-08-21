@@ -9,9 +9,9 @@ import {
   NavButton
 } from './Styles/IntroductionMain.styled';
 import AboutCard from './AbuotCard';
-import java from '../../../assets/IntroSection/java.jpg';
-import web from '../../../assets/IntroSection/web.jpg';
-import app from '../../../assets/IntroSection/app.jpg';
+import java from '../../../assets/IntroSection/java.avif';
+import web from '../../../assets/IntroSection/web.avif';
+import app from '../../../assets/IntroSection/app.avif';
 import coding from '../../../assets/IntroSection/coding.jpg';
 import graduation from '../../../assets/IntroSection/graduation.jpg';
 import hackathon from '../../../assets/IntroSection/hackathon.jpg';

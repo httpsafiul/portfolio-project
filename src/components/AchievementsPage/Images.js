@@ -1,11 +1,11 @@
-import RPHone from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHone.jpg';
-import RPHtwo from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHtwo.jpg';
-import RPHthree from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHthree.jpg';
-import RPHfour from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHfour.jpg';
-import RPHfive from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHfive.jpg';
-import RPHsix from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHsix.jpg';
-import RPHseven from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHseven.jpg';
-import RPHeight from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHeight.jpg';
+import RPHone from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHone.avif';
+import RPHtwo from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHtwo.avif';
+import RPHthree from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHthree.avif';
+import RPHfour from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHfour.avif';
+import RPHfive from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHfive.avif';
+import RPHsix from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHsix.avif';
+import RPHseven from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHseven.avif';
+import RPHeight from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHeight.avif';
 
 export const RajasthanPoliceHackathon = [
     {
@@ -43,10 +43,10 @@ export const RajasthanPoliceHackathon = [
 
 ]
 
-import SIHone from '../../assets/AchievementsSection/SIHInternal/SIHone.jpg';
-import SIHtwo from '../../assets/AchievementsSection/SIHInternal/SIHtwo.jpg';
-import SIHthree from '../../assets/AchievementsSection/SIHInternal/SIHthree.jpg';
-import SIHfour from '../../assets/AchievementsSection/SIHInternal/SIHfour.jpg';
+import SIHone from '../../assets/AchievementsSection/SIHInternal/SIHone.avif';
+import SIHtwo from '../../assets/AchievementsSection/SIHInternal/SIHtwo.avif';
+import SIHthree from '../../assets/AchievementsSection/SIHInternal/SIHthree.avif';
+import SIHfour from '../../assets/AchievementsSection/SIHInternal/SIHfour.avif';
 
 export const SIH = [
     {
@@ -69,11 +69,11 @@ export const SIH = [
 ]
 
 
-import InnovateOne from '../../assets/AchievementsSection/Innovate/Innovateone.jpg';
-import Innovatetwo from '../../assets/AchievementsSection/Innovate/Innovatetwo.jpg';
-import Innovatethree from '../../assets/AchievementsSection/Innovate/Innovatethree.jpg';
-import Innovatefour from '../../assets/AchievementsSection/Innovate/Innovatefour.jpg';
-import Innovatefive from '../../assets/AchievementsSection/Innovate/Innovatefive.jpg';
+import InnovateOne from '../../assets/AchievementsSection/Innovate/Innovateone.avif';
+import Innovatetwo from '../../assets/AchievementsSection/Innovate/Innovatetwo.avif';
+import Innovatethree from '../../assets/AchievementsSection/Innovate/Innovatethree.avif';
+import Innovatefour from '../../assets/AchievementsSection/Innovate/Innovatefour.avif';
+import Innovatefive from '../../assets/AchievementsSection/Innovate/Innovatefive.avif';
 
 export const Innovate = [
     {
@@ -99,13 +99,13 @@ export const Innovate = [
 
 ]
 
-import Hackfestone from '../../assets/AchievementsSection/Hackfest/Hackfestone.jpg';
-import Hackfesttwo from '../../assets/AchievementsSection/Hackfest/Hackfesttwo.jpg';
-import Hackfestthree from '../../assets/AchievementsSection/Hackfest/Hackfestthree.jpg';
-import Hackfestfour from '../../assets/AchievementsSection/Hackfest/Hackfestfour.jpg';
-import Hackfestfive from '../../assets/AchievementsSection/Hackfest/Hackfestfive.jpg';
-import Hackfestsix from '../../assets/AchievementsSection/Hackfest/Hackfestsix.jpg';
-import Hackfestseven from '../../assets/AchievementsSection/Hackfest/Hackfestseven.jpg';
+import Hackfestone from '../../assets/AchievementsSection/Hackfest/Hackfestone.avif';
+import Hackfesttwo from '../../assets/AchievementsSection/Hackfest/Hackfesttwo.avif';
+import Hackfestthree from '../../assets/AchievementsSection/Hackfest/Hackfestthree.avif';
+import Hackfestfour from '../../assets/AchievementsSection/Hackfest/Hackfestfour.avif';
+import Hackfestfive from '../../assets/AchievementsSection/Hackfest/Hackfestfive.avif';
+import Hackfestsix from '../../assets/AchievementsSection/Hackfest/Hackfestsix.avif';
+import Hackfestseven from '../../assets/AchievementsSection/Hackfest/Hackfestseven.avif';
 
 
 export const Hackfest = [
@@ -141,9 +141,9 @@ export const Hackfest = [
 ]
 
 
-import Webologyone from '../../assets/AchievementsSection/Webology/Webologyone.jpg';
-import Webologytwo from '../../assets/AchievementsSection/Webology/Webologytwo.jpg';
-import Webologythree from '../../assets/AchievementsSection/Webology/Webologythree.jpg';
+import Webologyone from '../../assets/AchievementsSection/Webology/Webologyone.avif';
+import Webologytwo from '../../assets/AchievementsSection/Webology/Webologytwo.avif';
+import Webologythree from '../../assets/AchievementsSection/Webology/Webologythree.avif';
 
 export const Webology = [
     {
