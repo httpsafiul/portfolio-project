@@ -56,6 +56,7 @@ export const RightSection = styled(Box)`
 
   @media (max-width: 830px) {
     padding: 0;
+    margin-top: 20px;
   }
 `;
 
@@ -79,13 +80,13 @@ export const ToggleButton1 = styled.button`
   background-color: ${(props) => (props.active ? colour_orange : colour_background)};
   color: ${(props) => (props.active ? colour_green : colour_green)};
   border: 2px solid ${colour_green};
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 20px 0px 0px;
 
   &:hover {
     opacity: 0.9;
   }
   @media (max-width: 830px) {
-    border-radius: 0px 0px 20px 0px;
+    border-radius: 0px 0px 0px 0px;
   }
   @media (max-width: 720px) {
     font-size: 0.8rem;
@@ -106,7 +107,7 @@ export const ToggleButton2 = styled.button`
   background-color: ${(props) => (props.active ? colour_orange : colour_background)};
   color: ${(props) => (props.active ? colour_green : colour_green)};
   border: 2px solid ${colour_green};
-  border-radius: 0px 0px 0px 20px;
+  border-radius: 0px 0px 0px 0px;
 
   &:hover {
     opacity: 0.9;
