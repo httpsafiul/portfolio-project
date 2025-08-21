@@ -56,7 +56,7 @@ export const RightSection = styled(Box)`
 
   @media (max-width: 830px) {
     padding: 0;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 `;
 
