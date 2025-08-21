@@ -18,7 +18,9 @@ import {
     GitHub,
     Instagram,
     ContentCopy,
+    Message,
 } from "@mui/icons-material";
+import Face6Icon from "@mui/icons-material/Face6";
 import XIcon from '@mui/icons-material/X';
 
 import {
@@ -32,7 +34,7 @@ import AnonymousMessageForm from "./AnonymousMessageForm";
 
 const ContactCard = () => {
     const [copied, setCopied] = useState(false);
-    const [activeForm, setActiveForm] = useState("anonymous"); // default active form
+    const [activeForm, setActiveForm] = useState("conversation"); // default active form
 
     const handleCopy = () => {
         navigator.clipboard.writeText("mdsafiulhaque4@gmail.com");
@@ -128,18 +130,18 @@ const ContactCard = () => {
             {/* RIGHT SECTION */}
             <RightSection>
                 <ToggleContainer>
-                    <ToggleButton1
-                        active={activeForm === "anonymous"}
-                        onClick={() => setActiveForm("anonymous")}
-                    >
-                        Anonymous Message
-                    </ToggleButton1>
                     <ToggleButton2
                         active={activeForm === "conversation"}
                         onClick={() => setActiveForm("conversation")}
                     >
-                        Start Conversation
+                        Start Conversation <Message fontSize="small" style={{ marginLeft: "8px" }} />
                     </ToggleButton2>
+                    <ToggleButton1
+                        active={activeForm === "anonymous"}
+                        onClick={() => setActiveForm("anonymous")}
+                    >
+                        Anonymous Message <Face6Icon fontSize="small" style={{ marginLeft: "8px" }} />
+                    </ToggleButton1>
                 </ToggleContainer>
                 <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
                     <Intro>
