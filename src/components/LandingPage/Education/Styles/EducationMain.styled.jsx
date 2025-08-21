@@ -28,6 +28,9 @@ export const HeadingWrapper = styled.div`
   width: 100%;
   margin-bottom: 3rem;
   margin-top: 1rem;
+  @media (max-width: 1200px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Heading = styled.h2`
@@ -37,7 +40,7 @@ export const Heading = styled.h2`
   white-space: nowrap;
   color: ${colour_green};
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     font-size: 1.4rem;
     margin-left: 20px;
   }

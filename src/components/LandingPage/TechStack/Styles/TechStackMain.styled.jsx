@@ -37,7 +37,7 @@ export const Heading = styled.h2`
   white-space: nowrap;
   color: ${colour_green};
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     font-size: 1.4rem;
     margin-left: 20px;
   }

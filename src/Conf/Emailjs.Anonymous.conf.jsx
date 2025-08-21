@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 
 emailjs.init({
-    publicKey: 'Qr0qdm0H9KxcqfGmf',
+    publicKey: 'stidvsqrPJHSgZZ89',
     // Do not allow headless browsers
     blockHeadless: true,
     blockList: {
@@ -18,22 +18,19 @@ emailjs.init({
     },
 });
 
-export default function sendEmail(name, message, email, setSending, setFeedback, setEmail, setName, setMessage) {
+export default function sendEmail(message, setSending, setFeedback, setMessage) {
     setSending(true);
-    emailjs.send('service_pe4myjj', 'template_li0jmtl', {name, message, email}).then(
+    emailjs.send('service_es0sgih', 'template_54qh6ih', {message}).then(
         (response) => {
             console.log('SUCCESS!', response.status, response.text);
             setSending(false);
             setFeedback(1);
             setMessage("");
-            setEmail("");
-            setName("");
         },
         (error) => {
             console.log('FAILED...', error);
             setSending(false);
-            setSending(false);
-            setFeedback(2);
+            setFeedback(2)
         },
     );
 }

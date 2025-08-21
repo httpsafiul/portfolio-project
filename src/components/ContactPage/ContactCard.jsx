@@ -6,8 +6,9 @@ import {
     SocialBox,
     SocialHeading,
     SocialLink,
-    FormContainer,
-    InputRow,
+    ToggleContainer,
+    ToggleButton1,
+    ToggleButton2,
     Intro,
 } from "./Styles/ContactCard.styled";
 
@@ -16,38 +17,22 @@ import {
     LinkedIn,
     GitHub,
     Instagram,
-    ContentCopy, // ✅ new icon
-    Send,
+    ContentCopy,
 } from "@mui/icons-material";
 import XIcon from '@mui/icons-material/X';
 
 import {
-    Box,
-    Button,
-    TextField,
     Typography,
     IconButton,
     Snackbar,
-    Alert,
 } from "@mui/material";
-import { colour_green, colour_orange, colour_white } from "../../Common/colours";
-import sendEmail from "../../Conf/Emailjs.conf";
+import { colour_white } from "../../Common/colours";
+import MessageForm from "./MessageForm";
+import AnonymousMessageForm from "./AnonymousMessageForm";
 
 const ContactCard = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
     const [copied, setCopied] = useState(false);
-    const [sending, setSending] = useState(false);
-    const [feedback, setFeedback] = useState(0);
-
-    const handleSend = () => {
-        if (!name || !email || !message) {
-            alert("Please fill in all fields before sending.");
-            return;
-        }
-        sendEmail(name, message, email, setSending, setFeedback, setEmail, setName, setMessage);
-    };
+    const [activeForm, setActiveForm] = useState("anonymous"); // default active form
 
     const handleCopy = () => {
         navigator.clipboard.writeText("mdsafiulhaque4@gmail.com");
@@ -65,7 +50,7 @@ const ContactCard = () => {
                     <SocialLink as="div" onClick={handleCopy}>
                         <Typography
                             variant="body2"
-                            sx={{ cursor: "pointer", fontFamily: "Libre Caslon Text", }}
+                            sx={{ cursor: "pointer", fontFamily: "Libre Caslon Text" }}
                         >
                             mdsafiulhaque4@gmail.com
                         </Typography>
@@ -88,7 +73,9 @@ const ContactCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography sx={{fontFamily: "Libre Caslon Text",}} variant="body2">linkedin.com/in/safiulhaque</Typography>
+                        <Typography sx={{ fontFamily: "Libre Caslon Text" }} variant="body2">
+                            linkedin.com/in/safiulhaque
+                        </Typography>
                     </SocialLink>
                 </SocialBox>
 
@@ -101,7 +88,9 @@ const ContactCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography sx={{fontFamily: "Libre Caslon Text",}} variant="body2">github.com/httpsafiul</Typography>
+                        <Typography sx={{ fontFamily: "Libre Caslon Text" }} variant="body2">
+                            github.com/httpsafiul
+                        </Typography>
                     </SocialLink>
                 </SocialBox>
 
@@ -114,7 +103,9 @@ const ContactCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography sx={{fontFamily: "Libre Caslon Text",}} variant="body2">instagram.com/httpsafiul</Typography>
+                        <Typography sx={{ fontFamily: "Libre Caslon Text" }} variant="body2">
+                            instagram.com/httpsafiul
+                        </Typography>
                     </SocialLink>
                 </SocialBox>
 
@@ -127,89 +118,40 @@ const ContactCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Typography sx={{fontFamily: "Libre Caslon Text",}} variant="body2">x.com/23Safiul</Typography>
+                        <Typography sx={{ fontFamily: "Libre Caslon Text" }} variant="body2">
+                            x.com/23Safiul
+                        </Typography>
                     </SocialLink>
                 </SocialBox>
             </LeftSection>
 
             {/* RIGHT SECTION */}
             <RightSection>
-            <div style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <Intro>
-                    If you've come this far, please leave a message for me :)
-                </Intro>
-</div>
-                <FormContainer>
-                    <InputRow>
-                        <TextField
-                            label="Enter your name"
-                            variant="outlined"
-                            fullWidth
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required
-                            
-                        />
-                        <TextField
-                            label="Enter your email"
-                            variant="outlined"
-                            fullWidth
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </InputRow>
+                <ToggleContainer>
+                    <ToggleButton1
+                        active={activeForm === "anonymous"}
+                        onClick={() => setActiveForm("anonymous")}
+                    >
+                        Anonymous Message
+                    </ToggleButton1>
+                    <ToggleButton2
+                        active={activeForm === "conversation"}
+                        onClick={() => setActiveForm("conversation")}
+                    >
+                        Start Conversation
+                    </ToggleButton2>
+                </ToggleContainer>
+                <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                    <Intro>
+                        If you've come this far, please leave a message for me :)
+                    </Intro>
+                </div>
 
-                    <TextField
-                        label="Your message"
-                        variant="outlined"
-                        multiline
-                        rows={6}
-                        fullWidth
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        required
-                    />
-
-                    <Box textAlign="right">
-                        {sending ?
-                            <Button loading variant="outlined" loadingPosition="start">
-                                Sending
-                            </Button>
-                            :
-                            <Button
-                                variant="contained"
-                                sx={{
-                                    backgroundColor: colour_green,
-                                    color: colour_white,
-                                    "&:hover": { backgroundColor: colour_orange, color: colour_green },
-                                    fontWeight: "bold",
-                                    fontFamily: "Libre Caslon Text",
-                                }}
-                                onClick={handleSend}
-                                startIcon={<Send />}
-                            >
-                                Send
-                            </Button>
-                        }
-                    </Box>
-                </FormContainer>
-                {feedback === 0 ? (
-                    <></>
+                {activeForm === "anonymous" ? (
+                    <AnonymousMessageForm />
                 ) : (
-                    <>
-                        {feedback === 1 ? (
-                            <Alert sx={{ marginTop: "20px" }} severity="success">
-                                Message sent successfully! Check your email for confirmation.
-                            </Alert>
-                        ) : (
-                            <Alert sx={{ marginTop: "20px" }} severity="error">
-                                Oops! Something went wrong.
-                            </Alert>
-                        )}
-                    </>
+                    <MessageForm />
                 )}
-
             </RightSection>
 
             {/* Snackbar for copy success */}
