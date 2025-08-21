@@ -12,9 +12,9 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import EducationCard from './EducationCard';
-import college from '../../../assets/EducationSection/college.avif';
-import hs from '../../../assets/EducationSection/hs.avif';
-import s from '../../../assets/EducationSection/s.avif';
+import college from '../../../assets/EducationSection/college.png';
+import hs from '../../../assets/EducationSection/hs.png';
+import s from '../../../assets/EducationSection/s.png';
 import { Alert } from '@mui/material';
 
 const cardsData = [
