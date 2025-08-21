@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 import { colour_orange, colour_white } from '../../../../Common/colours';
 import { Button } from '@mui/material';
-import bg from '../../../../assets/Hero/bg.png';
+import bg from '../../../../assets/Hero/bg.webp';
 
 export const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-end; */
-  /* padding: 4rem 8rem; */
   height: calc(100vh - 80px);
   font-family: 'Poppins', sans-serif;
   background-image: url(${bg});
@@ -18,7 +16,6 @@ export const HeroContainer = styled.div`
   @media (max-width: 805px) {
     flex-direction: column;
     align-items: center;
-    /* padding: 2rem; */
     text-align: center;
     height: auto;
   }

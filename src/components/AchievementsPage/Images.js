@@ -43,10 +43,10 @@ export const RajasthanPoliceHackathon = [
 
 ]
 
-import SIHone from '../../assets/AchievementsSection/SIHInternal/SIHone.avif';
-import SIHtwo from '../../assets/AchievementsSection/SIHInternal/SIHtwo.avif';
-import SIHthree from '../../assets/AchievementsSection/SIHInternal/SIHthree.avif';
-import SIHfour from '../../assets/AchievementsSection/SIHInternal/SIHfour.avif';
+import SIHone from '../../assets/AchievementsSection/SIHInternal/SIHone.jpg';
+import SIHtwo from '../../assets/AchievementsSection/SIHInternal/SIHtwo.jpg';
+import SIHthree from '../../assets/AchievementsSection/SIHInternal/SIHthree.jpg';
+import SIHfour from '../../assets/AchievementsSection/SIHInternal/SIHfour.jpg';
 
 export const SIH = [
     {
@@ -69,11 +69,11 @@ export const SIH = [
 ]
 
 
-import InnovateOne from '../../assets/AchievementsSection/Innovate/Innovateone.avif';
-import Innovatetwo from '../../assets/AchievementsSection/Innovate/Innovatetwo.avif';
-import Innovatethree from '../../assets/AchievementsSection/Innovate/Innovatethree.avif';
-import Innovatefour from '../../assets/AchievementsSection/Innovate/Innovatefour.avif';
-import Innovatefive from '../../assets/AchievementsSection/Innovate/Innovatefive.avif';
+import InnovateOne from '../../assets/AchievementsSection/Innovate/Innovateone.jpg';
+import Innovatetwo from '../../assets/AchievementsSection/Innovate/Innovatetwo.jpg';
+import Innovatethree from '../../assets/AchievementsSection/Innovate/Innovatethree.jpg';
+import Innovatefour from '../../assets/AchievementsSection/Innovate/Innovatefour.jpg';
+import Innovatefive from '../../assets/AchievementsSection/Innovate/Innovatefive.jpg';
 
 export const Innovate = [
     {
