@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Card, Box } from "@mui/material";
 import { colour_orange, colour_white, colour_green, colour_background } from "../../../Common/colours";
-import bg from "../../../assets/Hero/bg.webp";
+import bg from "../../../assets/Hero/bg.png";
 
 export const CardContainer = styled(Card)`
   width: 75%;
