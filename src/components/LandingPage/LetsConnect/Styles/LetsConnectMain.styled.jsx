@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from '../../../../assets/Hero/bg.png';
+import bg from '../../../../assets/Hero/bg.webp';
 
 export const LetsConnectSection = styled.section`
   width: 100%;
