@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   /* height: 450px;  */
   width: 85%;
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     flex-direction: column;
     height: auto;
     width: 100%;

@@ -26,7 +26,7 @@ export const Heading = styled.h2`
   font-weight: 700;
   color: ${colour_orange};
   margin-bottom: 1rem;
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     font-size: 1.3rem;
   }
 `;

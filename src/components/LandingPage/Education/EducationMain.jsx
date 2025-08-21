@@ -15,6 +15,7 @@ import EducationCard from './EducationCard';
 import college from '../../../assets/EducationSection/college.png';
 import hs from '../../../assets/EducationSection/hs.png';
 import s from '../../../assets/EducationSection/s.png';
+import { Alert } from '@mui/material';
 
 const cardsData = [
   {
@@ -52,7 +53,7 @@ const EducationMain = () => {
     const updateCardsPerPage = () => {
       if (window.innerWidth < 768) {
         setCardsPerPage(1);
-      } else if (window.innerWidth < 1305 && window.innerWidth >=768) {
+      } else if (window.innerWidth < 1305 && window.innerWidth >= 768) {
         setCardsPerPage(2);
       } else {
         setCardsPerPage(3);
@@ -84,7 +85,9 @@ const EducationMain = () => {
         <Heading>Education</Heading>
         <DividerLine />
       </HeadingWrapper>
-
+      <Alert sx={{ width: "100%", marginLeft: "20px", marginRight: "20px", marginBottom: "1rem", visibility: { xs: "visible", lg: "hidden" } }} severity="info">
+        Click on the images for more information
+      </Alert>
       <CarouselWrapper>
         <NavButton onClick={handlePrev} disabled={startIndex === 0}>
           <ArrowBackIosNewIcon />
