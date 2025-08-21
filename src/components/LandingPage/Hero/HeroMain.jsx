@@ -18,7 +18,7 @@ import {
 import { LinkedIn, GitHub, Instagram, LocationOn } from '@mui/icons-material';
 import XIcon from '@mui/icons-material/X';
 import { colour_green, colour_orange, colour_white } from '../../../Common/colours';
-import safi from "../../../assets/Hero/safi.png";
+import safi from "../../../assets/Hero/safi.webp";
 import { useNavigate } from 'react-router-dom';
 
 const HeroMain = () => {
