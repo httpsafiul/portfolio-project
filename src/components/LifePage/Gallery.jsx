@@ -43,7 +43,10 @@ const Gallery = ({ images }) => {
                       hash={img.hash}
                       width="100%"
                       height="100%"
+                      resolutionX={32}
+                      resolutionY={32}
                       punch={1}
+
                     />
                   )}
                 </BlurhashWrapper>
