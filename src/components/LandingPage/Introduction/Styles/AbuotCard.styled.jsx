@@ -12,7 +12,7 @@ export const CardWrapper = styled.div`
   overflow: hidden;
   border-radius: 6px;
   cursor: pointer;
-  background-color: ${colour_green};
+  /* background-color: ${colour_green}; */
   transition: transform 0.3s ease;
 
   &:hover {
@@ -32,7 +32,13 @@ export const CardWrapper = styled.div`
   }
 `;
 
-export const CardImage = styled.div`
+export const CardImageWrapper = styled.div`
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+`;
+
+export const CardImageBackground = styled.div`
   position: absolute;
   inset: 0;
   background-image: url(${(props) => props.img});
@@ -40,10 +46,18 @@ export const CardImage = styled.div`
   background-position: center;
   filter: brightness(0.5);
   transition: opacity 0.3s ease;
+  opacity: ${(props) => (props.loaded ? 1 : 0)};
 
   ${CardWrapper}:hover & {
     opacity: 0;
   }
+`;
+
+export const BlurhashWrapper = styled.div`
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease;
+  opacity: ${(props) => (props.loaded ? 0 : 1)};
 `;
 
 export const CardText = styled.div`
@@ -74,6 +88,7 @@ export const CardText = styled.div`
 `;
 
 export const CardHoverContent = styled.div`
+background-color: ${colour_green};
   position: absolute;
   inset: 0;
   background-color: ${colour_green};
@@ -96,16 +111,15 @@ export const CardHoverContent = styled.div`
     opacity: 1;
   }
 
-  .title{
+  .title {
     color: ${colour_orange};
     padding-bottom: 10px;
     font-size: 1.1rem;
-    
 
-  @media (max-width: 720px) {
-    font-size: 0.8rem;
+    @media (max-width: 720px) {
+      font-size: 0.8rem;
+    }
   }
-}
 
   @media (max-width: 768px) {
     p {
@@ -113,4 +127,3 @@ export const CardHoverContent = styled.div`
     }
   }
 `;
-

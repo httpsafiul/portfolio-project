@@ -27,6 +27,7 @@ const cardsData = [
   {
     frontHeading: "Java Developer",
     image: java,
+    imageHash: "LPJa[+Di-=9E_N~W%MM{%3xtIV?b",
     title: "Building scalable and robust applications",
     hoverText:
       "With strong expertise in Java, I enjoy creating efficient, object-oriented, and reliable software solutions. From backend systems to enterprise applications, I focus on writing clean, maintainable, and optimized code."
@@ -34,6 +35,7 @@ const cardsData = [
   {
     frontHeading: "Web Designer",
     image: web,
+    imageHash: "LFL}BE~qxajE_3?bxv?b^+oJM{R+",
     title: "Crafting beautiful and user-friendly interfaces",
     hoverText:
       "I design modern, responsive, and intuitive web experiences. By blending aesthetics with usability, I ensure websites not only look great but also provide seamless navigation and engagement."
@@ -41,6 +43,7 @@ const cardsData = [
   {
     frontHeading: "App Developer",
     image: app,
+    imageHash: "LLKBK^TKVX.S?^%gD%_3XSrqI:xZ",
     title: "Creating impactful Android applications",
     hoverText:
       "I develop Android apps that are functional, user-friendly, and efficient. With a focus on user experience and performance, I love turning ideas into mobile applications that solve real-world problems."
@@ -48,6 +51,7 @@ const cardsData = [
   {
     frontHeading: "Solving Problems, Powered by Coffee",
     image: coding,
+    imageHash: "LEE.kN_1~V9a009ZD*jbayNHoz?H",
     title: "Where logic meets creativity",
     hoverText:
       "Fueled by coffee and curiosity, I love solving problems and building impactful solutions through code. Programming isn't just a skill for me—it's my creative outlet to turn ideas into reality. I enjoy exploring new technologies and pushing my limits with every project."
@@ -55,6 +59,7 @@ const cardsData = [
   {
     frontHeading: "B.Tech '25",
     image: graduation,
+    imageHash: "LIMt58-Z^,~po~-:V[IVR,oMR*NG",
     title: "A strong foundation in tech and problem-solving.",
     hoverText:
       "Currently pursuing my B.Tech in Electronics and Communication Engineering, graduating in 2025. My academic journey has shaped my analytical and technical skills while exposing me to diverse projects. I focus on blending my education with real-world applications to grow as a developer."
@@ -62,6 +67,7 @@ const cardsData = [
   {
     frontHeading: "Hunting Hackathons",
     image: hackathon,
+    imageHash: "LXKmwvn5w]aeX-S~OFR*~WwIi_ni",
     title: "Thriving on challenges and teamwork",
     hoverText:
       "I’ve secured victories in several hackathons, from the Rajasthan Police Hackathon to multiple college competitions. I was the co-founder of the tech team Bengal Tigers in my college and have won several hackathons alongside the team, solving real-world problems through creativity and collaboration."
@@ -69,6 +75,7 @@ const cardsData = [
   {
     frontHeading: "Proud Potterhead",
     image: harry,
+    imageHash: "LC9jfhNGD%Rj~qNGM{oeNaV[xtxu",
     title: "Living in the wizarding world",
     hoverText:
       "The Harry Potter series has been a magical part of my life. From the lessons of friendship and courage to the thrill of spells and Quidditch, it’s a universe I revisit often. Whether it’s re-reading the books or binge-watching the films, the magic never fades."
@@ -76,6 +83,7 @@ const cardsData = [
   {
     frontHeading: "Certified Swiftie",
     image: taylor,
+    imageHash: "LHCFIuEM03}@0~jF^OX8M{t7kDRQ",
     title: "Finding inspiration in music",
     hoverText:
       "Taylor Swift’s music is my constant companion — from her storytelling to her melodies, I find inspiration and motivation in her songs. Being a Swiftie is more than fandom; it's about embracing creativity, emotions, and growth through music."
@@ -83,6 +91,7 @@ const cardsData = [
   {
     frontHeading: "The Office Aficionado",
     image: office,
+    imageHash: "LWODFD00?^RPD$WU-;t7%gRjR5W.",
     title: "Laughing through life's chaos",
     hoverText:
       "‘The Office’ is my go-to comfort show. I love its quirky humor, awkward moments, and heartfelt friendships. It's a reminder that even in the most ordinary places, extraordinary stories — and laughs — can be found."
@@ -146,6 +155,7 @@ const IntroductionMain = () => {
               image={card.image}
               title={card.title}
               hoverText={card.hoverText}
+              imageHash={card.imageHash}
             />
           ))}
         </CarouselInner>
