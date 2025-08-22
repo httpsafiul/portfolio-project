@@ -29,7 +29,20 @@ const Intro = styled.p`
 `;
 
 const Friends = () => {
-  const lifeImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
+  const lifeImages = [
+    { src: img1, hash: "L5F5v*0.?G5k}M$LEN4=yhdqIS-A" },
+    { src: img2, hash: "L6By]Z^}RzJW00IpI[$$~q-WVbVr" },
+    { src: img3, hash: "LRH_JSNF57%M~oNGi_WV9Fs;%Mbb" },
+    { src: img4, hash: "LNHeXv~q?v.9tMbYR*M{tmt7s8af" },
+    { src: img5, hash: "LtIYX_IUx]of%%WDWAa|ozj]V@WB" },
+    { src: img6, hash: "L9C~}0xZRik700I;5QsC~qM{9]s;" },
+    { src: img7, hash: "LEJ@n6~WxUoI?vXmIpt8-o^*jJ%M" },
+    { src: img8, hash: "LIFFy:M{oun+Mut7M_j]?Hjs_4of" },
+    { src: img9, hash: "LIDvD=M_IBj[~UoKxbni9Eoz%MWB" },
+    { src: img10, hash: "LpKwtc%2SeNa~qW;oLjF%NaeRjof" },
+    { src: img11, hash: "LCE:9pb[^t_LH@#t%4=|QlA9sqv~" },
+    { src: img12, hash: "LwL}4=WB-:n#~qofM{Rj%2oMM{j]" },
+  ];
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>

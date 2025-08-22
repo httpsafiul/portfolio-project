@@ -1,6 +1,6 @@
+// EducationCard.styled.js
 import styled from "styled-components";
 import {
-  colour_orange,
   colour_green,
   colour_white
 } from "../../../../Common/colours";
@@ -32,6 +32,12 @@ export const CardWrapper = styled.div`
   }
 `;
 
+export const CardImageWrapper = styled.div`
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+`;
+
 export const CardImage = styled.div`
   position: absolute;
   inset: 0;
@@ -40,10 +46,18 @@ export const CardImage = styled.div`
   background-position: center;
   filter: brightness(0.9);
   transition: opacity 0.3s ease;
+  opacity: ${(props) => (props.loaded ? 1 : 0)};
 
   ${CardWrapper}:hover & {
     opacity: 0;
   }
+`;
+
+export const BlurhashWrapper = styled.div`
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease;
+  opacity: ${(props) => (props.loaded ? 0 : 1)};
 `;
 
 export const CardText = styled.div`
@@ -67,7 +81,7 @@ export const CardText = styled.div`
 
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-top: 0px
+    margin-top: 0px;
   }
 `;
 

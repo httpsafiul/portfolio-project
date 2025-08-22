@@ -1,18 +1,51 @@
-import React from "react";
+// EducationCard.jsx
+import React, { useState, useEffect } from "react";
+import { Blurhash } from "react-blurhash";
 import {
   CardWrapper,
+  CardImageWrapper,
   CardImage,
+  BlurhashWrapper,
   CardText,
-  CardHoverContent
+  CardHoverContent,
 } from "./Styles/EducationCard.styled";
 import { colour_orange } from "../../../Common/colours";
 import { Typography } from "@mui/material";
 
-const EducationCard = ({ image, institute, university, year, marks, frontHeading }) => {
+const EducationCard = ({
+  image,
+  imageHash,
+  institute,
+  university,
+  year,
+  marks,
+  frontHeading,
+}) => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!image) return;
+
+    setLoaded(false);
+    const img = new Image();
+    img.src = image;
+    img.onload = () => setLoaded(true);
+  }, [image]);
+
   return (
     <CardWrapper>
-      <CardImage img={image} />
+      <CardImageWrapper>
+        <BlurhashWrapper loaded={loaded}>
+          {imageHash && (
+            <Blurhash hash={imageHash} width="100%" height="100%" punch={1} />
+          )}
+        </BlurhashWrapper>
+
+        <CardImage img={image} loaded={loaded} />
+      </CardImageWrapper>
+
       <CardText>{frontHeading}</CardText>
+
       <CardHoverContent>
         <Typography
           variant="h5"

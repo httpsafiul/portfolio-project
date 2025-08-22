@@ -21,6 +21,7 @@ const cardsData = [
   {
     frontHeading: "Secondary (X)",
     image: s,
+    imageHash: "LhQm6Zo~t8V=%Maeayj]~qaJRjoh",
     institute: "Barisha High School",
     university: "West Bengal Board of Secondary Education",
     year: 2019,
@@ -29,6 +30,7 @@ const cardsData = [
   {
     frontHeading: "Higher Secondary (XII)",
     image: hs,
+    imageHash: "LcQmI?t7t7ofxuWCayj[~pWBWBay",
     institute: "Barisha High School",
     university: "West Bengal Council of Higher Secondary Education",
     year: 2021,
@@ -37,6 +39,7 @@ const cardsData = [
   {
     frontHeading: "B.Tech. (ECE)",
     image: college,
+    imageHash: "LYRC=3#kt7OtxuWWayoJ~pT0Rkrq",
     institute: "Meghnad Saha Institute of Technology",
     university: "Maulana Abul Kalam Azad University of Technology",
     year: 2025,
@@ -103,6 +106,7 @@ const EducationMain = () => {
               marks={card.marks}
               university={card.university}
               year={card.year}
+              imageHash={card.imageHash}
             />
           ))}
         </CarouselInner>
