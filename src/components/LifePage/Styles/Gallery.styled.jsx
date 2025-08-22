@@ -45,7 +45,7 @@ export const GalleryImage = styled(motion.img)`
 `;
 
 export const BlurhashWrapper = styled.div`
-  /* position: relative; */
+  position: relative;
   inset: 0;
   object-fit: cover;
   transition: opacity 0.3s ease;
