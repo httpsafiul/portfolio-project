@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import { colour_orange, colour_white } from '../../../../Common/colours';
+import { colour_green, colour_orange, colour_white } from '../../../../Common/colours';
 import { Button } from '@mui/material';
-import bg from '../../../../assets/Hero/bg.webp';
+import bg from '../../../../assets/Hero/bg.png';
 
 export const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: calc(100vh - 80px);
   font-family: 'Poppins', sans-serif;
+  background-color: ${colour_green};
   background-image: url(${bg});
   background-size: cover;
   background-position: center;
