@@ -16,7 +16,7 @@ const LoadingScreen = () => {
         Please wait
       </Typography>
       <Box sx={{ width: {md: "20%", sm: "30%", xs: "40%"} }}>
-        <LinearProgress />
+        <LinearProgress color="success" />
       </Box>
     </Box>
   );
