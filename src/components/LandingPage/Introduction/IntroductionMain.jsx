@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import {
   IntroductionContainer,
   HeadingWrapper,
@@ -8,7 +8,7 @@ import {
   CarouselInner,
   NavButton
 } from './Styles/IntroductionMain.styled';
-import AboutCard from './AbuotCard';
+const AboutCard = React.lazy(() => import('./AbuotCard'))
 import java from '../../../assets/IntroSection/java.jpg';
 import web from '../../../assets/IntroSection/web.jpg';
 import app from '../../../assets/IntroSection/app.jpg';
@@ -21,7 +21,7 @@ import taylor from '../../../assets/IntroSection/taylor2.webp';
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Alert } from '@mui/material';
+import { Alert, Skeleton } from '@mui/material';
 
 const cardsData = [
   {
@@ -130,7 +130,7 @@ const IntroductionMain = () => {
         <Heading>Defining Myself</Heading>
         <DividerLine />
       </HeadingWrapper>
-      <Alert sx={{ width: "100%", marginLeft: "20px", marginRight:"20px", marginBottom: "1rem",  visibility: {xs: "visible", lg: "hidden"} }} severity="info">
+      <Alert sx={{ width: "100%", marginLeft: "20px", marginRight: "20px", marginBottom: "1rem", visibility: { xs: "visible", lg: "hidden" } }} severity="info">
         Click on the images for more information
       </Alert>
       <CarouselWrapper>
@@ -140,13 +140,17 @@ const IntroductionMain = () => {
 
         <CarouselInner>
           {visibleCards.map((card, index) => (
-            <AboutCard
-              key={index}
-              frontHeading={card.frontHeading}
-              image={card.image}
-              title={card.title}
-              hoverText={card.hoverText}
-            />
+            <Suspense fallback={
+              <Skeleton variant="rectangular" width={210} height={118} />
+            }>
+              <AboutCard
+                key={index}
+                frontHeading={card.frontHeading}
+                image={card.image}
+                title={card.title}
+                hoverText={card.hoverText}
+              />
+            </Suspense>
           ))}
         </CarouselInner>
 
