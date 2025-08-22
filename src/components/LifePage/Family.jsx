@@ -23,8 +23,14 @@ const Intro = styled.p`
 `;
 
 const Family = () => {
-  const lifeImages = [img1, img2, img3, img4, img5, img6];
-
+  const lifeImages = [
+    { src: img1, hash: "LlF~w5xaS1I:*0R%s;xax]bIWAV@" },
+    { src: img2, hash: "LVI}R,?vkVt6~TxtoJWXxUE2%1xu" },
+    { src: img3, hash: "LyIY5:D%t6M{~qM{WCRj%Mj[Rjof" },
+    { src: img4, hash: "LXECtXofWAWB_NkCayofogoffQof" },
+    { src: img5, hash: "L5Eo-|D40dPX5yBF^m,;9:^}+ZHq" },
+    { src: img6, hash: "LMJko%X8s$n$yF%2NMof?wR+-qM{" }
+  ];
   return (
     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
       <Intro>Abbu & Ammu, the most loving parents in the world.</Intro>

@@ -1,32 +1,62 @@
-import React, { useState } from "react";
+// Gallery.jsx
+import React, { useState, useEffect } from "react";
+import { Blurhash } from "react-blurhash";
 import { motion, AnimatePresence } from "framer-motion";
 import Backdrop from "@mui/material/Backdrop";
 import {
   GalleryContainer,
   GalleryGrid,
-  GalleryImage
+  GalleryImageWrapper,
+  GalleryImage,
+  BlurhashWrapper,
 } from "./Styles/Gallery.styled";
 
 const Gallery = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [loadedImages, setLoadedImages] = useState({});
+
+  useEffect(() => {
+    // Preload all images
+    images.forEach((img) => {
+      const image = new Image();
+      image.src = img.src;
+      image.onload = () =>
+        setLoadedImages((prev) => ({ ...prev, [img.src]: true }));
+    });
+  }, [images]);
 
   return (
     <GalleryContainer>
       <GalleryGrid>
-        {images.map((img, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.04 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <GalleryImage
-              src={img}
-              alt={`gallery-img-${index}`}
-              onClick={() => setSelectedImage(img)}
-              whileHover={{ borderColor: "var(--colour_green)" }}
-            />
-          </motion.div>
-        ))}
+        {images.map((img, index) => {
+          const isLoaded = loadedImages[img.src];
+          return (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <GalleryImageWrapper onClick={() => setSelectedImage(img.src)}>
+                <BlurhashWrapper loaded={isLoaded}>
+                  {img.hash && (
+                    <Blurhash
+                      hash={img.hash}
+                      width="100%"
+                      height="100%"
+                      punch={1}
+                    />
+                  )}
+                </BlurhashWrapper>
+                <GalleryImage
+                  src={img.src}
+                  alt={`gallery-img-${index}`}
+                  loaded={isLoaded ? 1 : 0}
+                  whileHover={{ borderColor: "var(--colour_green)" }}
+                />
+              </GalleryImageWrapper>
+            </motion.div>
+          );
+        })}
       </GalleryGrid>
 
       <AnimatePresence>
@@ -48,9 +78,9 @@ const Gallery = ({ images }) => {
                 maxWidth: "80%",
                 maxHeight: "80%",
                 borderRadius: "12px",
-                boxShadow: "0px 0px 20px rgba(0,0,0,0.4)"
+                boxShadow: "0px 0px 20px rgba(0,0,0,0.4)",
               }}
-              onClick={(e) => e.stopPropagation()} // prevent backdrop close on image click
+              onClick={(e) => e.stopPropagation()}
             />
           </Backdrop>
         )}
