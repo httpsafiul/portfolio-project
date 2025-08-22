@@ -9,7 +9,6 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid ${colour_orange};
 `;
 

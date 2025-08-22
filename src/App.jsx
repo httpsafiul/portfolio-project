@@ -6,26 +6,25 @@ import LandingPageMain from './components/LandingPage/LandingPageMain';
 import ProjectsMain from './components/ProjectsPage/ProjectsMain';
 import AchievementsMain from './components/AchievementsPage/AchievementsMain';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ComingSoon from './components/ComingSoon';
 import LifePageMain from './components/LifePage/LifePageMain';
 import ContactMain from './components/ContactPage/ContactMain';
 
 function App() {
   return (
     <GlobalStyle>
-     <Router>
+      <Router>
         <Routes>
           Lazy-loaded auth module
-          <Route path="/" element={<LandingPageMain/>} />
-          <Route path="/home" element={<LandingPageMain/>} />
-          <Route path="achievements" element={<AchievementsMain/>} />
-          <Route path="projects" element={<ProjectsMain/>} />
-          <Route path="life" element={<LifePageMain/>} />
-          <Route path="contact" element={<ContactMain/>} />
+          <Route path="/" element={<LandingPageMain />} />
+          <Route path="/home" element={<LandingPageMain />} />
+          <Route path="achievements" element={<AchievementsMain />} />
+          <Route path="projects" element={<ProjectsMain />} />
+          <Route path="life" element={<LifePageMain />} />
+          <Route path="contact" element={<ContactMain />} />
         </Routes>
       </Router>
-      <CopyrightSection/>
-      </GlobalStyle>
+      <CopyrightSection />
+    </GlobalStyle>
   );
 }
 
