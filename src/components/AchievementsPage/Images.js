@@ -8,40 +8,16 @@ import RPHseven from '../../assets/AchievementsSection/RajasthanPoliceHackathon/
 import RPHeight from '../../assets/AchievementsSection/RajasthanPoliceHackathon/RPHeight.avif';
 
 export const RajasthanPoliceHackathon = [
-    {
-        id: 0,
-        imageSrc: RPHone
-    },
-    {
-        id: 1,
-        imageSrc: RPHtwo
-    },
-    {
-        id: 2,
-        imageSrc: RPHthree
-    },
-    {
-        id: 3,
-        imageSrc: RPHfour
-    },
-    {
-        id: 4,
-        imageSrc: RPHfive
-    },
-    {
-        id: 5,
-        imageSrc: RPHsix
-    },
-    {
-        id: 6,
-        imageSrc: RPHseven
-    },
-    {
-        id: 7,
-        imageSrc: RPHeight
-    },
-
+    { id: 0, imageSrc: RPHone, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 1, imageSrc: RPHtwo, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 2, imageSrc: RPHthree, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 3, imageSrc: RPHfour, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 4, imageSrc: RPHfive, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 5, imageSrc: RPHsix, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 6, imageSrc: RPHseven, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 7, imageSrc: RPHeight, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
 ]
+
 
 import SIHone from '../../assets/AchievementsSection/SIHInternal/SIHone.jpg';
 import SIHtwo from '../../assets/AchievementsSection/SIHInternal/SIHtwo.jpg';
@@ -49,23 +25,10 @@ import SIHthree from '../../assets/AchievementsSection/SIHInternal/SIHthree.jpg'
 import SIHfour from '../../assets/AchievementsSection/SIHInternal/SIHfour.jpg';
 
 export const SIH = [
-    {
-        id: 0,
-        imageSrc: SIHone
-    },
-    {
-        id: 1,
-        imageSrc: SIHtwo
-    },
-    {
-        id: 2,
-        imageSrc: SIHthree
-    },
-    {
-        id: 3,
-        imageSrc: SIHfour
-    }
-
+    { id: 0, imageSrc: SIHone, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 1, imageSrc: SIHtwo, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 2, imageSrc: SIHthree, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 3, imageSrc: SIHfour, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
 ]
 
 
@@ -76,28 +39,13 @@ import Innovatefour from '../../assets/AchievementsSection/Innovate/Innovatefour
 import Innovatefive from '../../assets/AchievementsSection/Innovate/Innovatefive.jpg';
 
 export const Innovate = [
-    {
-        id: 0,
-        imageSrc: InnovateOne
-    },
-    {
-        id: 1,
-        imageSrc: Innovatetwo
-    },
-    {
-        id: 2,
-        imageSrc: Innovatethree
-    },
-    {
-        id: 3,
-        imageSrc: Innovatefour
-    },
-    {
-        id: 4,
-        imageSrc: Innovatefive
-    },
-
+    { id: 0, imageSrc: InnovateOne, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 1, imageSrc: Innovatetwo, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 2, imageSrc: Innovatethree, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 3, imageSrc: Innovatefour, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 4, imageSrc: Innovatefive, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
 ]
+
 
 import Hackfestone from '../../assets/AchievementsSection/Hackfest/Hackfestone.avif';
 import Hackfesttwo from '../../assets/AchievementsSection/Hackfest/Hackfesttwo.avif';
@@ -107,37 +55,14 @@ import Hackfestfive from '../../assets/AchievementsSection/Hackfest/Hackfestfive
 import Hackfestsix from '../../assets/AchievementsSection/Hackfest/Hackfestsix.avif';
 import Hackfestseven from '../../assets/AchievementsSection/Hackfest/Hackfestseven.avif';
 
-
 export const Hackfest = [
-    {
-        id: 0,
-        imageSrc: Hackfestone
-    },
-    {
-        id: 1,
-        imageSrc: Hackfesttwo
-    },
-    {
-        id: 2,
-        imageSrc: Hackfestthree
-    },
-    {
-        id: 3,
-        imageSrc: Hackfestfour
-    },
-    {
-        id: 4,
-        imageSrc: Hackfestfive
-    },
-    {
-        id: 5,
-        imageSrc: Hackfestsix
-    },
-    {
-        id: 6,
-        imageSrc: Hackfestseven
-    },
-
+    { id: 0, imageSrc: Hackfestone, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 1, imageSrc: Hackfesttwo, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 2, imageSrc: Hackfestthree, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 3, imageSrc: Hackfestfour, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 4, imageSrc: Hackfestfive, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 5, imageSrc: Hackfestsix, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 6, imageSrc: Hackfestseven, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
 ]
 
 
@@ -146,16 +71,7 @@ import Webologytwo from '../../assets/AchievementsSection/Webology/Webologytwo.a
 import Webologythree from '../../assets/AchievementsSection/Webology/Webologythree.avif';
 
 export const Webology = [
-    {
-        id: 0,
-        imageSrc: Webologyone
-    },
-    {
-        id: 1,
-        imageSrc: Webologytwo
-    },
-    {
-        id: 2,
-        imageSrc: Webologythree
-    },
+    { id: 0, imageSrc: Webologyone, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 1, imageSrc: Webologytwo, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
+    { id: 2, imageSrc: Webologythree, imageHash: "LOHURkwvtLsl*IWYSdS1w0X7Ioof" },
 ]

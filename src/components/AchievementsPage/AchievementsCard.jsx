@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
+import { Blurhash } from "react-blurhash";
 import {
     CardContainer,
     LeftSection,
@@ -42,9 +43,11 @@ const AchievementsCard = ({
 }) => {
     const [[imageCount, direction], setImageCount] = useState([0, 0]);
     const activeImageIndex = wrap(0, images.length, imageCount);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     const swipeToImage = swipeDirection => {
         setImageCount([imageCount + swipeDirection, swipeDirection]);
+        setImageLoaded(false); // reset loading state on image change
     };
 
     useEffect(() => {
@@ -69,13 +72,12 @@ const AchievementsCard = ({
             <LeftSection>
                 <TrophyIcon>{emoji}</TrophyIcon>
 
-                {/* Position */}
                 <Typography
                     variant="subtitle1"
                     sx={{
                         fontWeight: "bold",
                         color: "var(--colour_primary)",
-                        fontSize: "1.4rem", // increased size
+                        fontSize: "1.4rem",
                         marginBottom: "0px",
                         fontFamily: "Libre Caslon Text",
                     }}
@@ -83,10 +85,8 @@ const AchievementsCard = ({
                     {position}
                 </Typography>
 
-                {/* Competition Title */}
                 <Title>{competitionName}</Title>
 
-                {/* Date */}
                 <Typography
                     variant="body2"
                     sx={{
@@ -118,11 +118,7 @@ const AchievementsCard = ({
                     <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "6px" }}>
                         {team.map((member, index) => (
                             <React.Fragment key={index}>
-                                <Stack
-                                    direction="row"
-                                    alignItems="center"
-                                    spacing={0.5}
-                                >
+                                <Stack direction="row" alignItems="center" spacing={0.5}>
                                     <Link
                                         href={member.linkedin}
                                         target="_blank"
@@ -138,18 +134,17 @@ const AchievementsCard = ({
                                         rel="noopener noreferrer"
                                         sx={{ color: "#0077b5" }}
                                     >
-                                        <LinkedInIcon fontSize="medium" /> {/* bigger icon */}
+                                        <LinkedInIcon fontSize="medium" />
                                     </Link>
                                 </Stack>
                                 {index < team.length - 1 && (
-                                    <Typography variant="body2" sx={{ color: "#888", fontFamily: "Libre Caslon Text", }}>|</Typography>
+                                    <Typography variant="body2" sx={{ color: "#888", fontFamily: "Libre Caslon Text" }}>|</Typography>
                                 )}
                             </React.Fragment>
                         ))}
                     </Box>
                 </Box>
 
-                {/* Description */}
                 <Description>{description}</Description>
             </LeftSection>
 
@@ -159,14 +154,11 @@ const AchievementsCard = ({
                     <motion.div
                         key={imageCount}
                         style={{
-                            backgroundImage: `url(${images[activeImageIndex].imageSrc})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
                             height: "100%",
                             width: "100%",
                             position: "absolute",
                             top: 0,
-                            left: 0
+                            left: 0,
                         }}
                         custom={direction}
                         variants={sliderVariants}
@@ -178,7 +170,33 @@ const AchievementsCard = ({
                         dragConstraints={{ left: 0, right: 0 }}
                         dragElastic={1}
                         onDragEnd={(_, dragInfo) => dragEndHandler(dragInfo)}
-                    />
+                    >
+                        {!imageLoaded && (
+                            <Blurhash
+                                hash={images[activeImageIndex].imageHash}
+                                width={"100%"}
+                                height={"100%"}
+                                resolutionX={32}
+                                resolutionY={32}
+                                punch={1}
+                            />
+                        )}
+                        <img
+                            src={images[activeImageIndex].imageSrc}
+                            alt={`slide-${activeImageIndex}`}
+                            style={{
+                                objectFit: "cover",
+                                height: "100%",
+                                width: "100%",
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                opacity: imageLoaded ? 1 : 0,
+                                transition: "opacity 0.5s ease-in-out",
+                            }}
+                            onLoad={() => setImageLoaded(true)}
+                        />
+                    </motion.div>
                 </AnimatePresence>
             </RightSection>
         </CardContainer>
