@@ -115,7 +115,7 @@ const HeroMain = () => {
           <StaticProfileImage
             src={safi}
             alt="Md Safiul Haque"
-            onLoad={() => setLoading(false)} // 👈 hide loading when image is ready
+            onLoad={() => setLoading(true)} // 👈 hide loading when image is ready
           />
         </ImageSection>
       </HeroContainer>

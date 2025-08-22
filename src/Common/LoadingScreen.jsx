@@ -15,7 +15,7 @@ const LoadingScreen = () => {
       <Typography variant="h6" color="textPrimary">
         Please wait
       </Typography>
-      <Box sx={{ width: "60%" }}>
+      <Box sx={{ width: {md: "20%", sm: "30%", xs: "40%"} }}>
         <LinearProgress />
       </Box>
     </Box>
