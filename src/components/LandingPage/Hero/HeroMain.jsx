@@ -6,7 +6,7 @@ import {
   MotionIntroText,
   MotionNameText,
   SubtitleText,
-  StaticProfileImage,
+  StaticProfileImage, // keep styled wrapper
   ButtonContainer,
   StyledButton,
   SocialIconsContainer,
@@ -19,7 +19,12 @@ import { LinkedIn, GitHub, Instagram, LocationOn } from '@mui/icons-material';
 import XIcon from '@mui/icons-material/X';
 import { colour_green, colour_orange, colour_white } from '../../../Common/colours';
 import safi from "../../../assets/Hero/safi.webp";
+import safioritemp from "../../../assets/Hero/safioritemp.webp";
 import { useNavigate } from 'react-router-dom';
+
+// 👇 import lazy load component
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const HeroMain = () => {
   const navigate = useNavigate();
@@ -67,7 +72,7 @@ const HeroMain = () => {
                 color: colour_orange
               },
             }}
-            onClick={handleContactClick} // 👈 Navigate instead of href
+            onClick={handleContactClick}
           >
             Contact
           </StyledButton>
@@ -91,7 +96,13 @@ const HeroMain = () => {
       </TextSection>
 
       <ImageSection>
-        <StaticProfileImage src={safi} alt="Md Safiul Haque" />
+        <StaticProfileImage
+          as={LazyLoadImage} // 👈 use lazy-load version
+          src={safi}
+          alt="Md Safiul Haque"
+          placeholderSrc={safioritemp} // 👈 temp image before load
+          effect="blur" // 👈 optional blur-up effect
+        />
       </ImageSection>
     </HeroContainer>
   );
