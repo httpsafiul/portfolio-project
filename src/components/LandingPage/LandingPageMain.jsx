@@ -33,7 +33,6 @@ function LandingPageMain() {
     }>
         <HeroMain/>
     </Suspense>
-        {/* <HeroMain /> */}
         <IntroductionMain />
         <EducationMain/>
         <TechStackMain/>
