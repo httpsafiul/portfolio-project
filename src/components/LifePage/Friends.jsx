@@ -45,7 +45,7 @@ const Friends = () => {
   ];
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
       <Intro>Who are there for me.</Intro>
       <Gallery images={lifeImages} />
     </div>

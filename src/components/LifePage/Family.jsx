@@ -32,7 +32,7 @@ const Family = () => {
     { src: img6, hash: "LMJko%X8s$n$yF%2NMof?wR+-qM{" }
   ];
   return (
-    <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+    <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "100%"}}>
       <Intro>Abbu & Ammu, the most loving parents in the world.</Intro>
       <Gallery images={lifeImages} />
     </div>
