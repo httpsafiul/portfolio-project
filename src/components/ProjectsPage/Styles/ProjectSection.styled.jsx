@@ -1,41 +1,50 @@
+import styled from "styled-components";
+import { Card } from "@mui/material";
+import { colour_primary, colour_background, colour_green } from "../../../Common/colours";
 
-import styled from 'styled-components';
-import { colour_green, colour_primary } from '../../../Common/colours';
-
-export const ProjectCard = styled.div`
-  border: 2px solid ${({ theme }) => theme.colour_primary};
+export const ProjectCard = styled(Card)`
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  background: ${colour_background};
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   border-radius: 5px;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  /* &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-  } */
+  @media (max-width: 1300px) {
+    width: 90%;
+  }
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 90%;
+  }
 `;
 
 export const ProjectImage = styled.img`
-  width: 50%;
-  height: 220px;
+  width: 40%;
+  height: auto;
   object-fit: cover;
 
-  /* Smaller height for mobile */
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 220px;
+  }
+
   @media (max-width: 600px) {
     height: 160px;
   }
 `;
 
-
 export const ProjectContent = styled.div`
-  padding: 1rem;
+  flex: 1;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 `;
 
 export const ProjectTitle = styled.h3`
@@ -44,22 +53,19 @@ export const ProjectTitle = styled.h3`
 `;
 
 export const ProjectDescription = styled.p`
-  /* color: #444; */
   font-size: 0.95rem;
+  line-height: 1.4;
 `;
 
 export const ProjectHighlights = styled.p`
-  /* color: #555; */
   font-size: 0.9rem;
 `;
 
 export const ProjectRecognition = styled.p`
-  /* color: #555; */
   font-size: 0.9rem;
 `;
 
 export const ProjectTech = styled.p`
-  /* color: #222; */
   font-size: 0.9rem;
   font-weight: 500;
 `;

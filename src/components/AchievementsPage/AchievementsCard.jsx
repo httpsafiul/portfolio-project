@@ -68,7 +68,7 @@ const AchievementsCard = ({
     };
 
     return (
-        <CardContainer>
+        <CardContainer elevation={2}>
             <LeftSection>
                 <TrophyIcon>{emoji}</TrophyIcon>
 
@@ -77,7 +77,7 @@ const AchievementsCard = ({
                     sx={{
                         fontWeight: "bold",
                         color: "var(--colour_primary)",
-                        fontSize: "1.4rem",
+                        fontSize: "1.1rem",
                         marginBottom: "0px",
                         fontFamily: "Libre Caslon Text",
                     }}
@@ -93,7 +93,7 @@ const AchievementsCard = ({
                         color: "#888",
                         fontStyle: "italic",
                         marginBottom: "8px",
-                        fontSize: "1.2rem",
+                        fontSize: "1.1rem",
                         fontFamily: "Libre Caslon Text",
                     }}
                 >
@@ -124,7 +124,7 @@ const AchievementsCard = ({
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         underline="hover"
-                                        sx={{ color: "#0077b5", fontWeight: 500, fontSize: "1.1rem" }}
+                                        sx={{ color: "#0077b5", fontWeight: 500, fontSize: "1.0rem" }}
                                     >
                                         {member.name}
                                     </Link>

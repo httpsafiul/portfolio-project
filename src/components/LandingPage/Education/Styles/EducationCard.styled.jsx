@@ -12,7 +12,6 @@ export const CardWrapper = styled.div`
   overflow: hidden;
   border-radius: 6px;
   cursor: pointer;
-  background-color: ${colour_green};
   transition: transform 0.3s ease;
 
   &:hover {

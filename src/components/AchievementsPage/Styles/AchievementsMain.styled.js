@@ -3,13 +3,12 @@ import { colour_background } from '../../../Common/colours';
 
 export const AchievementsContainer = styled.section`
   width: 100%;
-  background: var(--colour_background);
+  background: ${colour_background};
   padding: 40px 8%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: ${colour_background};
     @media (max-width: 768px) {
     padding: 40px 5%;
   }
