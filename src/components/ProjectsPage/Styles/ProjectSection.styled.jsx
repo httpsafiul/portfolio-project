@@ -24,10 +24,10 @@ export const ProjectCard = styled(Card)`
   }
 `;
 
-export const ProjectImage = styled.img`
+export const ProjectImageWrapper = styled.div`
+  position: relative;
   width: 40%;
   height: auto;
-  object-fit: cover;
 
   @media (max-width: 900px) {
     width: 100%;
@@ -37,6 +37,15 @@ export const ProjectImage = styled.img`
   @media (max-width: 600px) {
     height: 160px;
   }
+`;
+
+export const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export const ProjectContent = styled.div`
