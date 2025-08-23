@@ -19,7 +19,7 @@ const LetsConnectCard = () => {
     return (
         <CardContainer>
             <Heading>
-                Are You Ready to Kickstart Your Project with a Touch of Magic?
+                Let Me Help You to Kickstart Your Project with a Touch of Magic!
             </Heading>
             <Description>
                 Reach out and let’s bring your ideas to life ✨.

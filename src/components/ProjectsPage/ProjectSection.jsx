@@ -51,11 +51,11 @@ const ProjectSection = ({ project }) => {
         <ProjectTech>
           <strong>Tech Used:</strong> {project.tech}
         </ProjectTech>
-        {project.link && (
+        {/* {project.link && (
           <LearnMoreButton href={project.link} target="_blank" rel="noopener noreferrer">
             Learn More <ArrowForwardIcon fontSize="small" />
           </LearnMoreButton>
-        )}
+        )} */}
       </ProjectContent>
     </ProjectCard>
   );
