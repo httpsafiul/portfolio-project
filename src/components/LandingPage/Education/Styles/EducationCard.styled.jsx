@@ -56,6 +56,7 @@ export const BlurhashWrapper = styled.div`
   position: absolute;
   inset: 0;
   transition: opacity 0.3s ease;
+  filter: brightness(0.9);
   opacity: ${(props) => (props.loaded ? 0 : 1)};
 `;
 
