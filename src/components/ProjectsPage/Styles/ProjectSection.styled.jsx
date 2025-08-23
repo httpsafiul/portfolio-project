@@ -20,7 +20,6 @@ export const ProjectCard = styled(Card)`
   }
   @media (max-width: 900px) {
     flex-direction: column;
-    width: 90%;
   }
 `;
 
