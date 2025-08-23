@@ -39,7 +39,7 @@ const Friends = () => {
     { src: img7, hash: "LEJ@n6~WxUoI?vXmIpt8-o^*jJ%M" },
     { src: img8, hash: "LIFFy:M{oun+Mut7M_j]?Hjs_4of" },
     { src: img9, hash: "LIDvD=M_IBj[~UoKxbni9Eoz%MWB" },
-    { src: img10, hash: "LpKwtc%2SeNa~qW;oLjF%NaeRjof" },
+    { src: img10, hash: "LGHB-$8^%dt8DN_NWZaJ0+RiD%NG" },
     { src: img11, hash: "LCE:9pb[^t_LH@#t%4=|QlA9sqv~" },
     { src: img12, hash: "LwL}4=WB-:n#~qofM{Rj%2oMM{j]" },
   ];
