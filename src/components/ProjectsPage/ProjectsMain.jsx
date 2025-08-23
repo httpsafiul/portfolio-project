@@ -61,16 +61,16 @@ const ProjectsMain = () => {
         tech: 'Python, OpenCV, TensorFlow, Flask, MongoDB',
         link: '#'
     },
-    {
-        image: tictactoe,
-        imageHash: "LJR3i^bb]}m,ysW=pIXn}RjFMxaJ",
-        name: 'Real-time Tic Tac Toe',
-        description: 'A real-time multiplayer Tic Tac Toe game with integrated live chat functionality. Players can challenge each other, chat in real-time during gameplay, and see instant board updates without page refresh. The platform ensures seamless synchronization between clients using WebSockets and offers a clean, responsive UI for both desktop and mobile devices.',
-        highlights: 'Fully responsive UI, live game state synchronization using WebSockets, integrated chat system.',
-        recognition: 'Showcased at college tech fest as a demonstration of real-time web application capabilities.',
-        tech: 'React.js, Node.js, WebSockets, Express.js',
-        link: '#'
-    }
+    // {
+    //     image: tictactoe,
+    //     imageHash: "LJR3i^bb]}m,ysW=pIXn}RjFMxaJ",
+    //     name: 'Real-time Tic Tac Toe',
+    //     description: 'A real-time multiplayer Tic Tac Toe game with integrated live chat functionality. Players can challenge each other, chat in real-time during gameplay, and see instant board updates without page refresh. The platform ensures seamless synchronization between clients using WebSockets and offers a clean, responsive UI for both desktop and mobile devices.',
+    //     highlights: 'Fully responsive UI, live game state synchronization using WebSockets, integrated chat system.',
+    //     recognition: 'Showcased at college tech fest as a demonstration of real-time web application capabilities.',
+    //     tech: 'React.js, Node.js, WebSockets, Express.js',
+    //     link: '#'
+    // }
 ];
 
 
