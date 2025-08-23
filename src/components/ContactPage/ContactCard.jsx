@@ -20,6 +20,7 @@ import {
     ContentCopy,
     Message,
 } from "@mui/icons-material";
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Face6Icon from "@mui/icons-material/Face6";
 import XIcon from '@mui/icons-material/X';
 
@@ -78,6 +79,12 @@ const ContactCard = () => {
                         <Typography sx={{ fontFamily: "Libre Caslon Text" }} variant="body2">
                             linkedin.com/in/safiulhaque
                         </Typography>
+                        <IconButton
+                            size="small"
+                            sx={{ color: colour_white }}
+                        >
+                            <ArrowOutwardIcon fontSize="small" />
+                        </IconButton>
                     </SocialLink>
                 </SocialBox>
 
@@ -93,6 +100,12 @@ const ContactCard = () => {
                         <Typography sx={{ fontFamily: "Libre Caslon Text" }} variant="body2">
                             github.com/httpsafiul
                         </Typography>
+                        <IconButton
+                            size="small"
+                            sx={{ color: colour_white }}
+                        >
+                            <ArrowOutwardIcon fontSize="small" />
+                        </IconButton>
                     </SocialLink>
                 </SocialBox>
 
@@ -108,6 +121,12 @@ const ContactCard = () => {
                         <Typography sx={{ fontFamily: "Libre Caslon Text" }} variant="body2">
                             instagram.com/httpsafiul
                         </Typography>
+                        <IconButton
+                            size="small"
+                            sx={{ color: colour_white }}
+                        >
+                            <ArrowOutwardIcon fontSize="small" />
+                        </IconButton>
                     </SocialLink>
                 </SocialBox>
 
@@ -123,6 +142,12 @@ const ContactCard = () => {
                         <Typography sx={{ fontFamily: "Libre Caslon Text" }} variant="body2">
                             x.com/23Safiul
                         </Typography>
+                        <IconButton
+                            size="small"
+                            sx={{ color: colour_white }}
+                        >
+                            <ArrowOutwardIcon fontSize="small" />
+                        </IconButton>
                     </SocialLink>
                 </SocialBox>
             </LeftSection>
