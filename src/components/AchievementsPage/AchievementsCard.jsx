@@ -68,7 +68,7 @@ const AchievementsCard = ({
     };
 
     return (
-        <CardContainer>
+        <CardContainer elevation={2}>
             <LeftSection>
                 <TrophyIcon>{emoji}</TrophyIcon>
 

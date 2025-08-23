@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { colour_green, colour_primary } from '../../../Common/colours';
+import { Card } from "@mui/material";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(Card)`
   display: flex;
   background: #fff;
   border-radius: 5px;

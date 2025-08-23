@@ -8,9 +8,7 @@ export const ProjectsContainer = styled.div`
   padding: 40px 8%;
   background-color: ${colour_background};
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on large screens */
-  }
+
 
   /* Reduce padding on mobile */
   @media (max-width: 600px) {

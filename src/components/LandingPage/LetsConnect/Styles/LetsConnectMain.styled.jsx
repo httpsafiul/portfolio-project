@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import bg from '../../../../assets/Hero/bg.webp';
+import { colour_background } from "../../../../Common/colours";
 
 export const LetsConnectSection = styled.section`
   width: 100%;
@@ -8,6 +9,7 @@ export const LetsConnectSection = styled.section`
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
+  background-color: ${colour_background};
     background-image: url(${bg});
 
   @media (max-width: 768px) {
