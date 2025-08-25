@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Card } from "@mui/material";
-import { colour_primary, colour_background, colour_green } from "../../../Common/colours";
+import { colour_background, colour_green } from "../../../Common/colours";
 
 export const ProjectCard = styled(Card)`
   width: 80%;
@@ -61,34 +61,21 @@ export const ProjectTitle = styled.h3`
 `;
 
 export const ProjectDescription = styled.p`
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.4;
 `;
 
 export const ProjectHighlights = styled.p`
-  font-size: 0.9rem;
+  font-size: 1rem;
 `;
 
 export const ProjectRecognition = styled.p`
-  font-size: 0.9rem;
+  font-size: 1rem;
 `;
 
-export const ProjectTech = styled.p`
-  font-size: 0.9rem;
-  font-weight: 500;
-`;
-
-export const LearnMoreButton = styled.a`
-  margin-top: auto;
-  display: inline-flex;
+export const ProjectTechWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   align-items: center;
-  gap: 0.4rem;
-  color: ${colour_primary};
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.2s ease-in-out;
-
-  &:hover {
-    transform: translateX(4px);
-  }
 `;

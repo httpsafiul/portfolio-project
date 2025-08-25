@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colour_green, colour_primary } from '../../../Common/colours';
+import { colour_green } from '../../../Common/colours';
 import { Card } from "@mui/material";
 
 export const CardContainer = styled(Card)`
@@ -8,7 +8,6 @@ export const CardContainer = styled(Card)`
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  /* height: 450px;  */
   width: 80%;
   @media (max-width: 1100px) {
     width: 100%;
@@ -23,7 +22,6 @@ export const CardContainer = styled(Card)`
 export const LeftSection = styled.div`
   flex: 1;
   padding: 30px;
-  /* background: var(--colour_background); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +52,7 @@ export const Title = styled.h3`
 export const Description = styled.p`
   color: #444;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-top: 12px;
   line-height: 1.5;
 `;
@@ -63,7 +61,7 @@ export const RightSection = styled.div`
   flex: 1; 
   position: relative;
   overflow: hidden;
-  min-height: 350px; /* Match card height */
+  min-height: 350px;
   @media (max-width: 768px) {
     min-height: 250px;
   }
