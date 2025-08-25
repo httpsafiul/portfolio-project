@@ -71,12 +71,14 @@ const HeroMain = () => {
                 fontWeight: "bold",
                 fontFamily: "Libre Caslon Text",
               }}
+              size='small'
               href="https://drive.google.com/file/d/1ph7YV5Nf4f4rfqpj_RlHT7gbFpysRbkL/view?usp=sharing"
               target="_blank"
             >
               Download CV
             </StyledButton>
             <StyledButton
+              size='small'
               variant="outlined"
               sx={{
                 borderColor: colour_white,
