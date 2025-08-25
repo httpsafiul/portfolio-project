@@ -6,25 +6,19 @@ import bg from '../../../../assets/Hero/bg.png';
 export const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: calc(100vh - 80px);
+  height: auto;
   font-family: 'Poppins', sans-serif;
   background-color: ${colour_green};
   background-image: url(${bg});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 1.3%;
 
   @media (max-width: 805px) {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: auto;
-  }
-  @media (min-height: 800px) {
-    height: auto;
-  }
-  @media (max-height: 530px) {
-    height: auto;
   }
 `;
 
@@ -48,7 +42,7 @@ export const TextSection = styled.div`
 `;
 
 export const MotionIntroText = styled.h2`
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -59,7 +53,7 @@ export const MotionIntroText = styled.h2`
 `;
 
 export const MotionNameText = styled.h1`
-  font-size: 4rem;
+  font-size: 3.6rem;
   font-weight: 900;
   text-transform: uppercase;
   color: ${colour_white};
@@ -73,7 +67,7 @@ export const MotionNameText = styled.h1`
 `;
 
 export const SubtitleText = styled.h3`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: ${colour_orange};
   margin: 1rem 0;
@@ -85,26 +79,27 @@ export const SubtitleText = styled.h3`
 export const ImageSection = styled.div`
   flex: 2;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
   @media (max-width: 1570px) {
     margin-right: 10px;
+    justify-content: center;
   }
   @media (max-width: 805px) {
-    /* padding-top: 1rem; */
     margin-left: 40px;
+    justify-content: center
   }
    @media (min-height: 800px) {
-    /* padding-top: 1rem; */
+    justify-content: center
   }
 `;
 
 export const StaticProfileImage = styled.img`
-  width: 650px;
+  width: 513px;
   height: auto;
   object-fit: contain;
     @media (max-width: 1024px) {
-    width: 520px;
+    width: 470px;
   }
   @media (max-width: 845px) {
     width: 380px;
@@ -139,6 +134,9 @@ export const SocialIconsContainer = styled.div`
   gap: 1rem;
   margin-top: 1.5rem;
   flex-wrap: wrap;
+    @media (max-width: 1270px) {
+    margin-bottom: 20px;
+  }
   @media (max-width: 805px) {
     justify-content: center;
   }
