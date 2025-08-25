@@ -10,7 +10,7 @@ import {
     Description,
     RightSection
 } from "./Styles/AchievementCard.styled";
-import { Box, Typography, Link, Stack } from "@mui/material";
+import { Box, Typography, Chip, Stack } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const sliderVariants = {
@@ -47,7 +47,7 @@ const AchievementsCard = ({
 
     const swipeToImage = swipeDirection => {
         setImageCount([imageCount + swipeDirection, swipeDirection]);
-        setImageLoaded(false); // reset loading state on image change
+        setImageLoaded(false);
     };
 
     useEffect(() => {
@@ -100,49 +100,46 @@ const AchievementsCard = ({
                     {date}
                 </Typography>
 
-                <Box sx={{ marginBottom: "12px" }}>
-                    <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
-                        <Typography
-                            variant="body2"
-                            sx={{
-                                fontSize: "1.1rem",
-                                fontWeight: "bold",
-                                marginBottom: "4px",
-                                fontFamily: "Libre Caslon Text",
-                            }}
-                        >
-                            My Team:
-                        </Typography>
-                    </div>
+                {/* My Team Section */}
+                <Box sx={{ marginBottom: "12px", width: "100%", textAlign: "center" }}>
+                    <Typography
+                        variant="body2"
+                        sx={{
+                            fontSize: "1.1rem",
+                            fontWeight: "bold",
+                            marginBottom: "8px",
+                            fontFamily: "Libre Caslon Text",
+                        }}
+                    >
+                        My Team:
+                    </Typography>
 
-                    <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "6px" }}>
+                    <Stack
+                        direction="row"
+                        flexWrap="wrap"
+                        justifyContent="center"
+                        gap={"10px"}
+                    >
                         {team.map((member, index) => (
-                            <React.Fragment key={index}>
-                                <Stack direction="row" alignItems="center" spacing={0.5}>
-                                    <Link
-                                        href={member.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        underline="hover"
-                                        sx={{ color: "#0077b5", fontWeight: 500, fontSize: "1.0rem" }}
-                                    >
-                                        {member.name}
-                                    </Link>
-                                    <Link
-                                        href={member.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        sx={{ color: "#0077b5" }}
-                                    >
-                                        <LinkedInIcon fontSize="medium" />
-                                    </Link>
-                                </Stack>
-                                {index < team.length - 1 && (
-                                    <Typography variant="body2" sx={{ color: "#888", fontFamily: "Libre Caslon Text" }}>|</Typography>
-                                )}
-                            </React.Fragment>
+                            <Chip
+                                key={index}
+                                label={member.name}
+                                icon={<LinkedInIcon />}
+                                variant="outlined"
+                                color="primary"
+                                clickable
+                                component="a"
+                                href={member.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                size="medium"
+                                sx={{
+                                    fontFamily: "Libre Caslon Text",
+                                    fontSize: "0.95rem",
+                                }}
+                            />
                         ))}
-                    </Box>
+                    </Stack>
                 </Box>
 
                 <Description>{description}</Description>

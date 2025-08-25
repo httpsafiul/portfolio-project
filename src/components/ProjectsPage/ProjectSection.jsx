@@ -8,12 +8,16 @@ import {
   ProjectDescription,
   ProjectHighlights,
   ProjectRecognition,
-  ProjectTech,
-  LearnMoreButton,
+  ProjectTechWrapper,
 } from "./Styles/ProjectSection.styled";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import CodeIcon from "@mui/icons-material/Code";
 
 import { Blurhash } from "react-blurhash";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { colour_green, colour_orange } from "../../Common/colours";
+
+import { Chip, Avatar } from "@mui/material";
 
 const ProjectSection = ({ project }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -42,20 +46,31 @@ const ProjectSection = ({ project }) => {
       <ProjectContent>
         <ProjectTitle>{project.name}</ProjectTitle>
         <ProjectDescription>{project.description}</ProjectDescription>
+
         <ProjectHighlights>
-          <strong>Highlights:</strong> {project.highlights}
+          <strong style={{color: colour_green}}>Highlights:</strong> {project.highlights}
         </ProjectHighlights>
+
         <ProjectRecognition>
-          <strong>Recognition:</strong> {project.recognition}
+          <strong style={{color: colour_green}}>Recognition:</strong> {project.recognition}
         </ProjectRecognition>
-        <ProjectTech>
-          <strong>Tech Used:</strong> {project.tech}
-        </ProjectTech>
-        {/* {project.link && (
-          <LearnMoreButton href={project.link} target="_blank" rel="noopener noreferrer">
-            Learn More <ArrowForwardIcon fontSize="small" />
-          </LearnMoreButton>
-        )} */}
+
+        <div>
+          <ProjectTechWrapper>
+            {project.tech?.map((tech, index) => (
+              <Chip
+                key={index}
+                avatar={<Avatar src={tech.icon} alt={tech.name} />}
+                label={tech.name}
+                size="medium"
+                variant="outlined"
+                sx={{
+                  marginTop: "5px"
+                }}
+              />
+            ))}
+          </ProjectTechWrapper>
+        </div>
       </ProjectContent>
     </ProjectCard>
   );
