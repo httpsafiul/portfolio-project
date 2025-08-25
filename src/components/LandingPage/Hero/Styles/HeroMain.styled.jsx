@@ -99,7 +99,7 @@ export const StaticProfileImage = styled.img`
   height: auto;
   object-fit: contain;
     @media (max-width: 1024px) {
-    width: 520px;
+    width: 470px;
   }
   @media (max-width: 845px) {
     width: 380px;
