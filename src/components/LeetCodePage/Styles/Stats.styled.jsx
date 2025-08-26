@@ -10,16 +10,17 @@ export const StatsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-        @media (max-width: 1060px) {
+
+  @media (max-width: 1060px) {
     width: 70%;
-    }
-    @media (max-width: 910px) {
+  }
+  @media (max-width: 910px) {
     width: 80%;
-    }
-    @media (max-width: 795px) {
+  }
+  @media (max-width: 795px) {
     width: 90%;
   }
-    @media (max-width: 520px) {
+  @media (max-width: 520px) {
     width: 100%;
   }
 `;
@@ -42,13 +43,13 @@ export const HeaderLeft = styled.div`
 export const Logo = styled.img`
   width: 50px;
   height: 50px;
-      @media (max-width: 780px) {
+  @media (max-width: 780px) {
     width: 40px;
-  height: 40px;
+    height: 40px;
   }
-    @media (max-width: 520px) {
+  @media (max-width: 520px) {
     width: 30px;
-  height: 30px;
+    height: 30px;
   }
 `;
 
@@ -56,10 +57,10 @@ export const Title = styled.h2`
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
-      @media (max-width: 780px) {
-    font-size: 1.0rem;
+  @media (max-width: 780px) {
+    font-size: 1rem;
   }
-    @media (max-width: 520px) {
+  @media (max-width: 520px) {
     font-size: 0.8rem;
   }
 `;
@@ -68,10 +69,10 @@ export const Subtitle = styled.p`
   margin: 0;
   font-size: 0.9rem;
   color: #666;
-        @media (max-width: 780px) {
+  @media (max-width: 780px) {
     font-size: 0.8rem;
   }
-    @media (max-width: 520px) {
+  @media (max-width: 520px) {
     font-size: 0.7rem;
   }
 `;
@@ -168,14 +169,27 @@ export const StatBox = styled.div`
 export const StatValue = styled.div`
   font-weight: bold;
   font-size: 1.1rem;
-        @media (max-width: 1371px) {
-    font-size: 1.0rem;
+  @media (max-width: 1371px) {
+    font-size: 1rem;
   }
 `;
 
 export const StatLabel = styled.div`
   font-size: 0.9rem;
-          @media (max-width: 1371px) {
+  @media (max-width: 1371px) {
     font-size: 0.8rem;
   }
+`;
+
+// NEW - Loading container
+export const LoadingPaper = styled(Paper)`
+  width: 100%;
+  border-radius: 12px;
+  padding: 2rem;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
 `;

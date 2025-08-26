@@ -137,9 +137,10 @@ function Navbar({ active }) {
                       onClick={() => handleNavClick(item)}
                       sx={{
                         color: isActive ? colour_orange : colour_white,
-                        fontWeight: '600',
-                        fontSize: '0.9rem',
+                        fontWeight: '500',
+                        fontSize: '1.1rem',
                         fontFamily: "Libre Caslon Text",
+                        textTransform: "none",
                       }}
                     >
                       {item}

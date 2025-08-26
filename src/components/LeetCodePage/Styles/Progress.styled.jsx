@@ -27,7 +27,8 @@ export const CardWrapper = styled(Paper)`
 
 export const CardHeading = styled(Typography).attrs({
   variant: "h6",
-  component: "h2"
+  component: "h2",
+  fontFamily: "Libre Caslon Text",
 })`
   font-weight: 700;
   margin-bottom: 1rem;
@@ -54,7 +55,8 @@ export const IconWrapper = styled.div`
 `;
 
 export const ItemText = styled(Typography).attrs({
-  variant: "body1"
+  variant: "body1",
+  fontFamily: "Libre Caslon Text",
 })`
   color: #333;
   font-weight: 500;

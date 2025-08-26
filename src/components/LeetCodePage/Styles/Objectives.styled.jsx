@@ -4,7 +4,7 @@ import { colour_background, colour_green, colour_orange } from "../../../Common/
 
 export const ObjectivesContainer = styled(Paper)`
   width: 80%;
-  margin: 2rem auto;
+  margin: 4rem auto;
   padding: 2rem;
   border-radius: 16px;
   background: ${colour_background};

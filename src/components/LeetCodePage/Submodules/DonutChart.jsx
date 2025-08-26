@@ -10,7 +10,7 @@ const DonutChart = ({ data }) => {
         datasets: [{
             label: "Problems Solved",
             data: [10, 20, 30],
-            backgroundColor: ['#1CBABA', '#FFB700', '#F63737'],
+            backgroundColor: ['#16C47F', '#FFD65A', '#F93827'],
         }]
     });
 
@@ -21,7 +21,7 @@ const DonutChart = ({ data }) => {
             datasets: [{
                 label: "Problems Solved",
                 data: [data.easy, data.medium, data.hard],
-                backgroundColor: ['#1CBABA', '#FFB700', '#F63737'],
+                backgroundColor: ['#16C47F', '#FFD65A', '#F93827'],
                 hoverOffset: 4
             }]
         });

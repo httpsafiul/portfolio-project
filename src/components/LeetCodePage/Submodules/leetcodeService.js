@@ -7,6 +7,6 @@ export const fetchLeetCodeStats = async (username, setStats) => {
       setStats(data);
     }
   } catch (err) {
-    console.error("Error fetching LeetCode stats:", err);
+    // console.error("Error fetching LeetCode stats:", err);
   }
 };

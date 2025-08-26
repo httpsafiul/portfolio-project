@@ -21,7 +21,7 @@ const LeetCodeTop = () => {
             </div>
             <Grid container spacing={3} justifyContent="center" sx={{ marginTop: "2rem" }}>
                 <Grid item xs={12} sm={4}>
-                    <StatCard>
+                    <StatCard elevation={2}>
                         <CardContent>
                             <StatGreen>Daily</StatGreen>
                             <StatGrey>Practice</StatGrey>
@@ -29,7 +29,7 @@ const LeetCodeTop = () => {
                     </StatCard>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <StatCard>
+                    <StatCard elevation={2}>
                         <CardContent>
                             <StatGreen>Tracked</StatGreen>
                             <StatGrey>Progress</StatGrey>
@@ -37,7 +37,7 @@ const LeetCodeTop = () => {
                     </StatCard>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <StatCard>
+                    <StatCard elevation={2}>
                         <CardContent>
                             <StatGreen>Focused</StatGreen>
                             <StatGrey>Learning</StatGrey>

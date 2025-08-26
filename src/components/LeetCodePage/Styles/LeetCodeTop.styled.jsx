@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Typography, Card } from "@mui/material";
+import { Typography, Paper } from "@mui/material";
 import { colour_green, colour_orange, colour_white } from '../../../Common/colours';
 
 export const Container = styled.div`
@@ -12,6 +12,7 @@ export const Heading = styled(Typography).attrs({
   variant: "h4",
   component: "h1",
   fontWeight: "bold",
+  fontFamily: "Libre Caslon Text",
 })`
   font-weight: 700;
   color: ${colour_green}
@@ -19,7 +20,8 @@ export const Heading = styled(Typography).attrs({
 
 export const Subheading = styled(Typography).attrs({
   variant: "subtitle1",
-  component: "p"
+  component: "p",
+  fontFamily: "Libre Caslon Text",
 })`
   margin-top: 0.8rem;
   color: #555;
@@ -29,7 +31,7 @@ export const Subheading = styled(Typography).attrs({
   line-height: 1.6;
 `;
 
-export const StatCard = styled(Card)`
+export const StatCard = styled(Paper)`
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
@@ -50,7 +52,8 @@ export const StatCard = styled(Card)`
 
 export const StatGreen = styled(Typography).attrs({
   variant: "h5",
-  component: "div"
+  component: "div",
+  fontFamily: "Libre Caslon Text",
 })`
   font-weight: 700;
   color: ${colour_green};
@@ -58,7 +61,8 @@ export const StatGreen = styled(Typography).attrs({
 
 export const StatGrey = styled(Typography).attrs({
   variant: "body1",
-  component: "div"
+  component: "div",
+  fontFamily: "Libre Caslon Text",
 })`
   font-weight: 500;
   color: ${colour_orange};
