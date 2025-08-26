@@ -8,6 +8,7 @@ import AchievementsMain from './components/AchievementsPage/AchievementsMain';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LifePageMain from './components/LifePage/LifePageMain';
 import ContactMain from './components/ContactPage/ContactMain';
+import LeetCodePageMain from './components/LeetCodePage/LeetCodePageMain';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="projects" element={<ProjectsMain />} />
           <Route path="life" element={<LifePageMain />} />
           <Route path="contact" element={<ContactMain />} />
+          <Route path="leetcode" element={<LeetCodePageMain />} />
         </Routes>
       </Router>
       <CopyrightSection />
