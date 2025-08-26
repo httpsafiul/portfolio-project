@@ -62,7 +62,7 @@ export const MilestoneLabel = styled.p`
 `;
 
 export const Description = styled.p`
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
   line-height: 1.6;
   max-width: 700px;
