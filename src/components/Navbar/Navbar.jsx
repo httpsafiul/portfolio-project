@@ -19,7 +19,7 @@ import { motion } from 'framer-motion';
 import { colour_green, colour_orange, colour_white } from '../../Common/colours';
 
 const drawerWidth = 240;
-const navItems = ["Home", "Achievements", "Projects", "Life", "Contact"];
+const navItems = ["Home", "Achievements", "Projects", "LeetCode", "Life", "Contact"];
 
 function Navbar({ active }) {
   const [mobileOpen, setMobileOpen] = useState(false);

@@ -6,22 +6,22 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DonutChart = ({ data }) => {
     const [chartData, setChartData] = useState({
-        labels: ['Easy', 'Medium', 'Difficult'],
+        labels: ['Easy', 'Medium', 'Hard'],
         datasets: [{
             label: "Problems Solved",
             data: [10, 20, 30],
-            backgroundColor: ['#34B3F1', '#F15412', '#F9D923'],
+            backgroundColor: ['#1CBABA', '#FFB700', '#F63737'],
         }]
     });
 
     useEffect(() => {
         if (!data) return;
         setChartData({
-            labels: ['Easy', 'Medium', 'Difficult'],
+            labels: ['Easy', 'Medium', 'Hard'],
             datasets: [{
                 label: "Problems Solved",
-                data: [data.easy, data.medium, data.difficult],
-                backgroundColor: ['#34B3F1', '#F15412', '#F9D923'],
+                data: [data.easy, data.medium, data.hard],
+                backgroundColor: ['#1CBABA', '#FFB700', '#F63737'],
                 hoverOffset: 4
             }]
         });

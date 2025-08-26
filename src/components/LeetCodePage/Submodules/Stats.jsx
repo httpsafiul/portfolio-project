@@ -11,7 +11,12 @@ import {
     LeftBox,
     RightBox,
     SectionTitle,
-    StatRow
+    StatRow,
+    ChartWrapper,
+    StatsSummary,
+    StatBox,
+    StatValue,
+    StatLabel
 } from "../Styles/Stats.styled";
 
 import { Button } from "@mui/material";
@@ -43,7 +48,7 @@ const Stats = () => {
     return (
         <StatsContainer>
             {/* Header */}
-            <Header>
+            <Header elevation={2}>
                 <HeaderLeft>
                     <Logo src={leetcode} alt="LeetCode Logo" />
                     <div>
@@ -55,10 +60,12 @@ const Stats = () => {
                     <Button
                         variant="contained"
                         endIcon={<ArrowForwardIcon />}
+                        size="small"
                         sx={{
                             borderRadius: "20px",
                             textTransform: "none",
                             backgroundColor: "#F44800",
+                            fontWeight: "bold",
                             "&:hover": {
                                 backgroundColor: "#d63200", // darker shade on hover
                             }
@@ -73,25 +80,28 @@ const Stats = () => {
             {/* Content */}
             <Content>
                 {/* Left Box */}
-                <LeftBox>
+                <LeftBox elevation={2}>
                     <SectionTitle>Progress Overview</SectionTitle>
-                    <div style={{ height: "220px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+
+                    <ChartWrapper>
                         <DonutChart data={chartData} />
-                    </div>
-                    <div style={{ width: "100%", display: "flex", justifyContent: "space-between", marginTop: "1rem" }}>
-                        <div style={{ width: "50%", marginRight: "5px", backgroundColor: "#f3f6f9ff", padding: "10px", display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
-                            <div style={{ fontWeight: "bold", fontSize: "1.3rem" }}>{stats.totalSolved}</div>
-                            <div style={{ fontSize: "0.9rem" }}>Problems Solved</div>
-                        </div>
-                        <div style={{ width: "50%", marginLeft: "5px", backgroundColor: "#f3f6f9ff", padding: "10px", display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
-                            <div style={{ fontWeight: "bold", fontSize: "1.3rem" }}>{stats.ranking.toLocaleString()}</div>
-                            <div style={{ fontSize: "0.9rem" }}>Rank</div>
-                        </div>
-                    </div>
+                    </ChartWrapper>
+
+                    <StatsSummary>
+                        <StatBox>
+                            <StatValue>{stats.totalSolved}</StatValue>
+                            <StatLabel>Problems Solved</StatLabel>
+                        </StatBox>
+                        <StatBox>
+                            <StatValue>{stats.ranking.toLocaleString()}</StatValue>
+                            <StatLabel>Rank</StatLabel>
+                        </StatBox>
+                    </StatsSummary>
                 </LeftBox>
 
+
                 {/* Right Box */}
-                <RightBox>
+                <RightBox elevation={2}>
                     <SectionTitle>By Difficulty</SectionTitle>
 
                     <StatRow bg="rgba(76, 175, 80, 0.2)">
