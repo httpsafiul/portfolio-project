@@ -24,7 +24,7 @@ import { Button, CircularProgress } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
-import leetcode from "../../../assets/Leetcode/leetcode.png";
+import leetcode from "../../../assets/LeetCode/leetcode.png";
 import DonutChart from "./DonutChart";
 import { fetchLeetCodeStats } from "./leetcodeService";
 
