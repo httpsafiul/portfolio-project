@@ -9,19 +9,21 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled(Typography).attrs({
-  variant: "h4",
-  component: "h1",
-  fontWeight: "bold",
-  fontFamily: "Libre Caslon Text",
+    fontSize: { xs: '1.8rem', sm: '2rem', md: '2.5rem' },
+    variant: "h4",
+    component: "h1",
+    fontWeight: "bold",
+    fontFamily: "Libre Caslon Text",
 })`
   font-weight: 700;
+  
   color: ${colour_green}
 `;
 
 export const Subheading = styled(Typography).attrs({
-  variant: "subtitle1",
-  component: "p",
-  fontFamily: "Libre Caslon Text",
+    variant: "subtitle1",
+    component: "p",
+    fontFamily: "Libre Caslon Text",
 })`
   margin-top: 0.8rem;
   color: #555;
@@ -51,18 +53,18 @@ export const StatCard = styled(Paper)`
 `;
 
 export const StatGreen = styled(Typography).attrs({
-  variant: "h5",
-  component: "div",
-  fontFamily: "Libre Caslon Text",
+    variant: "h5",
+    component: "div",
+    fontFamily: "Libre Caslon Text",
 })`
   font-weight: 700;
   color: ${colour_green};
 `;
 
 export const StatGrey = styled(Typography).attrs({
-  variant: "body1",
-  component: "div",
-  fontFamily: "Libre Caslon Text",
+    variant: "body1",
+    component: "div",
+    fontFamily: "Libre Caslon Text",
 })`
   font-weight: 500;
   color: ${colour_orange};
