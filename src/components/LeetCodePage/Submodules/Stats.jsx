@@ -40,7 +40,7 @@ const Stats = () => {
     return (
       <StatsContainer>
         <LoadingPaper elevation={2}>
-          <h3 style={{ margin: 0 }}>LeetCode Status is Loading</h3>
+          <h3 style={{ margin: 0 }}>Loading LeetCode Status</h3>
           <CircularProgress sx={{ color: colour_orange }} />
         </LoadingPaper>
       </StatsContainer>
