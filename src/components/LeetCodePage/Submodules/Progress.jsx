@@ -1,12 +1,12 @@
 import React from "react";
 import { Grid, CardContent } from "@mui/material";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import CodeIcon from "@mui/icons-material/Code";
+import AutoGraphIcon from "@mui/icons-material/AutoGraph";
+import StarIcon from "@mui/icons-material/Star";
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import FunctionsIcon from "@mui/icons-material/Functions";
-import AccountTreeIcon from "@mui/icons-material/AccountTree";
-import ScheduleIcon from "@mui/icons-material/Schedule";
-import TaskAltIcon from "@mui/icons-material/TaskAlt";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SpeedIcon from "@mui/icons-material/Speed";
 
 import {
@@ -27,73 +27,73 @@ const Progress = () => {
         justifyContent="center"
         alignItems="flex-start"
       >
-        {/* Current Focus */}
+        {/* Learning Focus */}
         <Grid item xs={12} md={5}>
           <CardWrapper elevation={2}>
             <CardContent>
               <CardHeading sx={{ fontWeight: "bold" }}>
-                Current Focus
+                Learning Focus
               </CardHeading>
               <ListItem>
                 <IconWrapper>
-                  <CheckCircleIcon />
+                  <LightbulbIcon />
                 </IconWrapper>
-                <ItemText>Arrays and String manipulation problems</ItemText>
+                <ItemText>Mastering problem-solving strategies</ItemText>
               </ListItem>
               <ListItem>
                 <IconWrapper>
-                  <FunctionsIcon />
+                  <PsychologyIcon />
                 </IconWrapper>
-                <ItemText>Dynamic Programming pattern recognition</ItemText>
+                <ItemText>Strengthening logical and analytical skills</ItemText>
               </ListItem>
               <ListItem>
                 <IconWrapper>
-                  <AccountTreeIcon />
+                  <CodeIcon />
                 </IconWrapper>
-                <ItemText>Binary Trees and Graph traversal algorithms</ItemText>
+                <ItemText>Deep dive into recursion & backtracking</ItemText>
               </ListItem>
               <ListItem>
                 <IconWrapper>
-                  <ScheduleIcon />
+                  <AutoGraphIcon />
                 </IconWrapper>
-                <ItemText>Maintaining daily coding consistency</ItemText>
+                <ItemText>Exploring advanced data structures</ItemText>
               </ListItem>
             </CardContent>
           </CardWrapper>
         </Grid>
 
-        {/* Recent Progress */}
+        {/* Achievements */}
         <Grid item xs={12} md={5}>
           <CardWrapper elevation={2}>
             <CardContent>
               <CardHeading sx={{ fontWeight: "bold" }}>
-                Recent Progress
+                Achievements
               </CardHeading>
               <ListItem>
                 <IconWrapper>
-                  <TaskAltIcon />
+                  <StarIcon />
                 </IconWrapper>
                 <ItemText>
-                  Established consistent daily solving routine
+                  Built solid foundation in core algorithms
                 </ItemText>
+              </ListItem>
+              <ListItem>
+                <IconWrapper>
+                  <WorkspacePremiumIcon />
+                </IconWrapper>
+                <ItemText>Earned badges for consistency & skills</ItemText>
               </ListItem>
               <ListItem>
                 <IconWrapper>
                   <TrendingUpIcon />
                 </IconWrapper>
-                <ItemText>Built solid foundation in core algorithms</ItemText>
-              </ListItem>
-              <ListItem>
-                <IconWrapper>
-                  <EmojiEventsIcon />
-                </IconWrapper>
-                <ItemText>Actively participating in weekly contests</ItemText>
+                <ItemText>Improved ranking in coding contests</ItemText>
               </ListItem>
               <ListItem>
                 <IconWrapper>
                   <SpeedIcon />
                 </IconWrapper>
-                <ItemText>Improved problem-solving efficiency</ItemText>
+                <ItemText>Enhanced speed & accuracy under time</ItemText>
               </ListItem>
             </CardContent>
           </CardWrapper>

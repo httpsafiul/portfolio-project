@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectsContainer } from './Styles/ProjectsMain.styled';
+import { Heading, Intro, ProjectsContainer } from './Styles/ProjectsMain.styled';
 import ProjectSection from './ProjectSection';
 import policeintel from '../../assets/Projects/Banner/policeintel.png';
 import ayurdehi from '../../assets/Projects/Banner/ayurdehi.png';
@@ -117,7 +117,14 @@ const ProjectsMain = () => {
     return (
         <>
             <Navbar active={"projects"} />
+
             <ProjectsContainer>
+                <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: 'center', width: "100%" }}>
+                    <Heading>Projects Showcase</Heading>
+                    <Intro>
+                        A collection of innovative solutions and real-world applications — reflecting my passion for problem-solving, technology, and building impactful products.
+                    </Intro>
+                </div>
                 {projects.map((project, index) => (
                     <ProjectSection key={index} project={project} />
                 ))}

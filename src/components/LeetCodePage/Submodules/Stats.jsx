@@ -27,6 +27,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import leetcode from "../../../assets/LeetCode/leetcode.png";
 import DonutChart from "./DonutChart";
 import { fetchLeetCodeStats } from "./leetcodeService";
+import { colour_green, colour_orange } from "../../../Common/colours";
 
 const Stats = () => {
   const [stats, setStats] = useState(null);
@@ -40,7 +41,7 @@ const Stats = () => {
       <StatsContainer>
         <LoadingPaper elevation={2}>
           <h3 style={{ margin: 0 }}>LeetCode Status is Loading</h3>
-          <CircularProgress sx={{ color: "#d63200" }} />
+          <CircularProgress sx={{ color: colour_orange }} />
         </LoadingPaper>
       </StatsContainer>
     );
@@ -72,10 +73,11 @@ const Stats = () => {
             sx={{
               borderRadius: "20px",
               textTransform: "none",
-              backgroundColor: "#F44800",
+              backgroundColor: colour_green,
               fontWeight: "bold",
               "&:hover": {
-                backgroundColor: "#d63200", // darker shade on hover
+                backgroundColor: colour_orange,
+                color: colour_green
               },
             }}
             onClick={() => window.open("https://leetcode.com/safiiiii/", "_blank")}
@@ -109,27 +111,29 @@ const Stats = () => {
 
         {/* Right Box */}
         <RightBox elevation={2}>
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <SectionTitle>By Difficulty</SectionTitle>
+        </div>
 
-          <StatRow bg="rgba(76, 175, 80, 0.2)">
+          <StatRow bg="rgb(132, 210, 197, 0.3)">
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <FiberManualRecordIcon fontSize="small" style={{ color: "#4caf50" }} />
+              <FiberManualRecordIcon fontSize="small" style={{ color: "#186F65" }} />
               <div style={{ fontSize: "0.9rem", fontWeight: "bold" }}>Easy</div>
             </div>
             <div style={{ fontSize: "1rem", fontWeight: "bold" }}>{stats.easySolved}</div>
           </StatRow>
 
-          <StatRow bg="rgba(255, 235, 59, 0.3)">
+          <StatRow bg="rgb(228, 201, 136, 0.3)">
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <FiberManualRecordIcon fontSize="small" style={{ color: "#ffeb3b" }} />
+              <FiberManualRecordIcon fontSize="small" style={{ color: "#e3b235ff" }} />
               <div style={{ fontSize: "0.9rem", fontWeight: "bold" }}>Medium</div>
             </div>
             <div style={{ fontSize: "1rem", fontWeight: "bold" }}>{stats.mediumSolved}</div>
           </StatRow>
 
-          <StatRow bg="rgba(244, 67, 54, 0.3)">
+          <StatRow bg="rgb(194, 118, 100, 0.3)">
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <FiberManualRecordIcon fontSize="small" style={{ color: "#f44336" }} />
+              <FiberManualRecordIcon fontSize="small" style={{ color: "#B2533E" }} />
               <div style={{ fontSize: "0.9rem", fontWeight: "bold" }}>Hard</div>
             </div>
             <div style={{ fontSize: "1rem", fontWeight: "bold" }}>{stats.hardSolved}</div>
