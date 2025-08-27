@@ -3,7 +3,7 @@ import { Card, Paper } from "@mui/material";
 
 export const StatsContainer = styled.div`
   width: 60%;
-  margin: 2rem auto;
+  margin: 0.5rem auto 0rem auto;
   padding: 1.5rem;
   border-radius: 16px;
   background: #fff;
