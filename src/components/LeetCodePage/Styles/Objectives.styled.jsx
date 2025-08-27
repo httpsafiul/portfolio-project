@@ -64,13 +64,6 @@ export const MilestoneValue = styled.h3`
 export const MilestoneLabel = styled.p`
   font-size: 1rem;
   color: #444;
-  margin-top: 0.3rem;
-      @media (max-width: 1024px) {
-    font-size: 0.9rem;
-  }
-  @media (max-width: 720px) {
-    font-size: 0.8rem;
-  }
 `;
 
 export const Description = styled.p`
