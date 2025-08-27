@@ -32,10 +32,10 @@ const Friends = () => {
   const lifeImages = [
     { src: img1, hash: "L5F5v*0.?G5k}M$LEN4=yhdqIS-A" },
     { src: img2, hash: "L6By]Z^}RzJW00IpI[$$~q-WVbVr" },
-    { src: img3, hash: "LRH_JSNF57%M~oNGi_WV9Fs;%Mbb" },
+    { src: img6, hash: "L9C~}0xZRik700I;5QsC~qM{9]s;" },
     { src: img4, hash: "LNHeXv~q?v.9tMbYR*M{tmt7s8af" },
     { src: img5, hash: "LtIYX_IUx]of%%WDWAa|ozj]V@WB" },
-    { src: img6, hash: "L9C~}0xZRik700I;5QsC~qM{9]s;" },
+    { src: img3, hash: "LRH_JSNF57%M~oNGi_WV9Fs;%Mbb" },
     { src: img7, hash: "LEJ@n6~WxUoI?vXmIpt8-o^*jJ%M" },
     { src: img8, hash: "LIFFy:M{oun+Mut7M_j]?Hjs_4of" },
     { src: img9, hash: "LIDvD=M_IBj[~UoKxbni9Eoz%MWB" },
