@@ -32,33 +32,3 @@ export const Subheading = styled(Typography).attrs({
 })`
   color: #333;
 `;
-
-
-
-export const StatCard = styled(Paper).attrs({
-  padding: { xs: '0rem', sm: '0.5rem', md: '1rem' },
-})`
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
-`;
-
-export const StatGreen = styled(Typography).attrs({
-  variant: "h5",
-  component: "div",
-  fontFamily: "Libre Caslon Text",
-  fontSize: { xs: '0.9rem', sm: '1.0rem', md: '1.3rem' },
-})`
-  font-weight: 700;
-  color: ${colour_green};
-`;
-
-export const StatGrey = styled(Typography).attrs({
-  variant: "body1",
-  component: "div",
-  fontFamily: "Libre Caslon Text",
-  fontSize: { xs: '0.7rem', sm: '0.8rem', md: '1.0rem' },
-})`
-  font-weight: 500;
-  color: ${colour_orange};
-`;
