@@ -100,7 +100,7 @@ const AchievementsMain = () => {
     <>
       <Navbar active={"achievements"} />
       <AchievementsContainer id="achievements">
-        <Heading>Hall of Fame</Heading>
+        <Heading>Innovation Spotlight</Heading>
         <Intro>
           A showcase of my journey through innovation and teamwork — highlighting milestones, stories, and moments from hackathons where ideas turned into impactful solutions.
         </Intro>
