@@ -13,33 +13,32 @@ const LeetCodeTop = () => {
     return (
         <Container>
             <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-                <Heading>LeetCode Progress</Heading>
-                <Subheading style={{ marginTop: "1rem", fontSize: "1.2rem" }}>
-                    Systematic approach to mastering data structures and algorithms through
-                    consistent practice and strategic problem-solving.
+                <Heading>LeetCode Dashboard</Heading>
+                <Subheading style={{ marginTop: "1rem" }}>
+                    A structured pathway to excel in data structures and algorithms with regular practice and smart problem-solving.
                 </Subheading>
             </div>
             <Grid container spacing={3} justifyContent="center" sx={{ marginTop: "2rem" }}>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={12} sm={4} >
                     <StatCard elevation={2}>
                         <CardContent>
                             <StatGreen>Daily</StatGreen>
-                            <StatGrey>Practice</StatGrey>
+                            <StatGrey>Challenges</StatGrey>
                         </CardContent>
                     </StatCard>
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <StatCard elevation={2}>
                         <CardContent>
-                            <StatGreen>Tracked</StatGreen>
-                            <StatGrey>Progress</StatGrey>
+                            <StatGreen>Measured</StatGreen>
+                            <StatGrey>Growth</StatGrey>
                         </CardContent>
                     </StatCard>
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <StatCard elevation={2}>
                         <CardContent>
-                            <StatGreen>Focused</StatGreen>
+                            <StatGreen>Targeted</StatGreen>
                             <StatGrey>Learning</StatGrey>
                         </CardContent>
                     </StatCard>
