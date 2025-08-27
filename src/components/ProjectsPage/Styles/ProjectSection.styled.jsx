@@ -4,7 +4,7 @@ import { colour_background, colour_green } from "../../../Common/colours";
 
 export const ProjectCard = styled(Card)`
   width: 80%;
-  margin: 1rem auto;
+  margin: 0rem auto 2rem auto;
   display: flex;
   flex-direction: row;
   background: ${colour_background};

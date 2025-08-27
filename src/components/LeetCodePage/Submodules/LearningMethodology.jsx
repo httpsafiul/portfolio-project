@@ -10,46 +10,47 @@ import {
   CardText
 } from "../Styles/LearningMethodology.styled";
 
-import PsychologyIcon from "@mui/icons-material/Psychology";
-import AutoGraphIcon from "@mui/icons-material/AutoGraph";
-import ReplayIcon from "@mui/icons-material/Replay";
+
+import TrackChangesIcon from "@mui/icons-material/TrackChanges";
+import InsightsIcon from "@mui/icons-material/Insights";
+import ModelTrainingIcon from '@mui/icons-material/ModelTraining';
 
 const LearningMethodology = () => {
   return (
     <SectionContainer>
-      <SectionHeading>Learning Methodology</SectionHeading>
+      <SectionHeading>Learning Pathway</SectionHeading>
       <SectionSubHeading>
-        A structured approach to algorithmic problem-solving and skill development
+        A disciplined roadmap to sharpen problem-solving skills and grow steadily with every challenge.
       </SectionSubHeading>
 
       <CardsContainer>
         <MethodCard elevation={2}>
           <CardIcon colour="orange">
-            <PsychologyIcon fontSize="large" />
+            <ModelTrainingIcon fontSize="large" />
           </CardIcon>
-          <CardHeading>Pattern Recognition</CardHeading>
+          <CardHeading>Progress Tracking</CardHeading>
           <CardText>
-            Studying common algorithmic patterns and solution templates to build a strong problem-solving framework.
+            Monitoring solved problems, streaks, and milestones to stay motivated and measure consistent improvement.
           </CardText>
         </MethodCard>
 
         <MethodCard elevation={2}>
           <CardIcon colour="orange">
-            <AutoGraphIcon fontSize="large" />
+            <TrackChangesIcon fontSize="large" />
           </CardIcon>
-          <CardHeading>Consistent Practice</CardHeading>
+          <CardHeading>Goal-Oriented Practice</CardHeading>
           <CardText>
-            Solving 2-3 problems daily with emphasis on understanding underlying concepts and multiple solution approaches.
+            Tackling problems with focused goals—mastering data structures, algorithms, and coding efficiency step by step.
           </CardText>
         </MethodCard>
 
         <MethodCard elevation={2}>
           <CardIcon colour="orange">
-            <ReplayIcon fontSize="large" />
+            <InsightsIcon fontSize="large" />
           </CardIcon>
-          <CardHeading>Iterative Review</CardHeading>
+          <CardHeading>Reflect & Improve</CardHeading>
           <CardText>
-            Regular revisiting of solved problems to reinforce learning and explore alternative optimization strategies.
+            Reviewing past attempts to strengthen weak areas, refine techniques, and gain deeper insights into problem-solving.
           </CardText>
         </MethodCard>
       </CardsContainer>

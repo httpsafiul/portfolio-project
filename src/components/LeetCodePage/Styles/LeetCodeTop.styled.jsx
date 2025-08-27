@@ -9,15 +9,15 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled(Typography).attrs({
-  fontSize: { xs: '1.8rem', sm: '2rem', md: '2.5rem' },
+  fontSize: { xs: '1.8rem', sm: '2rem', md: '2.2rem' },
   variant: "h4",
   component: "h1",
-  fontWeight: "bold",
+  fontWeight: "700",
   fontFamily: "Libre Caslon Text",
+  marginBottom: "1rem",
+
 })`
-  font-weight: 700;
-  
-  color: ${colour_green}
+  color: ${colour_green};
 `;
 
 export const Subheading = styled(Typography).attrs({
@@ -25,18 +25,20 @@ export const Subheading = styled(Typography).attrs({
   variant: "subtitle1",
   component: "p",
   fontFamily: "Libre Caslon Text",
+  marginTop: "0.8rem",
+  maxWidth: "800px",
+  textAlign: "center",
+  lineHeight: "1.8",
 })`
-  margin-top: 0.8rem;
-  color: #555;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
+  color: #333;
 `;
 
-export const StatCard = styled(Paper)`
+
+
+export const StatCard = styled(Paper).attrs({
+  padding: { xs: '0rem', sm: '0.5rem', md: '1rem' },
+})`
   border-radius: 16px;
-  padding: 1.0rem;
   text-align: center;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 `;

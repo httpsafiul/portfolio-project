@@ -9,31 +9,37 @@ import {
   MilestoneLabel,
   Description,
 } from "../Styles/Objectives.styled";
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+
+import FlagIcon from '@mui/icons-material/Flag';
 
 const Objectives = () => {
   return (
     <ObjectivesContainer elevation={2}>
       <StyledChip
-        icon={<TrendingUpIcon style={{ color: "white" }} />}
-        label="2025 Objectives"
+        icon={<FlagIcon style={{ color: "white" }} />}
+        label="2025 Goals"
       />
-      <SectionHeading>Target Milestones</SectionHeading>
+      <SectionHeading>Achievement Roadmap</SectionHeading>
 
       <MilestonesRow>
         <MilestoneBox>
-          <MilestoneValue>300+</MilestoneValue>
-          <MilestoneLabel>Problems to Solve</MilestoneLabel>
+          <MilestoneValue>500+</MilestoneValue>
+          <MilestoneLabel>Coding Challenges</MilestoneLabel>
         </MilestoneBox>
         <MilestoneBox>
-          <MilestoneValue>Top 20%</MilestoneValue>
-          <MilestoneLabel>Global Ranking</MilestoneLabel>
+          <MilestoneValue>Consistent</MilestoneValue>
+          <MilestoneLabel>Daily Streak</MilestoneLabel>
+        </MilestoneBox>
+        <MilestoneBox>
+          <MilestoneValue>Top 10%</MilestoneValue>
+          <MilestoneLabel>Leaderboard Rank</MilestoneLabel>
         </MilestoneBox>
       </MilestonesRow>
 
       <Description>
-        Focused preparation for technical interviews while building deep
-        algorithmic intuition and problem-solving expertise.
+        Aiming for continuous growth through disciplined problem-solving, 
+        sharpening competitive programming skills, and preparing for 
+        high-impact technical opportunities.
       </Description>
     </ObjectivesContainer>
   );
