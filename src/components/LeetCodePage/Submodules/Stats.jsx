@@ -61,8 +61,8 @@ const Stats = () => {
         <HeaderLeft>
           <Logo src={leetcode} alt="LeetCode Logo" />
           <div>
-            <Title>Safiul's LeetCode Journey</Title>
-            <Subtitle style={{ marginTop: "5px" }}>@safiiiii</Subtitle>
+            <Title>{stats.name}'s LeetCode Journey</Title>
+            <Subtitle style={{ marginTop: "5px" }}>@{stats.username}</Subtitle>
           </div>
         </HeaderLeft>
         <HeaderRight>
@@ -80,7 +80,7 @@ const Stats = () => {
                 color: colour_green
               },
             }}
-            onClick={() => window.open("https://leetcode.com/safiiiii/", "_blank")}
+            onClick={() => window.open(`https://leetcode.com/${stats.username}/`, "_blank")}
           >
             Profile
           </Button>
@@ -111,9 +111,9 @@ const Stats = () => {
 
         {/* Right Box */}
         <RightBox elevation={2}>
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-          <SectionTitle>By Difficulty</SectionTitle>
-        </div>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <SectionTitle>By Difficulty</SectionTitle>
+          </div>
 
           <StatRow bg="rgb(132, 210, 197, 0.3)">
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
