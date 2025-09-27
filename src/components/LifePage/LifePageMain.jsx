@@ -54,12 +54,12 @@ const LifePageMain = () => {
             >
               Friends
             </Button>
-            {/* <Button
+            <Button
               onClick={() => setActiveSection("loml")}
               variant={activeSection === "loml" ? "contained" : "outlined"}
             >
               LoML
-            </Button> */}
+            </Button>
           </ButtonGroup>
         </SectionWrapper>
 
